@@ -18,7 +18,7 @@ library(kableExtra)
 <script>
    $(document).ready(function() {
      $head = $('#header');
-     $head.prepend('<img src=\"http://www.posgrado.unam.mx/linguistica/img/cabecera.png\" style=\"float: right;\"/>')
+     $head.prepend('<img src=\"#http://www.posgrado.unam.mx/linguistica/img/cabecera.png\" style=\"float: right;\"/>')
    });
 </script>
 

@@ -1,5 +1,10 @@
 ---
 title: "Using R to Analyze Linguistic Data and Facilitate Reproducible Research"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 self_contained: false
 output: html_document
 ---

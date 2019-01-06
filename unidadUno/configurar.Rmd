@@ -1,48 +1,91 @@
 ---
 title: "Unidad 1: Herramientas y conceptos básicos de la informática"
-output: html_document
+output:
+  html_document:
+    toc: true
+  pdf_document: default
+  word_document: default
+knit: (function(input_file, encoding) {
+  out_dir <- '../docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'unidadUno.html'))})
 ---
 
-Si te gusta la lingüística, te va a encantar la programación. Imagínate una lengua que no tiene polisemia ni ambigüedad sintáctica y que una vez que vayas adquiriendo los ítems léxicos, los puedes pronunciar tan bien como cualquier otro "hablante". En esta unidad, vamos a familiarizarnos con las tecnologías básicas de la programación que usaremos a lo largo de este curso.
+<a href="index.html">
+<button type="button" class="btn btn-primary">Regresar al inicio</button>
+</a>
 
-# ¿Qué es el **shell** y para qué sirve?
+# Introducción
+Si te gusta la lingüística, te va a encantar la programación. Imagínate una lengua que no tiene polisemia ni ambigüedad sintáctica y que una vez que vayas adquiriendo los ítems léxicos, los puedes pronunciar tan bien como cualquier otra persona. En esta unidad, vamos a familiarizarnos con las tecnologías básicas de la programación que usaremos a lo largo del curso.
+
+# 1. ¿Qué es el **shell** y para qué sirve?
+
 <center>
 ![shell](./icons/terminal.png)
 </center>
-Un interfaz de línea de comandos que tú puedes usar para correr programas en tu maquina (o otra máquina disponible en internet, véase SSH), organizar y navegar por los archivos, y muchas cosas más. Es, sin duda, una de las herramientas más poderosas que tú tienes como programador.
+
+Un interfaz de línea de comandos que puedes usar para correr programas en tu maquina (o otra máquina disponible en internet (a través SSH), organizar y navegar por los archivos guardados, y muchas cosas más. Es, sin duda, una de las herramientas más poderosas e importantes que tú puedes tener como programador (aunque admito que cuando comenzé a aprender programar, no veía tanta la necesidad de usarlo).
 
 https://www.youtube.com/watch?time_continue=92&v=-EtN5oD8MM0
 
-## ¿Cómo hacerlo en Windows?
-https://www.youtube.com/watch?v=UQZvV6VTlGQ
-1. Seguir este vídeo a 50 segundos para descargar Git y Git bash. Si tienes un Mac, ya no necesitas hacer nada.
+## ¿Qué hacer?
+Si tú tienes Windows, vas a necesitar descargar un programa que se llama Git bash. Las instrucciones se pueden encontrar en este video: [este video](https://www.youtube.com/watch?v=UQZvV6VTlGQ). (50 segundos). Si tienes un Mac, ya no necesitas hacer nada porque ya cuentas con un programa que se llama *Terminal*.
 
-## Curso datacamp.com
+# 2. Curso datacamp.com
 
+<center>
 
-# Editores de Texto
-## Hay diferentes opciones: Sublime Text, Text Wrangler, Vim, Nano, R Studio
-## Codificación
-## *Search and Replace*
-## *Syntax Highlighting*
+```{r, out.width = "200px", echo=FALSE}
+knitr::include_graphics("https://cdn.datacamp.com/main-app/assets/brand/logos/DataCamp_Horizontal_CMYK-6182801ee29c9b9e380044bb930f3c18029987c1992648b7600051dd779b0868.png")
+```
+</center>
 
-# R vs R Studio
-## R es una lengua de programación
+Después de haber creado una cuenta en datacamp.com, completa el primer capítulo de este curso
 
-# Stackoverflow
-https://stackoverflow.com/company
-> Founded in 2008, Stack Overflow is the largest, most trusted online community for developers to learn, share their knowledge, and build their careers. More than 50 million professional and aspiring programmers visit Stack Overflow each month to help solve coding problems, develop new skills, and find job opportunities.
+# 3. Descargar R y R studio
+La diferencia entre R y R Studio es...
 
-## Estrategias para usar Stack Overflow
-Stack Overflow es un foro donde las personas pueden hacer y contestar preguntas acerca de la programación. Como reddit, los usuarios votan por las mejores preguntas, las cuales son promovidas. Stack Exchange se refiere a una red de sitios igualitos a Stack Overflow, pero con [diferentes tópicos](https://stackexchange.com/sites#).
+<center>
 
-## Cuando haces una pregunta, es importante seguir la guía para no perder puntos de reputación:
-(https://stackoverflow.com/help/how-to-ask)
+```{r, out.width = "200px", echo=FALSE}
+knitr::include_graphics("https://cran.r-project.org/Rlogo.svg")
+knitr::include_graphics("https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo.png")
+```
 
-## Sin tener mucha experiencia con la programación, estas redes son buenos puntos de entrarda para crecer tu reputación en todas las redes de Stack Exchange.
-1. https://linguistics.stackexchange.com/
-2. https://spanish.stackexchange.com/
+</center>
 
-## Una tutorial más complicado:
-https://www.youtube.com/watch?v=p73RhV7SZkY
-# Datacamp.com
+## ¿Qué hacer?
+Siguen [estas instrucciones](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu). Para usuarios de Windows, es muy fácil descargar R y R Studio, para usuarios de Mac es un poco más complicado si no tienes experiencia con la linea de comandos.
+
+# 4. Editores de Texto
+
+<center>
+```{r, out.width = "200px", echo=FALSE}
+knitr::include_graphics("sublime.svg")
+```
+</center>
+
+Los editores de texto son como *Word* pero para códigos. Hay diferentes opciones: Sublime Text, Text Wrangler, Vim, y Nano. Estos programas vuelven el proceso de la programación mucho menos tedioso, por ejemplo, se subrayan los patrones sintácticos (syntax highlighting) para la lengua data (*HTML*, *Javascript*, *R*, *Python*) y te ayudan a ver los archivos de forma muy organizada.
+
+## ¿Qué hacer?
+Nosotros vamos a estar utilizando Sublime Text y R Studio como los principales editores de texto. Como verémos más adelante, R Studio.
+
+# 5. *Stack Exchange* and *Stack Overflow*
+
+<center>
+```{r, out.width = "200px", echo=FALSE}
+knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/se/se-logo.png?v=dd7153fcc7fa")
+knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a")
+```
+
+</center>
+
+> Founded in 2008, Stack Overflow is the largest, most trusted online community for developers to learn, share their knowledge, and build their careers. More than 50 million professional and aspiring programmers visit Stack Overflow each month to help solve coding problems, develop new skills, and find job opportunities. (https://stackoverflow.com/company)
+
+## ¿Qué hacer?
+Crear una cuenta de Stack Exchange e ir al foro de [lingüística](https://linguistics.stackexchange.com/) y [español](https://spanish.stackexchange.com/). Busca una pregunta para contestar o piensa en una pregunta que podrías hacer. Sin tener mucha experiencia con la programación, estas redes son buenos puntos de entrarda para crecer tu reputación en todas las redes de Stack Exchnage. Una vez que hayas adquirirdo 200 puntos de reputación en algún foro, automáticamente cuentas con 100 puntos al unir otro foro.
+
+### Estrategias para usar Stack Overflow
+Stack Overflow es un foro donde las personas pueden hacer y contestar preguntas acerca de la programación. Como reddit, los usuarios votan por las mejores preguntas, las cuales son promovidas. Stack Exchange se refiere a una red de sitios igualitos a Stack Overflow, pero con [diferentes tópicos](https://stackexchange.com/sites#). Cuando haces una pregunta, es importante seguir la guía para no perder puntos de reputación:
+(https://stackoverflow.com/help/how-to-ask).

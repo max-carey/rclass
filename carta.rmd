@@ -165,19 +165,49 @@ kable(temas) %>%
 # Subtemas
 
 ### **Unidad 1**
-- Cómo interactuar con el sistema a través del *command line* para poder tener una buena organización de los archivos en el disco duro (4 horas datacamp.com y 2 horas de taller)
-- Herramientas básicas: (cómo instalarlas y usarlas): editores de texto (sublime text, text wrangler), syntax highligting, stack overflow para preguntas y dudas,  codificación de los archivos (p. ej., utf-8 vs. ASCII), control de versión básico (Git y Github), R Studio (2 horas de taller)
+
+<a href="unidadUno.html">
+<button type="button" class="btn btn-success">Ir a la unidad
+</button>
+</a>
+
+- Cómo interactuar con el sistema a través del *command line* para poder tener una buena organización de los archivos en el disco duro (1 horas datacamp.com y 2 horas de taller)
+- Herramientas básicas: (cómo instalarlas y usarlas): editores de texto (sublime text, text wrangler), syntax highligting, stack overflow para preguntas y dudas, codificación de los archivos (p. ej., utf-8 vs. ASCII), control de versión básico (Git y Github), R Studio (2 horas de taller)
 
 ### **Unidad 2**
+
+<a href="unidadUno.html">
+<button type="button" class="btn btn-warning">Ir a la unidad
+</button>
+</a>
+
 - Cómo mostrar output en R, (programas de tipo “hello world”) las estructuras de control (condicionales, iteraciones), en R variables, funciones, funciones de la familia apply() de R (10 horas de datacamp.com en casa y 4 horas de taller)
 
-### Unidad 3
+### **Unidad 3**
+
+<a href="unidadTres.html">
+<button type="button" class="btn btn-warning">Ir a la unidad
+</button>
+</a>
+
 - Dplyr para manipulación de datos, ggplot2 para la visualización de datos (4 horas de datacamp.com en casa y 2 horas de taller) 
 
-### Unidad 4
+### **Unidad 4**
+
+<a href="unidadCuatro.html">
+<button type="button" class="btn btn-warning">Ir a la unidad
+</button>
+</a>
+
 - Distribuciones, histogramas, boxplots, scatterplots, wordclouds, correlación, regresión simple y múltiple, regresión logística, modelos de efectos mixtos (20 horas de datacamp.com en casa y 8 horas de taller )
 
 ### Unidad 5
+
+<a href="unidadUno.html">
+<button type="button" class="btn btn-warning">Ir a la unidad
+</button>
+</a>
+
 - Anotación de partes de la oración, medidas de frecuencia: frecuencia de token vs. frecuencia de tipo, generación de concordancias, gestores de corpus (GECO, AntConc, SketchEngine) (5 horas de taller)
 - Trabajar con los propios datos de los hablantes (5 en casa y 10 horas de taller)
 

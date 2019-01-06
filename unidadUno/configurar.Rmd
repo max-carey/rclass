@@ -1,0 +1,48 @@
+---
+title: "Unidad 1: Herramientas y conceptos básicos de la informática"
+output: html_document
+---
+
+Si te gusta la lingüística, te va a encantar la programación. Imagínate una lengua que no tiene polisemia ni ambigüedad sintáctica y que una vez que vayas adquiriendo los ítems léxicos, los puedes pronunciar tan bien como cualquier otro "hablante". En esta unidad, vamos a familiarizarnos con las tecnologías básicas de la programación que usaremos a lo largo de este curso.
+
+# ¿Qué es el **shell** y para qué sirve?
+<center>
+![shell](./icons/terminal.png)
+</center>
+Un interfaz de línea de comandos que tú puedes usar para correr programas en tu maquina (o otra máquina disponible en internet, véase SSH), organizar y navegar por los archivos, y muchas cosas más. Es, sin duda, una de las herramientas más poderosas que tú tienes como programador.
+
+https://www.youtube.com/watch?time_continue=92&v=-EtN5oD8MM0
+
+## ¿Cómo hacerlo en Windows?
+https://www.youtube.com/watch?v=UQZvV6VTlGQ
+1. Seguir este vídeo a 50 segundos para descargar Git y Git bash. Si tienes un Mac, ya no necesitas hacer nada.
+
+## Curso datacamp.com
+
+
+# Editores de Texto
+## Hay diferentes opciones: Sublime Text, Text Wrangler, Vim, Nano, R Studio
+## Codificación
+## *Search and Replace*
+## *Syntax Highlighting*
+
+# R vs R Studio
+## R es una lengua de programación
+
+# Stackoverflow
+https://stackoverflow.com/company
+> Founded in 2008, Stack Overflow is the largest, most trusted online community for developers to learn, share their knowledge, and build their careers. More than 50 million professional and aspiring programmers visit Stack Overflow each month to help solve coding problems, develop new skills, and find job opportunities.
+
+## Estrategias para usar Stack Overflow
+Stack Overflow es un foro donde las personas pueden hacer y contestar preguntas acerca de la programación. Como reddit, los usuarios votan por las mejores preguntas, las cuales son promovidas. Stack Exchange se refiere a una red de sitios igualitos a Stack Overflow, pero con [diferentes tópicos](https://stackexchange.com/sites#).
+
+## Cuando haces una pregunta, es importante seguir la guía para no perder puntos de reputación:
+(https://stackoverflow.com/help/how-to-ask)
+
+## Sin tener mucha experiencia con la programación, estas redes son buenos puntos de entrarda para crecer tu reputación en todas las redes de Stack Exchange.
+1. https://linguistics.stackexchange.com/
+2. https://spanish.stackexchange.com/
+
+## Una tutorial más complicado:
+https://www.youtube.com/watch?v=p73RhV7SZkY
+# Datacamp.com

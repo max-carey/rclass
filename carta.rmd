@@ -1,0 +1,285 @@
+---
+title: "Using R to Analyze Linguistic Data and Facilitate Reproducible Research"
+self_contained: false
+output: html_document
+---
+
+```{r include=FALSE}
+# To get the logo on the page just followed this stack overflow:
+# https://stackoverflow.com/questions/38333691/r-markdown-putting-an-image-in-the-top-right-hand-corner-of-html-and-moving-tit
+library(kableExtra)
+```
+
+<script>
+   $(document).ready(function() {
+     $head = $('#header');
+     $head.prepend('<img src=\"http://www.posgrado.unam.mx/linguistica/img/cabecera.png\" style=\"float: right;\"/>')
+   });
+</script>
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+<style>
+ /* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} 
+</style>
+<center>
+```{r, echo=FALSE}
+library(phonR)
+remapping <- c(i = "ɪʏ̯", e = "ɛœ̰ɚ", a = "ɒɐ˞", o = "ɤɞ̆", u = "ɯʊ̥")
+indo$unicodevowel <- remapping[as.character(indo$vowel)]
+with(indo, plotVowels(f1, f2, unicodevowel, plot.tokens = TRUE, pch.tokens = vowel, 
+    cex.tokens = 1.2, alpha.tokens = 0.4, plot.means = TRUE, pch.means = unicodevowel, 
+    cex.means = 4, var.col.by = unicodevowel, pretty = TRUE))
+```
+
+> An example of plotting formant values using the [phonR](http://drammock.github.io/phonR/) package in R, plot shows vowels of standard Indonesian
+
+</center>
+
+# Course information
+
+<div class="col2">
+### Instructor:
+Max Carey
+
+### Semester:
+Winter Semester (February 4th- June 6th)
+
+### Time and Location:
+To be decided
+
+<br>
+<br>
+<br>
+
+### Number of credits:
+This is a no credit class
+
+### Langauges:
+English and Spanish
+
+### Total Hours of Course During Semester:
+`60`
+</div>
+
+### General objective
+To familiarize students, from a pratical standpoint, with basic R programming, doing statistics in R, and other basic tools and concepts in computer science in order to aid their research.
+
+# Temas
+```{r echo=FALSE}
+temas <- data.frame(stringsAsFactors=FALSE,
+          Unidad = c(1, 2, 3, 4, 5),
+          Tema = c("Herramientas y conceptos básicos de la informática",
+                 "Programación básica con R", "R Studio y El Tidyverse",
+                 "Estadística descriptiva e inferencial con R",
+                 "Lingüística de corpus con R y otras herramientas"),
+          Horas_Teóricas = c(0, 0, 0, 0, 0),
+          Horas_Prácticas = c(10, 14, 6, 20, 10)
+)
+kable(temas) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+# Subtemas
+
+### **Unidad 1**
+- Cómo interactuar con el sistema a través del *command line* para poder tener una buena organización de los archivos en el disco duro (4 horas datacamp.com y 2 horas de taller)
+- Herramientas básicas: (cómo instalarlas y usarlas): editores de texto (sublime text, text wrangler), syntax highligting, stack overflow para preguntas y dudas,  codificación de los archivos (p. ej., utf-8 vs. ASCII), control de versión básico (Git y Github), R Studio (2 horas de taller)
+
+### **Unidad 2**
+- Cómo mostrar output en R, (programas de tipo “hello world”) las estructuras de control (condicionales, iteraciones), en R variables, funciones, funciones de la familia apply() de R (10 horas de datacamp.com en casa y 4 horas de taller)
+
+### Unidad 3
+- Dplyr para manipulación de datos, ggplot2 para la visualización de datos (4 horas de datacamp.com en casa y 2 horas de taller) 
+
+### Unidad 4
+- Distribuciones, histogramas, boxplots, scatterplots, wordclouds, correlación, regresión simple y múltiple, regresión logística, modelos de efectos mixtos (20 horas de datacamp.com en casa y 8 horas de taller )
+
+### Unidad 5
+- Anotación de partes de la oración, medidas de frecuencia: frecuencia de token vs. frecuencia de tipo, generación de concordancias, gestores de corpus (GECO, AntConc, SketchEngine) (5 horas de taller)
+- Trabajar con los propios datos de los hablantes (5 en casa y 10 horas de taller)
+
+# Bibliografía básica
+This course will primarily use datacamp.com, an online platform for learning data science. Students will complete courses on their own and come to class for troubleshooting, working on problems related to linguistics, and working with their own data.
+
+1. [Introduction to Shell for Data Science](https://www.datacamp.com/courses/introduction-to-shell-for-data-science) (datacamp.com), Chapter 1 
+
+2. [Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r) (datacamp.com)
+
+3. [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) (datacamp.com)
+
+4. [Introduction to Data](https://www.datacamp.com/courses/introduction-to-data) (datacamp.com)
+
+
+5. [Exploratory Data Analysis](https://www.datacamp.com/courses/exploratory-data-analysis) (datacamp.com)
+
+6. [Correlation and Regression](https://www.datacamp.com/courses/correlation-and-regression) (datacamp.com)
+
+7. [Multiple and Logistic Regression](https://www.google.com/search?client=firefox-b&q=datacamp+multiple+and+logistic+regression)(datacamp.com)
+
+8. [Foundations of Inference](https://www.datacamp.com/courses/foundations-of-inference) (datacamp.com)
+
+9. Sierra Martínez, G. E. (2017). Introducción a los corpus lingüísticos. Instituto de Ingeniería. UNAM
+
+
+# Bibliografía complementaria
+
+1. Gries, S. T. (2017). Quantitative corpus linguistics with R: a practical introduction (Segunda Edición). New York: Routledge, Taylor & Francis Group
+2. Adolphs, S. (2011). Corpus Linguistics. En J. Simpson (Ed.), The Routledge handbook of applied linguistics (1st ed). Milton Park, Abingdon, [UK]; New York: Routledge.
+3. Weisser, M. (2016). Practical corpus linguistics: an introduction to corpus-based language analysis. Chichester, West Sussex [England]; Malden, MA: Wiley Blackwell.
+
+# Estratétias didácticas
+
+ <label class="container">Exposición oral
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Exposición audiovisual
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Ejercicios dentro de clase
+  <input type="checkbox" checked="checked" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Ejercicios fuera del aula
+  <input type="checkbox" checked="checked" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Lecturas obligatorias
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Trabajo de Investigación
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+# Mecanismos de evaluación del  aprendizaje de los alumnos: 
+
+ <label class="container">Exámenes Parciales
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Examen final escrito
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Trabajos y tareas fuera del aula
+  <input type="checkbox" checked="checked" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Exposición de seminarios por los alumnos
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Participación en clase
+  <input type="checkbox" checked="checked" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Asistencia
+  <input type="checkbox" checked="checked" onclick="return false;">
+  <span class="checkmark" checked="checked"></span>
+</label>
+
+<label class="container">Seminario
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Ejercicios fuera de aula
+  <input type="checkbox" onclick="return false;">
+  <span class="checkmark"></span>
+</label>
+
+# Perfil profesiográfico:
+Licenciado en lingüística romance, experiencia profesional enseñando a programar, publicaciones y tesis que utilizaron R, Diplomado en Programación para aplicaciones web, experiencia profesional programación para el análisis de datos
+
+# Fecha: 7 de enero de 2018

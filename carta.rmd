@@ -1,5 +1,5 @@
 ---
-title: "Using R to Analyze Linguistic Data and Facilitate Reproducible Research"
+title: "Utilizar R para analizar datos lingüísticos y facilitar investigaciones reproducibles"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -18,7 +18,7 @@ library(kableExtra)
 <script>
    $(document).ready(function() {
      $head = $('#header');
-     $head.prepend('<img src=\"#http://www.posgrado.unam.mx/linguistica/img/cabecera.png\" style=\"float: right;\"/>')
+     $head.prepend('<img src=\"http://www.posgrado.unam.mx/linguistica/img/cabecera.png\" style=\"float: right;\"/>')
    });
 </script>
 
@@ -114,38 +114,38 @@ with(indo, plotVowels(f1, f2, unicodevowel, plot.tokens = TRUE, pch.tokens = vow
     cex.means = 4, var.col.by = unicodevowel, pretty = TRUE))
 ```
 
-> An example of plotting formant values using the [phonR](http://drammock.github.io/phonR/) package in R, plot shows vowels of standard Indonesian
+> Las vocales del indonesio visualizados con el paquete [phonR](http://drammock.github.io/phonR/).
 
 </center>
 
-# Course information
+# Información del curso
 
 <div class="col2">
-### Instructor:
+### Tutor:
 Max Carey
 
-### Semester:
-Winter Semester (February 4th- June 6th)
+### Semestre:
+2018-2 (4 de febrero al 6 de junio)
 
-### Time and Location:
-To be decided
+### Horario
+Todavía no se decide
 
 <br>
 <br>
 <br>
 
-### Number of credits:
-This is a no credit class
+### Número de créditos:
+Esta clase es sin crédito, sin embargo, los alumnos recibirán una constancia por su participación.
 
-### Langauges:
-English and Spanish
+### Lenguas:
+Los materiales del curso serán en inglés y las sesiones se darán en español.
 
-### Total Hours of Course During Semester:
+### Número de horas durante el semestre:
 `60`
 </div>
 
-### General objective
-To familiarize students, from a pratical standpoint, with basic R programming, doing statistics in R, and other basic tools and concepts in computer science in order to aid their research.
+### Objetivo general
+Familiarizar el alumno, de manera muy práctica, con la programación en R, la estadística en R, y otras herramientas y conceptos básicos de la informática para que puedan aplicarlos a sus futuros y actuales proyectos de investigación.
 
 # Temas
 ```{r echo=FALSE}
@@ -212,7 +212,7 @@ kable(temas) %>%
 - Trabajar con los propios datos de los hablantes (5 en casa y 10 horas de taller)
 
 # Bibliografía básica
-This course will primarily use datacamp.com, an online platform for learning data science. Students will complete courses on their own and come to class for troubleshooting, working on problems related to linguistics, and working with their own data.
+Este curso utilizará datacamp.com, una plataforma en línea para aprender sobre la ciencia de datos. Los alumnos completarán los cursillos de datacamp.com en sus casas y venir a las sesiones semanales para solucionar problemas, trabajar con datos lingüísticos, incluyendo, los propios datos de los alumnos.
 
 1. [Introduction to Shell for Data Science](https://www.datacamp.com/courses/introduction-to-shell-for-data-science) (datacamp.com), Chapter 1 
 
@@ -316,5 +316,3 @@ This course will primarily use datacamp.com, an online platform for learning dat
 
 # Perfil profesiográfico:
 Licenciado en lingüística romance, experiencia profesional enseñando a programar, publicaciones y tesis que utilizaron R, Diplomado en Programación para aplicaciones web, experiencia profesional programación para el análisis de datos
-
-# Fecha: 7 de enero de 2018

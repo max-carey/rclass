@@ -125,7 +125,7 @@ with(indo, plotVowels(f1, f2, unicodevowel, plot.tokens = TRUE, pch.tokens = vow
 Max Carey
 
 ### Semestre:
-2018-2 (4 de febrero al 6 de junio)
+2018-2 (28 de enero al 6 de junio)
 
 ### Horario
 Todavía no se decide
@@ -240,7 +240,7 @@ Este curso utilizará datacamp.com, una plataforma en línea para aprender sobre
 2. Adolphs, S. (2011). Corpus Linguistics. En J. Simpson (Ed.), The Routledge handbook of applied linguistics (1st ed). Milton Park, Abingdon, [UK]; New York: Routledge.
 3. Weisser, M. (2016). Practical corpus linguistics: an introduction to corpus-based language analysis. Chichester, West Sussex [England]; Malden, MA: Wiley Blackwell.
 
-# Estratétias didácticas
+# Estrategias didácticas
 
  <label class="container">Exposición oral
   <input type="checkbox" onclick="return false;">

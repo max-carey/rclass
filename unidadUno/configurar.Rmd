@@ -16,14 +16,18 @@ knit: (function(input_file, encoding) {
 <button type="button" class="btn btn-primary">Regresar al inicio</button>
 </a>
 
+<script>
+   $(document).ready(function() {
+     $head = $('#header');
+     $head.prepend('<img src=\"http://www.posgrado.unam.mx/linguistica/img/cabecera.png\" style=\"float: right;\"/>')
+   });
+</script>
+
 # Introducción
 Si te gusta la lingüística, te va a encantar la programación. Imagínate una lengua que no tiene polisemia ni ambigüedad sintáctica y que una vez que vayas adquiriendo los ítems léxicos, los puedes pronunciar tan bien como cualquier otra persona. En esta unidad, vamos a familiarizarnos con las tecnologías básicas de la programación que usaremos a lo largo del curso.
 
 # 1. ¿Qué es el **shell** y para qué sirve?
-
-<center>
 ![shell](./icons/terminal.png)
-</center>
 
 Un interfaz de línea de comandos que puedes usar para correr programas en tu maquina (o otra máquina disponible en internet (a través SSH), organizar y navegar por los archivos guardados, y muchas cosas más. Es, sin duda, una de las herramientas más poderosas e importantes que tú puedes tener como programador (aunque admito que cuando comencé a aprender programar, no veía tanta la necesidad de usarlo).
 
@@ -33,13 +37,10 @@ https://www.youtube.com/watch?time_continue=92&v=-EtN5oD8MM0
 Si tú tienes Windows, vas a necesitar descargar un programa que se llama Git bash. Las instrucciones se pueden encontrar en este vídeo: [este video](https://www.youtube.com/watch?v=UQZvV6VTlGQ). (50 segundos). Si tienes un Mac, ya no necesitas hacer nada porque ya cuentas con un programa que se llama *Terminal*.
 
 # 2. Curso datacamp.com
-
-<center>
-
-```{r, out.width = "200px", echo=FALSE}
+```{r, out.width = "20%", echo=FALSE}
 knitr::include_graphics("https://cdn.datacamp.com/main-app/assets/brand/logos/DataCamp_Horizontal_CMYK-6182801ee29c9b9e380044bb930f3c18029987c1992648b7600051dd779b0868.png")
 ```
-</center>
+
 
 Después de haber creado una cuenta en datacamp.com, completa el primer capítulo de este curso
 

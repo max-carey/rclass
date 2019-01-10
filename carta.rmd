@@ -147,6 +147,15 @@ Los materiales del curso serán en inglés y las sesiones se darán en español.
 ### Objetivo general
 Familiarizar el alumno, de manera muy práctica, con la programación en R, la estadística en R, y otras herramientas y conceptos básicos de la informática para que puedan aplicarlos a sus futuros y actuales proyectos de investigación.
 
+### Datacamp.com
+```{r, out.width = "20%", echo=FALSE}
+knitr::include_graphics("https://cdn.datacamp.com/main-app/assets/brand/logos/DataCamp_Horizontal_CMYK-6182801ee29c9b9e380044bb930f3c18029987c1992648b7600051dd779b0868.png")
+```
+
+> “This class is supported by DataCamp, the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.”
+
+
+
 # Temas
 ```{r echo=FALSE}
 temas <- data.frame(stringsAsFactors=FALSE,

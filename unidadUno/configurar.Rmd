@@ -16,6 +16,81 @@ knit: (function(input_file, encoding) {
 <button type="button" class="btn btn-primary">Regresar al inicio</button>
 </a>
 
+<a href="https://github.com/axme100/rclass" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+
+<style>
+ /* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} 
+</style>
+
+
 <script>
    $(document).ready(function() {
      $head = $('#header');
@@ -26,6 +101,11 @@ knit: (function(input_file, encoding) {
 # Introducción
 Si te gusta la lingüística, te va a encantar la programación. Imagínate una lengua que no tiene polisemia ni ambigüedad sintáctica y que una vez que vayas adquiriendo los ítems léxicos, los puedes pronunciar tan bien como cualquier otra persona. En esta unidad, vamos a familiarizarnos con las tecnologías básicas de la programación que usaremos a lo largo del curso.
 
+---
+
+<br>
+<br>
+
 # 1. ¿Qué es el **shell** y para qué sirve?
 ![](./icons/terminal.png)
 
@@ -35,69 +115,115 @@ Es una interfaz de línea de comandos que puedes usar para correr programas en t
 
 https://www.youtube.com/watch?time_continue=92&v=-EtN5oD8MM0
 
-## ¿Qué hacer?
+<br>
+
+### <span style="color:red"> Tarea 1:</span> Descargar Git Bash (Solo para usuarios de Windows)
+
+
+<label class="container">Hecho
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+
 Si tienes Windows, vas a necesitar descargar un programa que se llama Git bash. Las instrucciones se pueden encontrar en: [este video](https://www.youtube.com/watch?v=UQZvV6VTlGQ). (50 segundos). Si tienes un Mac, no necesitas hacer nada porque ya cuentas con un programa que se llama *Terminal*.
 
-# 2. Curso datacamp.com
-```{r, out.width = "20%", echo=FALSE}
-knitr::include_graphics("https://cdn.datacamp.com/main-app/assets/brand/logos/DataCamp_Horizontal_CMYK-6182801ee29c9b9e380044bb930f3c18029987c1992648b7600051dd779b0868.png")
-```
 
-
+### <span style="color:red"> Tarea 2:</span> Completar curso de datacamp.com
+ 
+<label class="container">Hecho
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
 Después de haber creado una cuenta en datacamp.com, completa el primer capítulo de este curso:
 
 1. [Introduction to Shell for Data Science](https://www.datacamp.com/courses/introduction-to-shell-for-data-science) (datacamp.com), Chapter 1
 
 
-# 3. Descargar R y R Studio
-La diferencia entre R y R Studio es...
 
-<center>
+---
 
-```{r, out.width = "200px", echo=FALSE}
+<br>
+<br>
+
+# 2. Descargar R y R Studio
+```{r, out.width = "100px", echo=FALSE}
 knitr::include_graphics("https://cran.r-project.org/Rlogo.svg")
 knitr::include_graphics("https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo.png")
 ```
 
-</center>
+R es una lengua de programación igual que Python o Java. Cuando descargues R, vas a ver que puedes abrir un programa que se ve así:
 
-## ¿Qué hacer?
-Sigue [estas instrucciones](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu). Para usuarios de Windows, es muy fácil descargar R y R Studio, para usuarios de Mac es un poco más complicado si no tienes experiencia con la línea de comandos.
-
-# 4. Editores de Texto
-
+<br>
 <center>
-```{r, out.width = "200px", echo=FALSE}
-knitr::include_graphics("sublime.svg")
+```{r, out.width = "600px", echo=FALSE}
+knitr::include_graphics("../r_window.png")
 ```
 </center>
+<br>
+
+Dentro de este programa puedes usar R. R Studio es un programa que utiliza R pero viene con otras herramientas que se te mejora la experiencia de programar con R. 
+
+<br>
+
+### <span style="color:red"> Tarea 3:</span> Descargar R y R Studio
+
+<label class="container">Hecho
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+Sigue [estas instrucciones](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu). Para usuarios de Windows, es muy fácil descargar R y R Studio, para usuarios de Mac es un poco más complicado si no tienes experiencia con la línea de comandos.
+
+---
+
+<br>
+<br>
+
+
+# 3. Editores de Texto (Sublime Text)
+
+```{r, out.width = "50px", out.height="50px", echo=FALSE}
+knitr::include_graphics("sublime.svg")
+```
 
 Los editores de texto son como *Word* pero para códigos. Hay diferentes opciones: Sublime Text, Text Wrangler, Vim, y Nano. Estos programas hacen que proceso de la programación sea mucho menos tedioso, por ejemplo, se subrayan los patrones sintácticos (syntax highlighting) para la lengua dada (*HTML*, *Javascript*, *R*, *Python*) y te ayudan a ver los archivos de forma muy organizada.
 
-## ¿Qué hacer?
+<br>
+
+### <span style="color:red"> Tarea 4:</span> Descargar Sublime Text
+
+<label class="container">Hecho
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
 Nosotros vamos a estar utilizando Sublime Text y R Studio como los principales editores de texto. Como veremos más adelante, R Studio es un editor de textos (entre muchas otras cosas).
 
-# 5. *Stack Exchange* and *Stack Overflow*
+---
 
-<center>
+<br>
+<br>
+
+# 4. *Stack Exchange* and *Stack Overflow*
+
+
 ```{r, out.width = "200px", echo=FALSE}
 knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/se/se-logo.png?v=dd7153fcc7fa")
 knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a")
 ```
 
-</center>
+### Estrategias para usar Stack Overflow
+Stack Overflow es un foro donde las personas pueden hacer y contestar preguntas acerca de la programación. Como reddit, los usuarios votan las mejores preguntas, las cuales son promovidas. Stack Exchange se refiere a una red de sitios idénticos a Stack Overflow, pero con [diferentes tópicos](https://stackexchange.com/sites#). Cuando haces una pregunta, es importante seguir la guía para no perder puntos de reputación: (https://stackoverflow.com/help/how-to-ask).
 
 > Founded in 2008, Stack Overflow is the largest, most trusted online community for developers to learn, share their knowledge, and build their careers. More than 50 million professional and aspiring programmers visit Stack Overflow each month to help solve coding problems, develop new skills, and find job opportunities. (https://stackoverflow.com/company)
 
-## ¿Qué hacer?
+### <span style="color:red"> Tarea 5:</span> Crear una cuenta en Stack Exchange y explorar los foros
+
+<label class="container">Hecho
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
 Crear una cuenta de Stack Exchange e ir al foro de [lingüística](https://linguistics.stackexchange.com/) y [español](https://spanish.stackexchange.com/). Busca una pregunta para contestar o piensa en una pregunta que podrías hacer. Sin tener mucha experiencia con la programación, estas redes son un buen punto de entrada para aumentar tu reputación en todas las redes de Stack Exchnage. Una vez que hayas adquirido 200 puntos de reputación en algún foro, automáticamente cuentas con 100 puntos al unirte a otro.
 
-
-
-
-
-
-Crear una cuenta de Stack Exchange e ir al foro de [lingüística](https://linguistics.stackexchange.com/) y [español](https://spanish.stackexchange.com/). Busca una pregunta para contestar o piensa en una pregunta que podrías hacer. Sin tener mucha experiencia con la programación, estas redes son buenos puntos de entrada para crecer tu reputación en todas las redes de Stack Exchnage. Una vez que hayas adquirido 200 puntos de reputación en algún foro, automáticamente cuentas con 100 puntos al unir otro foro.
-
-### Estrategias para usar Stack Overflow
-Stack Overflow es un foro donde las personas pueden hacer y contestar preguntas acerca de la programación. Como reddit, los usuarios votan las mejores preguntas, las cuales son promovidas. Stack Exchange se refiere a una red de sitios idénticos a Stack Overflow, pero con [diferentes tópicos](https://stackexchange.com/sites#). Cuando haces una pregunta, es importante seguir la guía para no perder puntos de reputación: (https://stackoverflow.com/help/how-to-ask).

@@ -1,5 +1,5 @@
 ---
-title: "Utilizar R para analizar datos lingüísticos y facilitar investigaciones reproducibles"
+title: "R para analizar datos lingüísticos y facilitar investigaciones reproducibles"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -137,7 +137,7 @@ Por decidir
 <br>
 
 ### Número de créditos:
-Esta clase es sin crédito, sin embargo, los alumnos recibirán constancias por su participación. Se recibe una constancia en datacamp.com por cada curso terminado.
+Este curso no otorgará créditos con valor curricular.
 
 ### Lenguas:
 Los materiales del curso serán en inglés y las sesiones se darán en español.
@@ -147,7 +147,7 @@ Los materiales del curso serán en inglés y las sesiones se darán en español.
 </div>
 
 ### Objetivo general
-Familiarizar al alumno, de manera muy práctica, con la programación en R, la estadística en R y otras herramientas y conceptos básicos de la informática para que puedan aplicarlos a sus futuros y actuales proyectos de investigación.
+Familiarizar al alumno, de manera muy práctica, con la programación en R, Estadística con R, y otras herramientas y conceptos básicos de la informática para que puedan aplicarlos a sus futuros y actuales proyectos de investigación.
 
 <br>
 

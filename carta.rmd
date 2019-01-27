@@ -116,7 +116,7 @@ with(indo, plotVowels(f1, f2, unicodevowel, plot.tokens = TRUE, pch.tokens = vow
     cex.means = 4, var.col.by = unicodevowel, pretty = TRUE))
 ```
 
-> Las vocales del indonesio visualizados con el paquete [phonR](http://drammock.github.io/phonR/).
+> Las vocales del indonesio visualizados con el paquete [phonR](http://drammock.github.io/phonR/) McCloy(2016)
 
 </center>
 
@@ -127,7 +127,8 @@ with(indo, plotVowels(f1, f2, unicodevowel, plot.tokens = TRUE, pch.tokens = vow
 Max Carey
 
 ### Semestre:
-2018-2 (28 de enero al 6 de junio)
+2018-2 (1 de febrero al 24 de mayo)
+[¡Inscríbete!](https://goo.gl/forms/ty6TgMkmSIMpqNb82)
 
 ### Horario y lugar:
 Viernes 15:00-17:00
@@ -328,3 +329,6 @@ Este curso utilizará datacamp.com, una plataforma en línea para aprender sobre
 
 # Perfil profesiográfico:
 Licenciado en lingüística romance, experiencia profesional enseñando a programar, publicaciones y tesis que utilizaron R, Diplomado en Programación para aplicaciones web, experiencia profesional en programación para el análisis de datos
+
+# Referencias
+Daniel R. McCloy (2016). phonR: tools for phoneticians and phonologists. R package version 1.0-7. 

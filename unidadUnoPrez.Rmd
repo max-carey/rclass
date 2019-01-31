@@ -80,7 +80,7 @@ qplot(data=mtcars, mpg, disp)
 # 3. Editores de Texto (Sublime Text)
 
 ```{r, out.width = "200px", out.height="200px"}
-knitr::include_graphics("unidadUno/icons/sublime.svg")
+knitr::include_graphics("../unidadUno/icons/sublime.svg")
 ```
 
 

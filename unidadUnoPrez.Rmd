@@ -1,0 +1,80 @@
+---
+title: "Unidad 1"
+subtitle: "⚔<br/>with xaringan"
+author: "UNAM"
+date: "2019/01/02 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+class: center, middle
+
+# xaringan
+
+### /ʃæ.'riŋ.ɡæn/
+
+---
+class: inverse, center, middle
+
+# Empezemos
+
+---
+# 1. ¿Qué es el **shell** y para qué sirve?
+![](unidadUno/icons/terminal.png)
+
+--
+
+Tarea 1:</span> Descargar Git Bash (Solo para usuarios de Windows)
+
+--
+
+Tarea 2:</span> Completar curso de datacamp.com
+
+---
+# 2. Descargar R y R Studio
+```{r, out.width = "100px", echo=FALSE}
+knitr::include_graphics("https://cran.r-project.org/Rlogo.svg")
+knitr::include_graphics("https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo.png")
+```
+
+--
+
+#### Configurar tidyverse
+
+--
+
+```{r message=FALSE, warning=FALSE}
+# install.packages("tidyverse")
+library(tidyverse)
+```
+
+--
+
+#### ¿Cuáles son las columnas en mtcars?
+
+```{r}
+colnames(mtcars)
+```
+
+---
+
+#### Crea una gráfica de dispersión
+```{r}
+qplot(data=mtcars, mpg, disp)
+```

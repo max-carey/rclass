@@ -16,7 +16,7 @@ knit: (function(input_file, encoding) {
 <button type="button" class="btn btn-primary">Regresar al inicio</button>
 </a>
 
-<a href="unidadUnoPrez.html#1">
+<a href="unidadUnoPrez.html" target="_blank">
 <button type="button" class="btn btn-primary">Abrir diapositivas</button>
 </a>
 

@@ -188,7 +188,7 @@ Sigue [estas instrucciones](https://www.datacamp.com/community/tutorials/install
 # 3. Editores de Texto (Sublime Text)
 
 ```{r, out.width = "50px", out.height="50px", echo=FALSE}
-knitr::include_graphics("sublime.svg")
+knitr::include_graphics("icons/sublime.svg")
 ```
 
 Los editores de texto son como *Word* pero para códigos. Hay diferentes opciones: Sublime Text, Text Wrangler, Vim, y Nano. Estos programas hacen que proceso de la programación sea mucho menos tedioso, por ejemplo, se subrayan los patrones sintácticos (syntax highlighting) para la lengua dada (*HTML*, *Javascript*, *R*, *Python*) y te ayudan a ver los archivos de forma muy organizada.

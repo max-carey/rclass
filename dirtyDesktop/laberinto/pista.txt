@@ -1,0 +1,1 @@
+Sin regresar un nivel, muestra el contenido del archivo l.phoneme

@@ -3,31 +3,24 @@
   <head>
     <title>Unidad 1</title>
     <meta charset="utf-8">
-    <meta name="author" content="UNAM" />
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <meta name="author" content="Max Carey" />
+    <link href="libs/remark-css/robot.css" rel="stylesheet" />
+    <link href="libs/remark-css/robot-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
 # Unidad 1
-## ⚔<br/>with xaringan
-### UNAM
-### 2019/01/02 (updated: 2019-01-30)
+## R para analizar datos lingüísticos y facilitar investigaciones reproducibles
+### Max Carey
+### UNAM </br> 2019-01-31
 
 ---
 
 
 
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
-???
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
-
----
 class: center, middle
 
 # xaringan
@@ -90,12 +83,63 @@ qplot(data=mtcars, mpg, disp)
 ```
 
 ![](unidadUnoPrez_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+
+# 3. Editores de Texto (Sublime Text)
+
+
+```r
+knitr::include_graphics("unidadUno/icons/sublime.svg")
+```
+
+&lt;img src="unidadUno/icons/sublime.svg" width="200px" height="200px" /&gt;
+
+
+---
+
+# 4. *Stack Exchange* and *Stack Overflow*
+
+&lt;img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/se/se-logo.png?v=dd7153fcc7fa" width="200px" /&gt;&lt;img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a" width="200px" /&gt;
+
+---
+
+# Dirty Dekstop Project
+
+Antes de empezar, organizar bien los archivos de tu escritorio
+
+--
+
+- Navega al desktop de tu computadora: utilizandeo `cd`
+
+--
+
+- Utiliza git para clonar el archivo de esta clase:
+
+```bash
+git clone https://github.com/axme100/rclass
+```
+
+--
+
+-  Mover todos los contenidos en el arhivo `rclass/dirtyDesktop/ a al escritorio
+
+
+```bash
+mv rclass/dirtyDesktop/** .
+```
+
+--
+
+-  Organizar bien los archivos poniendo cada uno en una nueva carpeta
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"ratio": "16:9"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

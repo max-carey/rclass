@@ -1,28 +1,24 @@
 ---
 title: "Unidad 1"
-subtitle: "⚔<br/>with xaringan"
-author: "UNAM"
-date: "2019/01/02 (updated: `r Sys.Date()`)"
+subtitle: "R para analizar datos lingüísticos y facilitar investigaciones reproducibles"
+author: "Max Carey"
+date: "UNAM </br> `r Sys.Date()`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    css: ["robot", "robot-fonts"]
     nature:
+      beforeInit: "http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      ratio: "16:9"
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
-???
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
-
----
 class: center, middle
 
 # xaringan
@@ -78,3 +74,51 @@ colnames(mtcars)
 ```{r}
 qplot(data=mtcars, mpg, disp)
 ```
+
+---
+
+# 3. Editores de Texto (Sublime Text)
+
+```{r, out.width = "200px", out.height="200px"}
+knitr::include_graphics("unidadUno/icons/sublime.svg")
+```
+
+
+---
+
+# 4. *Stack Exchange* and *Stack Overflow*
+
+```{r, out.width = "200px", echo=FALSE}
+knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/se/se-logo.png?v=dd7153fcc7fa")
+knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a")
+```
+
+---
+
+# Dirty Dekstop Project
+
+Antes de empezar, organizar bien los archivos de tu escritorio
+
+--
+
+- Navega al desktop de tu computadora: utilizandeo `cd`
+
+--
+
+- Utiliza git para clonar el archivo de esta clase:
+```{r, engine = 'bash', eval = FALSE}
+git clone https://github.com/axme100/rclass
+```
+
+--
+
+-  Mover todos los contenidos en el arhivo `rclass/dirtyDesktop/ a al escritorio
+
+```{r, engine = 'bash', eval = FALSE}
+mv rclass/dirtyDesktop/** .
+```
+
+--
+
+-  Organizar bien los archivos poniendo cada uno en una nueva carpeta
+

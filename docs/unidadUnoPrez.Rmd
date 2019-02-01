@@ -6,7 +6,7 @@ date: "UNAM </br> `r Sys.Date()`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["robot", "robot-fonts"]
+    css: ["rladies", "rladies-fonts"]
     nature:
       beforeInit: "http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"
       highlightStyle: github

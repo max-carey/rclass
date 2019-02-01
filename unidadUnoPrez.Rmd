@@ -32,7 +32,13 @@ class: inverse, center, middle
 
 ---
 # 1. ¿Qué es el **shell** y para qué sirve?
-![](unidadUno/icons/terminal.png)
+```{r, out.width = "100px", echo=FALSE}
+knitr::include_graphics("https://cdn1.macworld.co.uk/cmsdata/features/3608274/Terminalicon2_thumb800.png")
+```
+
+
+
+
 
 --
 
@@ -80,7 +86,7 @@ qplot(data=mtcars, mpg, disp)
 # 3. Editores de Texto (Sublime Text)
 
 ```{r, out.width = "200px", out.height="200px"}
-knitr::include_graphics("../unidadUno/icons/sublime.svg")
+knitr::include_graphics("https://en.wikipedia.org/wiki/Sublime_Text#/media/File:Sublime_Text_3_logo.png")
 ```
 
 

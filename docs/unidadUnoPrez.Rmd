@@ -1,6 +1,6 @@
 ---
 title: "Unidad 1"
-subtitle: "R para analizar datos lingüísticos y facilitar investigaciones reproducibles"
+subtitle: "Herramientas y conceptos básicos de la informática"
 author: "Max Carey"
 date: "UNAM </br> `r Sys.Date()`"
 output:

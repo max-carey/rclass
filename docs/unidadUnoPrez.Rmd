@@ -101,6 +101,14 @@ knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img
 
 ---
 
+5. # Git y Github
+
+```{r, out.width = "200px", echo=FALSE}
+knitr::include_graphics("https://cdn-images-1.medium.com/max/800/1*qwFrTMnFkcd3U9rFKwwacw.png")
+```
+
+---
+
 # Dirty Dekstop Project
 
 Antes de empezar, organizar bien los archivos de tu escritorio
@@ -127,4 +135,6 @@ mv rclass/dirtyDesktop/** .
 --
 
 -  Organizar bien los archivos poniendo cada uno en una nueva carpeta
+
+---
 

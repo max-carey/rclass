@@ -86,7 +86,7 @@ qplot(data=mtcars, mpg, disp)
 # 3. Editores de Texto (Sublime Text)
 
 ```{r, out.width = "200px", out.height="200px"}
-knitr::include_graphics("https://en.wikipedia.org/wiki/Sublime_Text#/media/File:Sublime_Text_3_logo.png")
+knitr::include_graphics("https://cdn.dribbble.com/users/533705/screenshots/3811091/sublime-icon.png")
 ```
 
 

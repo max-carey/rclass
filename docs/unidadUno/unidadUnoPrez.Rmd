@@ -1,18 +1,23 @@
 ---
 title: "Unidad 1"
-subtitle: "R para analizar datos lingüísticos y facilitar investigaciones reproducibles"
+subtitle: "Herramientas y conceptos básicos de la informática"
 author: "Max Carey"
 date: "UNAM </br> `r Sys.Date()`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["robot", "robot-fonts"]
+    css: ["rladies", "rladies-fonts"]
     nature:
       beforeInit: "http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
       ratio: "16:9"
+knit: (function(input_file, encoding) {
+  out_dir <- '';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, '../unidadUnoPrez.html'))})
 ---
 
 ```{r setup, include=FALSE}
@@ -86,7 +91,7 @@ qplot(data=mtcars, mpg, disp)
 # 3. Editores de Texto (Sublime Text)
 
 ```{r, out.width = "200px", out.height="200px"}
-knitr::include_graphics("https://en.wikipedia.org/wiki/Sublime_Text#/media/File:Sublime_Text_3_logo.png")
+knitr::include_graphics("https://cdn.dribbble.com/users/533705/screenshots/3811091/sublime-icon.png")
 ```
 
 
@@ -97,6 +102,14 @@ knitr::include_graphics("https://en.wikipedia.org/wiki/Sublime_Text#/media/File:
 ```{r, out.width = "200px", echo=FALSE}
 knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/se/se-logo.png?v=dd7153fcc7fa")
 knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a")
+```
+
+---
+
+# 5.Git y Github
+
+```{r, out.width = "200px", echo=FALSE}
+knitr::include_graphics("https://cdn-images-1.medium.com/max/800/1*qwFrTMnFkcd3U9rFKwwacw.png")
 ```
 
 ---
@@ -127,4 +140,6 @@ mv rclass/dirtyDesktop/** .
 --
 
 -  Organizar bien los archivos poniendo cada uno en una nueva carpeta
+
+---
 

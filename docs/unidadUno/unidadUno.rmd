@@ -6,10 +6,10 @@ output:
   pdf_document: default
   word_document: default
 knit: (function(input_file, encoding) {
-  out_dir <- '../docs';
+  out_dir <- '';
   rmarkdown::render(input_file,
  encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'unidadUno.html'))})
+ output_file=file.path(dirname(input_file), out_dir, '../unidadUno.html'))})
 ---
 
 <a href="index.html">
@@ -111,7 +111,9 @@ Si te gusta la lingüística, te va a encantar la programación. Imagínate una 
 <br>
 
 # 1. ¿Qué es el **shell** y para qué sirve?
-![](./icons/terminal.png)
+```{r}
+knitr::include_graphics("https://cdn1.macworld.co.uk/cmsdata/features/3608274/Terminalicon2_thumb800.png")
+```
 
 Es una interfaz de línea de comandos que puedes usar para correr programas en tu maquina (u otra máquina disponible en internet (a través de SSH), organizar y navegar por los archivos guardados, y muchas cosas más. Es, sin duda, una de las herramientas más poderosas e importantes que puedes tener como programador (aunque admito que cuando comencé a aprender programar, no veía tanta necesidad de usarlo).
 
@@ -122,6 +124,9 @@ https://www.youtube.com/watch?time_continue=92&v=-EtN5oD8MM0
 <br>
 
 ### <span style="color:red"> Tarea 1:</span> Descargar Git Bash (Solo para usuarios de Windows)
+
+Esta página:
+https://git-scm.com/
 
 
 <label class="container">Hecho
@@ -187,8 +192,8 @@ Sigue [estas instrucciones](https://www.datacamp.com/community/tutorials/install
 
 # 3. Editores de Texto (Sublime Text)
 
-```{r, out.width = "50px", out.height="50px", echo=FALSE}
-knitr::include_graphics("icons/sublime.svg")
+```{r, out.width = "200px", out.height="200px"}
+knitr::include_graphics("https://cdn.dribbble.com/users/533705/screenshots/3811091/sublime-icon.png")
 ```
 
 Los editores de texto son como *Word* pero para códigos. Hay diferentes opciones: Sublime Text, Text Wrangler, Vim, y Nano. Estos programas hacen que proceso de la programación sea mucho menos tedioso, por ejemplo, se subrayan los patrones sintácticos (syntax highlighting) para la lengua dada (*HTML*, *Javascript*, *R*, *Python*) y te ayudan a ver los archivos de forma muy organizada.
@@ -231,3 +236,12 @@ Stack Overflow es un foro donde las personas pueden hacer y contestar preguntas 
 
 Crear una cuenta de Stack Exchange e ir al foro de [lingüística](https://linguistics.stackexchange.com/) y [español](https://spanish.stackexchange.com/). Busca una pregunta para contestar o piensa en una pregunta que podrías hacer. Sin tener mucha experiencia con la programación, estas redes son un buen punto de entrada para aumentar tu reputación en todas las redes de Stack Exchnage. Una vez que hayas adquirido 200 puntos de reputación en algún foro, automáticamente cuentas con 100 puntos al unirte a otro.
 
+# 5. Git y Git Hub
+
+```{r, out.width = "200px", echo=FALSE}
+knitr::include_graphics("https://cdn-images-1.medium.com/max/800/1*qwFrTMnFkcd3U9rFKwwacw.png")
+```
+
+
+En primer lugar, Git y Github son herramientas de control de versión. [Este blog](https://www.deustoformacion.com/blog/programacion-diseno-web/que-es-para-que-sirve-github) explica por qué es importante esta tecnología. 
+En segundo lugar, Git Hub es un lugar donde se almacena muchos programas de fuente abierto. Para una explicación de Git y Github a grandes rasgos, puede consultar [este blog]("https://kinsta.com/es/base-de-conocimiento/que-es-github/").

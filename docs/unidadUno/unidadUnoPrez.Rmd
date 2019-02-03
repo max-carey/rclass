@@ -18,6 +18,7 @@ knit: (function(input_file, encoding) {
   rmarkdown::render(input_file,
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, '../unidadUnoPrez.html'))})
+
 ---
 
 ```{r setup, include=FALSE}

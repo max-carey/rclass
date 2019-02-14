@@ -166,11 +166,11 @@ knitr::include_graphics("https://cdn.datacamp.com/main-app/assets/brand/logos/Da
 temas <- data.frame(stringsAsFactors=FALSE,
           Unidad = c(1, 2, 3, 4, 5),
           Tema = c("Herramientas y conceptos básicos de la informática",
-                 "Programación básica con R", "R Studio y El Tidyverse",
+"R Studio y El Tidyverse",  "Programación básica con R", 
                  "Estadística descriptiva e inferencial con R",
                  "Lingüística de corpus con R y otras herramientas"),
           Horas_Teóricas = c(0, 0, 0, 0, 0),
-          Horas_Prácticas = c(10, 14, 6, 20, 10)
+          Horas_Prácticas = c(10, 6, 14, 20, 10)
 )
 kable(temas) %>%
   kable_styling(bootstrap_options = c("striped", "hover"))

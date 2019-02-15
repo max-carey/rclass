@@ -170,7 +170,9 @@ ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10()
 ```{r}
 wordCloudData <- spanLexData %>%
   select(headword,rawFreq) %>%
-  mutate(rawFreq = log10(rawFreq))
+  # Selecionar las filas de 100 a n()
+  # https://stackoverflow.com/a/42238006/5420796
+  slice(100:n())
 
 wordcloud2(wordCloudData)
 

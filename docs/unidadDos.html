@@ -383,6 +383,7 @@ $(document).ready(function () {
 <li><a href="#con-str">Con <code>str()</code></a></li>
 <li><a href="#con-glimpse">Con <code>glimpse()</code></a></li>
 <li><a href="#con-view">Con <code>View()</code></a></li>
+<li><a href="#con-head">Con <code>head()</code></a></li>
 </ul></li>
 </ul>
 </div>
@@ -521,6 +522,31 @@ glimpse(spanLexData)</code></pre>
 <div id="con-view" class="section level2">
 <h2>Con <code>View()</code></h2>
 <pre class="r"><code>View(spanLexData)</code></pre>
+</div>
+<div id="con-head" class="section level2">
+<h2>Con <code>head()</code></h2>
+<pre class="r"><code>head(spanLexData)</code></pre>
+<pre><code>##   rank headword  pos                english
+## 1   48    sobre prep on top of, over, about
+## 2 2406      ola   nf           wave, billow
+## 3 1362  campaña   nf               campaign
+## 4 1207 destruir    v       to destroy, ruin
+## 5 2616 príncipe   nm                 prince
+## 6 2183  repente  adv de + repente: suddenly
+##                                                         sample range
+## 1                         dejó el papel sobre la mesa y se fue   100
+## 2                  el sonido era un poco como las olas del mar    85
+## 3 fueron expresadas en una nueva campaña de reforma ideológica    93
+## 4             el equipo militar piensa destruir a este enemigo   100
+## 5      el heredero es su hijo mayor, Carlos, príncipe de Gales    81
+## 6                               de repente nos tiramos al agua    80
+##   rawFreq oral fiction nonFiction
+## 1   35038 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 2     539 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 3    2230 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 4    1174 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 5     550 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 6     999 high    &lt;NA&gt;        low</code></pre>
 </div>
 </div>
 

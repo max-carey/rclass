@@ -139,4 +139,7 @@ glimpse(spanLexData)
 View(spanLexData)
 ```
 
-
+## Con `head()`
+```{r}
+head(spanLexData)
+```

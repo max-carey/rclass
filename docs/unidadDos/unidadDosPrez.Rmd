@@ -17,6 +17,9 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+library(tidyverse)
+library(wordcloud2)
+library(kableExtra)
 ```
 
 class: center, middle
@@ -28,7 +31,7 @@ class: center, middle
 ---
 class: inverse, center, middle
 
-# Empezemos
+# ¿Cómo cargar datos en R Studio?
 
 ---
 # ¿Cómo cargar datos en R?
@@ -47,103 +50,179 @@ spanLexData <- read.csv("~/Documents/proj/R_class/docs/unidadDos/spanLexData.csv
 spanLexData <- read.csv("spanLexData.csv")
 ```
 
-
-
---
-
-Tarea 1:</span> Descargar Git Bash (Solo para usuarios de Windows)
-
---
-
-Tarea 2:</span> Completar curso de datacamp.com
+## En *R Studio*
+- Ayuda muchísimo `import dataset`
 
 ---
-# 2. Descargar R y R Studio
-```{r, out.width = "100px", echo=FALSE}
-knitr::include_graphics("https://cran.r-project.org/Rlogo.svg")
-knitr::include_graphics("https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo.png")
-```
+
+# ¿Cómo son estos datos?
 
 --
 
-#### Configurar tidyverse
+## Con `str()`
 
 --
-
-```{r message=FALSE, warning=FALSE}
-# install.packages("tidyverse")
-library(tidyverse)
-```
-
---
-
-#### ¿Cuáles son las columnas en mtcars?
 
 ```{r}
-colnames(mtcars)
+str(spanLexData)
 ```
 
 ---
 
-#### Crea una gráfica de dispersión
+## Con `glimpse()`
+
+--
+
 ```{r}
-qplot(data=mtcars, mpg, disp)
+# library(dplyr)
+glimpse(spanLexData)
 ```
 
 ---
 
-# 3. Editores de Texto (Sublime Text)
-
-```{r, out.width = "200px", out.height="200px"}
-knitr::include_graphics("https://cdn.dribbble.com/users/533705/screenshots/3811091/sublime-icon.png")
-```
-
-
----
-
-# 4. *Stack Exchange* and *Stack Overflow*
-
-```{r, out.width = "200px", echo=FALSE}
-knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/se/se-logo.png?v=dd7153fcc7fa")
-knitr::include_graphics("https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a")
-```
-
----
-
-# 5.Git y Github
-
-```{r, out.width = "200px", echo=FALSE}
-knitr::include_graphics("https://cdn-images-1.medium.com/max/800/1*qwFrTMnFkcd3U9rFKwwacw.png")
-```
-
----
-
-# Dirty Dekstop Project
-
-Antes de empezar, organizar bien los archivos de tu escritorio
+## Con `unique()`
 
 --
 
-- Navega al desktop de tu computadora: utilizandeo `cd`
-
---
-
-- Utiliza git para clonar el archivo de esta clase:
-```{r, engine = 'bash', eval = FALSE}
-git clone https://github.com/axme100/rclass
+```{r}
+unique(spanLexData$pos)
 ```
-
---
-
--  Mover todos los contenidos en el arhivo `rclass/dirtyDesktop/ a al escritorio
-
-```{r, engine = 'bash', eval = FALSE}
-mv rclass/dirtyDesktop/** .
-```
-
---
-
--  Organizar bien los archivos poniendo cada uno en una nueva carpeta
 
 ---
+
+## Con `View()`
+
+--
+
+```{r}
+# View(spanLexData)
+```
+
+---
+
+## Con `head()`
+
+--
+
+```{r}
+head(spanLexData)
+```
+
+---
+
+# ¿Cómo podemos ordenar esta base de datos?
+
+--
+
+```{r}
+spanLexData <- spanLexData %>%
+  arrange(rank)
+```
+
+---
+
+class: inverse, center, middle
+
+# ¿Cómo son los datos?
+
+---
+
+## ¿Qué tan frecuente es la palabra más frecuente?
+
+--
+
+```{r fig.height=5, fig.width=8}
+ggplot(spanLexData, aes(y = rawFreq, x = rank))
+```
+
+---
+
+## ¿Qué tan frecuente es la palabra más frecuente?
+
+--
+
+```{r fig.height=5, fig.width=8}
+ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point()
+```
+
+---
+
+## ¿Qué tan frecuente es la palabra más frecuente?
+
+--
+
+```{r fig.height=5, fig.width=8}
+ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10()
+```
+
+---
+
+## ¿Qué tan frecuente es la palabra más frecuente?
+
+--
+
+```{r fig.height=5, fig.width=8}
+ggplot(spanLexData, aes(y = rawFreq, x = rank, color = pos)) + geom_point() + scale_y_log10()
+```
+
+---
+
+## Se observa el mismo patrón por cada POS?
+
+--
+
+```{r fig.height=5, fig.width=8}
+ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10() + facet_wrap(~pos)
+```
+
+---
+
+## ¿Cuál es el POS más frecuente?
+
+### Contar los datos
+```{r}
+spanLexData %>%
+  count(pos)
+```
+
+---
+
+## ¿Cuál es el POS más frecuente?
+
+### utilizar arrange para en orden descendente
+
+```{r}
+spanLexData %>%
+  count(pos) %>%
+  arrange(desc(n))
+```
+
+
+---
+
+## ¿Cuál es el POS más frecuente?
+
+Ver los resultados
+
+```{r}
+spanLexData %>%
+  count(pos) %>%
+  arrange(desc(n)) %>%
+ggplot(.,aes(y=n,x=pos)) + geom_col()
+```
+
+
+
+---
+
+### Reorganizar los factores(opcional)
+
+--
+
+```{r}
+new <- spanLexData %>%
+  count(pos) %>%
+  arrange(desc(n)) %>%
+  mutate(pos = fct_reorder(pos,desc(n)))
+```
 

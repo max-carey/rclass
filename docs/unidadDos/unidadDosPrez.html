@@ -30,7 +30,7 @@ class: center, middle
 ---
 class: inverse, center, middle
 
-# Empezemos
+# ¿Cómo cargar datos en R Studio?
 
 ---
 # ¿Cómo cargar datos en R?
@@ -51,112 +51,330 @@ spanLexData &lt;- read.csv("~/Documents/proj/R_class/docs/unidadDos/spanLexData.
 spanLexData &lt;- read.csv("spanLexData.csv")
 ```
 
-
-
---
-
-Tarea 1:&lt;/span&gt; Descargar Git Bash (Solo para usuarios de Windows)
-
---
-
-Tarea 2:&lt;/span&gt; Completar curso de datacamp.com
+## En *R Studio*
+- Ayuda muchísimo `import dataset`
 
 ---
-# 2. Descargar R y R Studio
-&lt;img src="https://cran.r-project.org/Rlogo.svg" width="100px" /&gt;&lt;img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo.png" width="100px" /&gt;
+
+# ¿Cómo son estos datos?
 
 --
 
-#### Configurar tidyverse
+## Con `str()`
 
 --
 
 
 ```r
-# install.packages("tidyverse")
-library(tidyverse)
+str(spanLexData)
 ```
 
---
+```
+## 'data.frame':	2500 obs. of  10 variables:
+##  $ rank      : int  48 2406 1362 1207 2616 2183 2307 2336 1800 1746 ...
+##  $ headword  : Factor w/ 2446 levels "a","abajo","abandonado",..: 2187 1638 325 723 1872 2016 2083 1676 109 654 ...
+##  $ pos       : Factor w/ 17 levels "adj","adv","aj",..: 15 9 9 17 11 2 1 9 9 9 ...
+##  $ english   : Factor w/ 2465 levels "(alive) fish",..: 1159 2387 216 1889 1312 411 1441 1216 80 423 ...
+##  $ sample    : Factor w/ 2499 levels "-Vi que mi posición en aquel momento era inútil",..: 413 646 1031 529 551 387 628 1596 147 1374 ...
+##  $ range     : int  100 85 93 100 81 80 79 83 91 91 ...
+##  $ rawFreq   : int  35038 539 2230 1174 550 999 1346 611 823 1334 ...
+##  $ oral      : Factor w/ 2 levels "high","low": NA NA NA NA NA 1 NA NA NA NA ...
+##  $ fiction   : Factor w/ 1 level "low": NA NA NA NA NA NA NA NA NA NA ...
+##  $ nonFiction: Factor w/ 1 level "low": NA NA NA NA NA 1 NA NA NA NA ...
+```
 
-#### ¿Cuáles son las columnas en mtcars?
+---
+
+## Con `glimpse()`
+
+--
 
 
 ```r
-colnames(mtcars)
+# library(dplyr)
+glimpse(spanLexData)
 ```
 
 ```
-##  [1] "mpg"  "cyl"  "disp" "hp"   "drat" "wt"   "qsec" "vs"   "am"   "gear"
-## [11] "carb"
+## Observations: 2,500
+## Variables: 10
+## $ rank       &lt;int&gt; 48, 2406, 1362, 1207, 2616, 2183, 2307, 2336, 1800,...
+## $ headword   &lt;fct&gt; sobre, ola, campaña, destruir, príncipe, repente, r...
+## $ pos        &lt;fct&gt; prep, nf, nf, v, nm, adv, adj, nf, nf, nf, nm, num,...
+## $ english    &lt;fct&gt; on top of, over, about, wave, billow, campaign, to ...
+## $ sample     &lt;fct&gt; dejó el papel sobre la mesa y se fue, el sonido era...
+## $ range      &lt;int&gt; 100, 85, 93, 100, 81, 80, 79, 83, 91, 91, 82, 89, 8...
+## $ rawFreq    &lt;int&gt; 35038, 539, 2230, 1174, 550, 999, 1346, 611, 823, 1...
+## $ oral       &lt;fct&gt; NA, NA, NA, NA, NA, high, NA, NA, NA, NA, NA, high,...
+## $ fiction    &lt;fct&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,...
+## $ nonFiction &lt;fct&gt; NA, NA, NA, NA, NA, low, NA, NA, NA, NA, NA, NA, NA...
 ```
 
 ---
 
-#### Crea una gráfica de dispersión
+## Con `unique()`
+
+--
+
 
 ```r
-qplot(data=mtcars, mpg, disp)
+unique(spanLexData$pos)
 ```
 
-![](unidadDosPrez_files/figure-html/unnamed-chunk-63-1.png)&lt;!-- --&gt;
+```
+##  [1] prep    nf      v       nm      adv     adj     num     nm/f   
+##  [9] pron    nc      nmf     conj    nf (el) aj      interj  n      
+## [17] art    
+## 17 Levels: adj adv aj art conj interj n nc nf nf (el) nm nm/f nmf ... v
+```
 
 ---
 
-# 3. Editores de Texto (Sublime Text)
+## Con `View()`
+
+--
 
 
 ```r
-knitr::include_graphics("https://cdn.dribbble.com/users/533705/screenshots/3811091/sublime-icon.png")
+# View(spanLexData)
 ```
 
-&lt;img src="https://cdn.dribbble.com/users/533705/screenshots/3811091/sublime-icon.png" width="200px" height="200px" /&gt;
-
-
 ---
 
-# 4. *Stack Exchange* and *Stack Overflow*
-
-&lt;img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/se/se-logo.png?v=dd7153fcc7fa" width="200px" /&gt;&lt;img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-logo.png?v=9c558ec15d8a" width="200px" /&gt;
-
----
-
-# 5.Git y Github
-
-&lt;img src="https://cdn-images-1.medium.com/max/800/1*qwFrTMnFkcd3U9rFKwwacw.png" width="200px" /&gt;
-
----
-
-# Dirty Dekstop Project
-
-Antes de empezar, organizar bien los archivos de tu escritorio
+## Con `head()`
 
 --
 
-- Navega al desktop de tu computadora: utilizandeo `cd`
 
---
-
-- Utiliza git para clonar el archivo de esta clase:
-
-```bash
-git clone https://github.com/axme100/rclass
+```r
+head(spanLexData)
 ```
 
---
-
--  Mover todos los contenidos en el arhivo `rclass/dirtyDesktop/ a al escritorio
-
-
-```bash
-mv rclass/dirtyDesktop/** .
+```
+##   rank headword  pos                english
+## 1   48    sobre prep on top of, over, about
+## 2 2406      ola   nf           wave, billow
+## 3 1362  campaña   nf               campaign
+## 4 1207 destruir    v       to destroy, ruin
+## 5 2616 príncipe   nm                 prince
+## 6 2183  repente  adv de + repente: suddenly
+##                                                         sample range
+## 1                         dejó el papel sobre la mesa y se fue   100
+## 2                  el sonido era un poco como las olas del mar    85
+## 3 fueron expresadas en una nueva campaña de reforma ideológica    93
+## 4             el equipo militar piensa destruir a este enemigo   100
+## 5      el heredero es su hijo mayor, Carlos, príncipe de Gales    81
+## 6                               de repente nos tiramos al agua    80
+##   rawFreq oral fiction nonFiction
+## 1   35038 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 2     539 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 3    2230 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 4    1174 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 5     550 &lt;NA&gt;    &lt;NA&gt;       &lt;NA&gt;
+## 6     999 high    &lt;NA&gt;        low
 ```
 
+---
+
+# ¿Cómo podemos ordenar esta base de datos?
+
 --
 
--  Organizar bien los archivos poniendo cada uno en una nueva carpeta
+
+```r
+spanLexData &lt;- spanLexData %&gt;%
+  arrange(rank)
+```
 
 ---
+
+class: inverse, center, middle
+
+# ¿Cómo son los datos?
+
+---
+
+## ¿Qué tan frecuente es la palabra más frecuente?
+
+--
+
+
+```r
+ggplot(spanLexData, aes(y = rawFreq, x = rank))
+```
+
+![](unidadDosPrez_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+
+---
+
+## ¿Qué tan frecuente es la palabra más frecuente?
+
+--
+
+
+```r
+ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point()
+```
+
+```
+## Warning: Removed 1 rows containing missing values (geom_point).
+```
+
+![](unidadDosPrez_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+
+---
+
+## ¿Qué tan frecuente es la palabra más frecuente?
+
+--
+
+
+```r
+ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10()
+```
+
+```
+## Warning: Removed 1 rows containing missing values (geom_point).
+```
+
+![](unidadDosPrez_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+
+---
+
+## ¿Qué tan frecuente es la palabra más frecuente?
+
+--
+
+
+```r
+ggplot(spanLexData, aes(y = rawFreq, x = rank, color = pos)) + geom_point() + scale_y_log10()
+```
+
+```
+## Warning: Removed 1 rows containing missing values (geom_point).
+```
+
+![](unidadDosPrez_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+
+---
+
+## Se observa el mismo patrón por cada POS?
+
+--
+
+
+```r
+ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10() + facet_wrap(~pos)
+```
+
+```
+## Warning: Removed 1 rows containing missing values (geom_point).
+```
+
+![](unidadDosPrez_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
+
+---
+
+## ¿Cuál es el POS más frecuente?
+
+### Contar los datos
+
+```r
+spanLexData %&gt;%
+  count(pos)
+```
+
+```
+## # A tibble: 17 x 2
+##    pos         n
+##    &lt;fct&gt;   &lt;int&gt;
+##  1 adj       492
+##  2 adv       117
+##  3 aj          2
+##  4 art         3
+##  5 conj       12
+##  6 interj      2
+##  7 n           1
+##  8 nc         18
+##  9 nf        576
+## 10 nf (el)     6
+## 11 nm        570
+## 12 nm/f       19
+## 13 nmf        10
+## 14 num        27
+## 15 prep       18
+## 16 pron       33
+## 17 v         594
+```
+
+---
+
+## ¿Cuál es el POS más frecuente?
+
+### utilizar arrange para en orden descendente
+
+
+```r
+spanLexData %&gt;%
+  count(pos) %&gt;%
+  arrange(desc(n))
+```
+
+```
+## # A tibble: 17 x 2
+##    pos         n
+##    &lt;fct&gt;   &lt;int&gt;
+##  1 v         594
+##  2 nf        576
+##  3 nm        570
+##  4 adj       492
+##  5 adv       117
+##  6 pron       33
+##  7 num        27
+##  8 nm/f       19
+##  9 nc         18
+## 10 prep       18
+## 11 conj       12
+## 12 nmf        10
+## 13 nf (el)     6
+## 14 art         3
+## 15 aj          2
+## 16 interj      2
+## 17 n           1
+```
+
+
+---
+
+## ¿Cuál es el POS más frecuente?
+
+Ver los resultados
+
+
+```r
+spanLexData %&gt;%
+  count(pos) %&gt;%
+  arrange(desc(n)) %&gt;%
+ggplot(.,aes(y=n,x=pos)) + geom_col()
+```
+
+![](unidadDosPrez_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+
+
+
+---
+
+### Reorganizar los factores(opcional)
+
+--
+
+
+```r
+new &lt;- spanLexData %&gt;%
+  count(pos) %&gt;%
+  arrange(desc(n)) %&gt;%
+  mutate(pos = fct_reorder(pos,desc(n)))
+```
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"></script>

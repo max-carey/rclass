@@ -149,7 +149,18 @@ head(spanLexData)
 unique(spanLexData$pos)
 ```
 
+# ¿Cómo podemos ordenar esta base de datos?
+```{r}
+spanLexData <- spanLexData %>%
+  arrange(rank)
+```
+
 # ¿Qué tan frecuente es la palabra más frecuente?
 ```{r}
 ggplot(spanLexData, aes(y = rawFreq, x = rank, color = pos)) + geom_point() + scale_y_log10()
+```
+
+# Se observa el mismo patrón por cada POS?
+```{r}
+ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10() + facet_wrap(~pos)
 ```

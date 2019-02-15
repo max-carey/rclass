@@ -29,6 +29,39 @@ class: center, middle
 ### /ʃæ.'riŋ.ɡæn/
 
 ---
+
+- Vamos a utilizar datos lexicográficos (y unos datos de mi tesis)
+
+```{r, out.width = "50px", echo=FALSE}
+knitr::include_graphics("https://wordery.com/jackets/e7071a1a/m/a-frequency-dictionary-of-spanish-mark-davies-9780415334297.jpg")
+```
+
+--
+
+- Utiliza git para clonar el archivo de esta clase:
+```{r, engine = 'bash', eval = FALSE}
+git clone https://github.com/axme100/rclass
+```
+
+--
+
+- Utiliza shell para sacar la carpeta `starterPack`
+```{r, engine = 'bash', eval = FALSE}
+git clone https://github.com/axme100/rclass
+```
+
+--
+
+- Borrar rclass `starterPack`
+```{r, engine = 'bash', eval = FALSE}
+rm -r rclass/
+```
+
+--
+
+- Haz click en `myScript.R`
+
+---
 class: inverse, center, middle
 
 # ¿Cómo cargar datos en R Studio?

@@ -1,5 +1,5 @@
 ---
-title: "Unidad 1: Herramientas y conceptos básicos de la informática"
+title: "Unidad 2: R Studio y El Tidyverse"
 output:
   html_document:
     toc: true
@@ -9,7 +9,7 @@ knit: (function(input_file, encoding) {
   out_dir <- '';
   rmarkdown::render(input_file,
  encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, '../unidadUno.html'))})
+ output_file=file.path(dirname(input_file), out_dir, '../unidadDos.html'))})
 ---
 
 <a href="index.html">
@@ -104,9 +104,21 @@ knit: (function(input_file, encoding) {
 
 # Introducción
 
-```{r}
+## ¿Cómo cargar datos en R?
 
+### Con *Absolute Path*
+```{r}
+spanLexData <- read.csv("~/Documents/proj/R_class/docs/unidadDos/spanLexData.csv")
 ```
 
+### Con *Relative Path*
+```{r}
+spanLexData <- read.csv("spanLexData.csv")
+```
+
+
+
+
+## Arrange
 
 

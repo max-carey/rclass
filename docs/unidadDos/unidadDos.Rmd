@@ -169,9 +169,8 @@ ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10()
 # ¿Como hacer un WordCloud?
 ```{r}
 wordCloudData <- spanLexData %>%
-  select(headword,rawFreq)
-
-# library(wordcloud2)
+  select(headword,rawFreq) %>%
+  mutate(rawFreq = log10(rawFreq))
 
 wordcloud2(wordCloudData)
 

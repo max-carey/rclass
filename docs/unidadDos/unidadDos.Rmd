@@ -102,23 +102,26 @@ knit: (function(input_file, encoding) {
    });
 </script>
 
-# Introducción
+# ¿Cómo cargar datos en R?
 
-## ¿Cómo cargar datos en R?
-
-### Con *Absolute Path*
+## Con *Absolute Path*
 ```{r}
 spanLexData <- read.csv("~/Documents/proj/R_class/docs/unidadDos/spanLexData.csv")
 ```
 
-### Con *Relative Path*
+## Con *Relative Path*
 ```{r}
 spanLexData <- read.csv("spanLexData.csv")
 ```
 
+## En *R Studio*
 
+# ¿Cómo son estos datos?
 
-
-## Arrange
+```{r}
+library(dplyr)
+glimpse(spanLexData)
+# str(spanLexData)
+```
 
 

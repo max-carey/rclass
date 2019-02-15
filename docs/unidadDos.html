@@ -374,13 +374,12 @@ $(document).ready(function () {
 
 <div id="TOC">
 <ul>
-<li><a href="#introduccion">Introducción</a><ul>
 <li><a href="#como-cargar-datos-en-r">¿Cómo cargar datos en R?</a><ul>
 <li><a href="#con-absolute-path">Con <em>Absolute Path</em></a></li>
 <li><a href="#con-relative-path">Con <em>Relative Path</em></a></li>
+<li><a href="#en-r-studio">En <em>R Studio</em></a></li>
 </ul></li>
-<li><a href="#arrange">Arrange</a></li>
-</ul></li>
+<li><a href="#como-son-estos-datos">¿Cómo son estos datos?</a></li>
 </ul>
 </div>
 
@@ -464,22 +463,45 @@ $(document).ready(function () {
      $head.prepend('<img src=\"http://www.posgrado.unam.mx/linguistica/img/cabecera.png\" style=\"float: right;\"/>')
    });
 </script>
-<div id="introduccion" class="section level1">
-<h1>Introducción</h1>
-<div id="como-cargar-datos-en-r" class="section level2">
-<h2>¿Cómo cargar datos en R?</h2>
-<div id="con-absolute-path" class="section level3">
-<h3>Con <em>Absolute Path</em></h3>
+<div id="como-cargar-datos-en-r" class="section level1">
+<h1>¿Cómo cargar datos en R?</h1>
+<div id="con-absolute-path" class="section level2">
+<h2>Con <em>Absolute Path</em></h2>
 <pre class="r"><code>spanLexData &lt;- read.csv(&quot;~/Documents/proj/R_class/docs/unidadDos/spanLexData.csv&quot;)</code></pre>
 </div>
-<div id="con-relative-path" class="section level3">
-<h3>Con <em>Relative Path</em></h3>
+<div id="con-relative-path" class="section level2">
+<h2>Con <em>Relative Path</em></h2>
 <pre class="r"><code>spanLexData &lt;- read.csv(&quot;spanLexData.csv&quot;)</code></pre>
 </div>
+<div id="en-r-studio" class="section level2">
+<h2>En <em>R Studio</em></h2>
 </div>
-<div id="arrange" class="section level2">
-<h2>Arrange</h2>
 </div>
+<div id="como-son-estos-datos" class="section level1">
+<h1>¿Cómo son estos datos?</h1>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>glimpse(spanLexData)</code></pre>
+<pre><code>## Observations: 2,500
+## Variables: 10
+## $ rank       &lt;int&gt; 48, 2406, 1362, 1207, 2616, 2183, 2307, 2336, 1800,...
+## $ headword   &lt;fct&gt; sobre, ola, campaña, destruir, príncipe, repente, r...
+## $ pos        &lt;fct&gt; prep, nf, nf, v, nm, adv, adj, nf, nf, nf, nm, num,...
+## $ english    &lt;fct&gt; on top of, over, about, wave, billow, campaign, to ...
+## $ sample     &lt;fct&gt; dejó el papel sobre la mesa y se fue, el sonido era...
+## $ range      &lt;int&gt; 100, 85, 93, 100, 81, 80, 79, 83, 91, 91, 82, 89, 8...
+## $ rawFreq    &lt;int&gt; 35038, 539, 2230, 1174, 550, 999, 1346, 611, 823, 1...
+## $ oral       &lt;fct&gt; NA, NA, NA, NA, NA, high, NA, NA, NA, NA, NA, high,...
+## $ fiction    &lt;fct&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,...
+## $ nonFiction &lt;fct&gt; NA, NA, NA, NA, NA, low, NA, NA, NA, NA, NA, NA, NA...</code></pre>
+<pre class="r"><code># str(spanLexData)</code></pre>
 </div>
 
 

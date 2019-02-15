@@ -128,10 +128,15 @@ spanLexData <- read.csv("spanLexData.csv")
 str(spanLexData)
 ```
 
-## Con glimpse()
+## Con `glimpse()`
 ```{r}
 # library(dplyr)
 glimpse(spanLexData)
+```
+
+## Con `View()`
+```{r}
+View(spanLexData)
 ```
 
 

@@ -381,7 +381,8 @@ $(document).ready(function () {
 </ul></li>
 <li><a href="#como-son-estos-datos">¿Cómo son estos datos?</a><ul>
 <li><a href="#con-str">Con <code>str()</code></a></li>
-<li><a href="#con-glimpse">Con glimpse()</a></li>
+<li><a href="#con-glimpse">Con <code>glimpse()</code></a></li>
+<li><a href="#con-view">Con <code>View()</code></a></li>
 </ul></li>
 </ul>
 </div>
@@ -501,7 +502,7 @@ $(document).ready(function () {
 ##  $ nonFiction: Factor w/ 1 level &quot;low&quot;: NA NA NA NA NA 1 NA NA NA NA ...</code></pre>
 </div>
 <div id="con-glimpse" class="section level2">
-<h2>Con glimpse()</h2>
+<h2>Con <code>glimpse()</code></h2>
 <pre class="r"><code># library(dplyr)
 glimpse(spanLexData)</code></pre>
 <pre><code>## Observations: 2,500
@@ -516,6 +517,10 @@ glimpse(spanLexData)</code></pre>
 ## $ oral       &lt;fct&gt; NA, NA, NA, NA, NA, high, NA, NA, NA, NA, NA, high,...
 ## $ fiction    &lt;fct&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,...
 ## $ nonFiction &lt;fct&gt; NA, NA, NA, NA, NA, low, NA, NA, NA, NA, NA, NA, NA...</code></pre>
+</div>
+<div id="con-view" class="section level2">
+<h2>Con <code>View()</code></h2>
+<pre class="r"><code>View(spanLexData)</code></pre>
 </div>
 </div>
 

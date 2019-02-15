@@ -102,6 +102,10 @@ knit: (function(input_file, encoding) {
    });
 </script>
 
+```{r include=FALSE}
+library(tidyverse)
+```
+
 # ¿Cómo cargar datos en R?
 
 ## Con *Absolute Path*
@@ -119,9 +123,9 @@ spanLexData <- read.csv("spanLexData.csv")
 # ¿Cómo son estos datos?
 
 ```{r}
-library(dplyr)
+str(spanLexData)
+# library(dplyr)
 glimpse(spanLexData)
-# str(spanLexData)
 ```
 
 

@@ -167,14 +167,6 @@ ggplot(spanLexData, aes(y = rawFreq, x = rank, color = pos)) + geom_point() + sc
 ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10() + facet_wrap(~pos)
 ```
 
-# ¿Cuál es el POS más frecuente?
-```{r}
-new <- spanLexData %>%
-  count(pos) %>%
-  arrange(desc(n)) %>%
-  mutate(pos = fct_reorder(pos,desc(n)))
-  
-ggplot(new, aes(y=n,x=pos)) + geom_col()
 ```
 
 # ¿Como obtener una base que solo contine las palabras con una representación sesgada en la parte oral del corpus?

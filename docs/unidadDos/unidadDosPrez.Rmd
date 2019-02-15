@@ -204,7 +204,7 @@ spanLexData %>%
 
 Ver los resultados
 
-```{r}
+```{r fig.height=5, fig.width=8}
 spanLexData %>%
   count(pos) %>%
   arrange(desc(n)) %>%
@@ -219,10 +219,84 @@ ggplot(.,aes(y=n,x=pos)) + geom_col()
 
 --
 
-```{r}
-new <- spanLexData %>%
+```{r fig.height=5, fig.width=8}
+spanLexData %>%
   count(pos) %>%
   arrange(desc(n)) %>%
-  mutate(pos = fct_reorder(pos,desc(n)))
+  mutate(pos = fct_reorder(pos,desc(n))) %>%
+ggplot(., aes(y=n,x=pos)) + geom_col()
+
 ```
 
+---
+
+## ¿Como obtener una base que solo contine las palabras con una representación sesgada en la parte oral del corpus?
+
+--
+
+```{r}
+# library(kableExtra)
+spanLexDataOral <- spanLexData %>%
+  filter(oral=="high")
+```
+
+---
+
+## Confirmar resultados
+```{r}
+unique(spanLexDataOral$oral)
+```
+
+-??????????
+
+-Son los niveles de los factores
+
+--
+
+## Confirmar de otra manera
+
+```{r}
+spanLexDataOral %>%
+  count(oral)
+```
+
+
+---
+
+class: inverse, center, middle
+
+# Boxplots
+
+---
+
+## Cargar los datos de mi tesis
+
+--
+
+```{r}
+maxTesis <- read.csv("maxTesis.csv")
+```
+
+---
+
+## ¿Que grupo dialectal tiene realizaciones de la /d/ intervocálica más debilitadas?
+
+--
+
+```{r fig.height=5, fig.width=8}
+ggplot(maxTesis, aes(y=intensityDif, x = grupo)) + geom_boxplot()
+```
+
+---
+
+# ¿Como hacer un WordCloud?
+```{r}
+wordCloudData <- spanLexData %>%
+  select(headword,rawFreq) %>%
+  # Selecionar las filas de 100 a n()
+  # https://stackoverflow.com/a/42238006/5420796
+  slice(100:n())
+
+wordcloud2(wordCloudData)
+```
+---

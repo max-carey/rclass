@@ -191,7 +191,7 @@ kable(temas) %>%
 ### **Unidad 2**
 
 <a href="unidadDos.html">
-<button type="button" class="btn btn-primary">Ir a la unidad
+<button type="button" class="btn btn-success">Ir a la unidad
 </button>
 </a>
 

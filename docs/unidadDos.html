@@ -379,7 +379,10 @@ $(document).ready(function () {
 <li><a href="#con-relative-path">Con <em>Relative Path</em></a></li>
 <li><a href="#en-r-studio">En <em>R Studio</em></a></li>
 </ul></li>
-<li><a href="#como-son-estos-datos">¿Cómo son estos datos?</a></li>
+<li><a href="#como-son-estos-datos">¿Cómo son estos datos?</a><ul>
+<li><a href="#con-str">Con <code>str()</code></a></li>
+<li><a href="#con-glimpse">Con glimpse()</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -475,10 +478,15 @@ $(document).ready(function () {
 </div>
 <div id="en-r-studio" class="section level2">
 <h2>En <em>R Studio</em></h2>
+<ul>
+<li>Ayuda muchísimo <code>import dataset</code></li>
+</ul>
 </div>
 </div>
 <div id="como-son-estos-datos" class="section level1">
 <h1>¿Cómo son estos datos?</h1>
+<div id="con-str" class="section level2">
+<h2>Con <code>str()</code></h2>
 <pre class="r"><code>str(spanLexData)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    2500 obs. of  10 variables:
 ##  $ rank      : int  48 2406 1362 1207 2616 2183 2307 2336 1800 1746 ...
@@ -491,6 +499,9 @@ $(document).ready(function () {
 ##  $ oral      : Factor w/ 2 levels &quot;high&quot;,&quot;low&quot;: NA NA NA NA NA 1 NA NA NA NA ...
 ##  $ fiction   : Factor w/ 1 level &quot;low&quot;: NA NA NA NA NA NA NA NA NA NA ...
 ##  $ nonFiction: Factor w/ 1 level &quot;low&quot;: NA NA NA NA NA 1 NA NA NA NA ...</code></pre>
+</div>
+<div id="con-glimpse" class="section level2">
+<h2>Con glimpse()</h2>
 <pre class="r"><code># library(dplyr)
 glimpse(spanLexData)</code></pre>
 <pre><code>## Observations: 2,500
@@ -505,6 +516,7 @@ glimpse(spanLexData)</code></pre>
 ## $ oral       &lt;fct&gt; NA, NA, NA, NA, NA, high, NA, NA, NA, NA, NA, high,...
 ## $ fiction    &lt;fct&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,...
 ## $ nonFiction &lt;fct&gt; NA, NA, NA, NA, NA, low, NA, NA, NA, NA, NA, NA, NA...</code></pre>
+</div>
 </div>
 
 

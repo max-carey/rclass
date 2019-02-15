@@ -119,11 +119,17 @@ spanLexData <- read.csv("spanLexData.csv")
 ```
 
 ## En *R Studio*
+- Ayuda muchísimo `import dataset`
 
 # ¿Cómo son estos datos?
 
+## Con `str()`
 ```{r}
 str(spanLexData)
+```
+
+## Con glimpse()
+```{r}
 # library(dplyr)
 glimpse(spanLexData)
 ```

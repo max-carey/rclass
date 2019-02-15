@@ -104,6 +104,7 @@ knit: (function(input_file, encoding) {
 
 ```{r include=FALSE}
 library(tidyverse)
+library(wordcloud2)
 ```
 
 # ¿Cómo cargar datos en R?
@@ -163,4 +164,15 @@ ggplot(spanLexData, aes(y = rawFreq, x = rank, color = pos)) + geom_point() + sc
 # Se observa el mismo patrón por cada POS?
 ```{r}
 ggplot(spanLexData, aes(y = rawFreq, x = rank)) + geom_point() + scale_y_log10() + facet_wrap(~pos)
+```
+
+# ¿Como hacer un WordCloud?
+```{r}
+wordCloudData <- spanLexData %>%
+  select(headword,rawFreq)
+
+# library(wordcloud2)
+
+wordcloud2(wordCloudData)
+
 ```

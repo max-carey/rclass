@@ -143,3 +143,13 @@ View(spanLexData)
 ```{r}
 head(spanLexData)
 ```
+
+## Con `unique()`
+```{r}
+unique(spanLexData$pos)
+```
+
+# ¿Qué tan frecuente es la palabra más frecuente?
+```{r}
+ggplot(spanLexData, aes(y = rawFreq, x = rank, color = pos)) + geom_point() + scale_y_log10()
+```

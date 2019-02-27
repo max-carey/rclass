@@ -109,6 +109,9 @@ library(kableExtra)
 ```
 
 # ¿Cómo cargar datos en R?
+Los primeros datos linguüísticos que vamos a cargar vienen de un diccionario de frecuencia llamado [*A Frequency Dictionary of Spanish: Core Vocabulary for Learners (Routledge Frequency Dictionaries)*](https://www.amazon.com/Frequency-Dictionary-Spanish-Vocabulary-Dictionaries/dp/0415334292). El diccionario está pensado en los aprendices del español.
+
+
 
 ## Con *Absolute Path*
 ```{r}
@@ -186,18 +189,17 @@ spanLexDataOral <- spanLexData %>%
   kable()
 ```
 
-# Boxplots
+# Otro tipo de datos lexicográficos, ahora en excel
 
-## Cargar los datos de mi tesis
-```{r}
-maxTesis <- read.csv("maxTesis.csv")
+Los datos con los que vamos a trabjar hoy vienen del <a href="http://www.englishprofile.org/">English Grammar Profile</a>, un recurso que permite a los profesores de inglés como lengua extranjera identificar cuáles son las habilidades gramaticales que los alumnos tienen según <a href="https://es.wikipedia.org/wiki/Marco_Com%C3%BAn_Europeo_de_Referencia_para_las_lenguas" target=blank>el Marco Común Europeo de Referencia para las lenguas</a>.
+
+Al final de las actividades, vamos a crear una gráfica como la de abajo que nos muestra un conteo de las diferentes habilidades gramaticales que un alumno posee con respeto al pasado en inglés según el nivel del marco.
+```{r include=FALSE}
+library(readxl)
+source("getCEFRgraph.R")
+createCEFRgraph("PAST")
 ```
 
-## ¿Que grupo dialectal tiene realizaciones de la /d/ intervocálica más debilitadas?
-
-```{r}
-ggplot(maxTesis, aes(y=intensityDif, x = grupo)) + geom_boxplot()
-```
 
 # ¿Como hacer un WordCloud?
 ```{r}
@@ -208,5 +210,4 @@ wordCloudData <- spanLexData %>%
   slice(100:n())
 
 wordcloud2(wordCloudData)
-
 ```

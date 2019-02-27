@@ -194,7 +194,7 @@ spanLexDataOral <- spanLexData %>%
 Los datos con los que vamos a trabjar hoy vienen del <a href="http://www.englishprofile.org/">English Grammar Profile</a>, un recurso que permite a los profesores de inglés como lengua extranjera identificar cuáles son las habilidades gramaticales que los alumnos tienen según <a href="https://es.wikipedia.org/wiki/Marco_Com%C3%BAn_Europeo_de_Referencia_para_las_lenguas" target=blank>el Marco Común Europeo de Referencia para las lenguas</a>.
 
 Al final de las actividades, vamos a crear una gráfica como la de abajo que nos muestra un conteo de las diferentes habilidades gramaticales que un alumno posee con respeto al pasado en inglés según el nivel del marco.
-```{r include=FALSE}
+```{r echo=FALSE}
 library(readxl)
 source("getCEFRgraph.R")
 createCEFRgraph("PAST")

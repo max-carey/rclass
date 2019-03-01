@@ -20,6 +20,7 @@ options(htmltools.dir.version = FALSE)
 library(tidyverse)
 library(wordcloud2)
 library(kableExtra)
+library(readxl)
 ```
 
 class: center, middle
@@ -30,9 +31,9 @@ class: center, middle
 
 ---
 
-- Vamos a utilizar datos lexicográficos (y unos datos de mi tesis)
+- Vamos a utilizar algunos datos lexicográficos (*A Frequency Dictionary of Spanish* y *English Grammar Profile*) y unos datos sociofonéticos para practicar el uso del *tidyverse*
 
-```{r, out.width = "50px", echo=FALSE}
+```{r, out.width = "100px", echo=FALSE}
 knitr::include_graphics("https://wordery.com/jackets/e7071a1a/m/a-frequency-dictionary-of-spanish-mark-davies-9780415334297.jpg")
 ```
 
@@ -73,7 +74,7 @@ class: inverse, center, middle
 
 ## Con *Absolute Path*
 ```{r}
-spanLexData <- read.csv("~/Documents/proj/R_class/docs/unidadDos/spanLexData.csv")
+spanLexData <- read.csv("spanLexData.csv")
 ```
 
 --
@@ -222,7 +223,7 @@ spanLexData %>%
 
 ## ¿Cuál es el POS más frecuente?
 
-### utilizar arrange para en orden descendente
+### utilizar arrange para ponder en un orden descendente
 
 ```{r}
 spanLexData %>%
@@ -258,67 +259,163 @@ spanLexData %>%
   arrange(desc(n)) %>%
   mutate(pos = fct_reorder(pos,desc(n))) %>%
 ggplot(., aes(y=n,x=pos)) + geom_col()
-
 ```
-
----
-
-## ¿Como obtener una base que solo contine las palabras con una representación sesgada en la parte oral del corpus?
-
---
-
-```{r}
-# library(kableExtra)
-spanLexDataOral <- spanLexData %>%
-  filter(oral=="high")
-```
-
----
-
-## Confirmar resultados
-```{r}
-unique(spanLexDataOral$oral)
-```
-
--??????????
-
--Son los niveles de los factores
-
---
-
-## Confirmar de otra manera
-
-```{r}
-spanLexDataOral %>%
-  count(oral)
-```
-
 
 ---
 
 class: inverse, center, middle
 
-# Boxplots
+# Boxplots con unos datos de mi tesis
 
 ---
 
-## Cargar los datos de mi tesis
+## Cargar y inspecionar unos datos de mi tesis
+
+
+--
+```{r}
+maxTesis <- read.csv("maxTesis.csv")
+glimpse(maxTesis)
+```
+
+--
+
+---
+
+1. intensityDif es un índice de debilitamiento de la /d/ intervocálica. Los valores más cercanos a 1 son más debilitadas.
+
+2. Con Boxplots, queremos ver ¿cuál de los tres grupos dialectales debilita más?
+
+---
+
+```{r}
+ggplot(maxTesis, aes(x=grupo, y=intensityDif)) + geom_boxplot()
+```
+
+---
+
+# ¿Cómo podemos ver la siguiente
+
+```{r echo=FALSE}
+ggplot(maxTesis, aes(x=grupo, y=intensityDif,fill=sexo)) + geom_boxplot()
+```
+
+
+---
+
+```{r}
+ggplot(maxTesis, aes(x=grupo, y=intensityDif,fill=sexo)) + geom_boxplot()
+```
+
+¿Cuál grupo dialectal tiene realizaciones de la /d/ más debilitadas?
+
+---
+
+class: inverse, center, middle
+
+# *Stacked Bar Graphs* con datos del *English Grammar Profile*
+
+---
+
+# *English Grammar Profile*
+
+### 1. Diccionario de las habilidades gramaticales según el Marco Común Europeo de Referencia para las lenguas
+
+--
+
+### 2. Cargar los datos
 
 --
 
 ```{r}
-maxTesis <- read.csv("maxTesis.csv")
+engGrPr <- read_excel("a1-c2.xlsx")
+```
+
+--
+
+### 3. Inspeccionar los datos. (La definición de las variables se encuentra <a href="http://www.englishprofile.org/english-grammar-profile/glossary"> aquí </a>)
+
+--
+
+### 4. Vamos a hacer un *Stacked Bar Graph*
+
+---
+
+```{r echo=FALSE, fig.height=8}
+
+engGrPr %>%
+    filter(SuperCategory == "PAST") %>%
+    ggplot(aes(x=SubCategory, fill=Level)) +
+    geom_bar(position = position_stack(reverse = TRUE)) +
+    coord_flip() +
+    theme(legend.position = "top") +
+    ggtitle("PAST BY CEFR LEVEL")
+```
+
+---
+# English Grammar Profile
+
+### Hay que filtrar por las categorías que solo tienen la *SuperCategory* *PAST*
+```{r}
+engGrPr %>%
+    filter(SuperCategory == "PAST")
 ```
 
 ---
 
-## ¿Que grupo dialectal tiene realizaciones de la /d/ intervocálica más debilitadas?
-
---
-
-```{r fig.height=5, fig.width=8}
-ggplot(maxTesis, aes(y=intensityDif, x = grupo)) + geom_boxplot()
+### Mapear los datos que queremos usar a la función
+```{r}
+engGrPr %>%
+    filter(SuperCategory == "PAST") %>%
+    ggplot(aes(x=SubCategory, fill=Level))
 ```
+
+---
+
+### Agregar el tipo de vis. que queremos
+```{r fig.height=5}
+engGrPr %>%
+    filter(SuperCategory == "PAST") %>%
+    ggplot(aes(x=SubCategory, fill=Level)) +
+    geom_bar()
+```
+
+---
+
+### Voltear las barras
+```{r fig.height=5}
+engGrPr %>%
+    filter(SuperCategory == "PAST") %>%
+    ggplot(aes(x=SubCategory, fill=Level)) +
+    geom_bar(position = position_stack(reverse = TRUE))
+```
+
+---
+
+```{r}
+engGrPr %>%
+    filter(SuperCategory == "PAST") %>%
+    ggplot(aes(x=SubCategory, fill=Level)) +
+    geom_bar(position = position_stack(reverse = TRUE)) +
+    coord_flip()
+```
+
+---
+
+```{r}
+engGrPr %>%
+    filter(SuperCategory == "PAST") %>%
+    ggplot(aes(x=SubCategory, fill=Level)) +
+    geom_bar(position = position_stack(reverse = TRUE)) +
+    coord_flip() +
+    theme(legend.position = "top")
+```
+
+---
+
+class: inverse, center, middle
+
+# Word Cloud con Word Cloud 2
 
 ---
 

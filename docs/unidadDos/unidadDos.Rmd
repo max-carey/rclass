@@ -108,6 +108,10 @@ library(wordcloud2)
 library(kableExtra)
 ```
 
+# *Overview*
+En esta unidad, vamos a aplicar lo que vimos en el curso *Introduction to the Tidyverse* a dos bases de datos lexicográficos: *A Frequency Dictionar of Spanish* y *English Grammar Profile*; y unos datos sociofonéticos.
+
+
 # ¿Cómo cargar datos en R?
 Los primeros datos linguüísticos que vamos a cargar vienen de un diccionario de frecuencia llamado [*A Frequency Dictionary of Spanish: Core Vocabulary for Learners (Routledge Frequency Dictionaries)*](https://www.amazon.com/Frequency-Dictionary-Spanish-Vocabulary-Dictionaries/dp/0415334292). El diccionario está pensado en los aprendices del español.
 
@@ -115,7 +119,7 @@ Los primeros datos linguüísticos que vamos a cargar vienen de un diccionario d
 
 ## Con *Absolute Path*
 ```{r}
-spanLexData <- read.csv("~/Documents/proj/R_class/docs/unidadDos/spanLexData.csv")
+spanLexData <- read.csv("spanLexData.csv")
 ```
 
 ## Con *Relative Path*
@@ -180,14 +184,7 @@ new <- spanLexData %>%
 ggplot(new, aes(y=n,x=pos)) + geom_col()
 ```
 
-# ¿Como obtener una base que solo contine las palabras con una representación sesgada en la parte oral del corpus?
-
-```{r}
-# library(kableExtra)
-spanLexDataOral <- spanLexData %>%
-  filter(oral=="high") %>%
-  kable()
-```
+# ¿Cómo hacer un *box plot* con datos sociofonéticos?
 
 # Otro tipo de datos lexicográficos, ahora en excel
 

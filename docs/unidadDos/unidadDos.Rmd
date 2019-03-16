@@ -127,7 +127,7 @@ spanLexData <- read.csv("/Users/maxcarey/Documents/proj/rclass/docs/unidadDos/sp
 
 Acuérdate que siempre es mejor utilizar *relative paths* porque hace que tu *script* sea más transferible a otras personas. Es decir, el *path* de arriba, no funcionaría en tu maquina, pues tendrías que poner tu proio nombre. Si nuestro *script* y nuestros datos están en la misma carpeta solo tenemos que decirle a R que identifica esta carpeta como el directorio activo. En R Studio, con el *script* meta que estémos utilizando se hace: `Session` -> `Set Working Directory` -> `To Source File Location` (Ve abajo):
 
-[working_directory](set_wd.png)
+![working_directory](set_wd.png)
 
 ## Con *Relative Path*
 ```{r}

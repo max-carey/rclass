@@ -1,0 +1,1997 @@
+base,pos,gw,freq
+a,determiner,NOT PARTICULAR,A1
+a,determiner,ANY/EVERY,A1
+a,determiner,ONE,A1
+a,determiner,TYPE,A1
+a,determiner,AMOUNTS,A2
+a,determiner,AN ACTION,A2
+a,determiner,TWO NOUNS,A2
+a,determiner,UNIT,A2
+a,determiner,WITH FRACTION,A2
+a,determiner,PERIOD OF TIME,A2
+abandon,verb,LEAVE,B2
+abandon,verb,STOP DOING,C1
+abandoned,adjective,EMPTY,B2
+abandoned,adjective,LEFT SOMEWHERE,B2
+ability,noun,none,B1
+be able to do sth ,lexical_chunk,none,A2
+able,adjective,SMART,C2
+abnormal,adjective,none,C1
+aboard,adverb,none,C1
+aboard,preposition,none,C1
+abolish,verb,none,B2
+abortion,noun,none,C1
+about,preposition,SUBJECT,A1
+How/What about?,lexical_chunk,none,A2
+How/What about?,lexical_chunk,none,B1
+about,adverb,none,A1
+be about to do sth ,lexical_chunk,none,B2
+above,adverb,HIGHER POSITION,A1
+above,preposition,HIGHER POSITION,A1
+above,adverb,MORE,A2
+above,preposition,MORE,A2
+above all,lexical_chunk,none,B1
+above,adverb,TOO IMPORTANT,C2
+above,preposition,TOO IMPORTANT,C2
+above,adverb,none,B1
+above,adjective,none,B1
+abroad,adverb,none,B1
+abrupt,adjective,SUDDEN,C2
+abrupt,adjective,QUICK,C2
+abruptly,adverb,none,C2
+absence,noun,NOT PRESENT,B2
+absence,noun,NOT EXISTING,B2
+absent,adjective,none,B1
+absolute,adjective,none,B2
+absolutely,adverb,COMPLETELY,B1
+Absolutely!,lexical_chunk,none,B2
+Absolutely not.,lexical_chunk,none,C2
+absorb,verb,TAKE IN,B2
+be absorbed in sth,lexical_chunk,none,B2
+absorb,verb,REMEMBER,C1
+abstract,adjective,IDEAS,B2
+abstract,adjective,ART,B2
+absurd,adjective,none,B2
+abuse,noun,BAD TREATMENT,B2
+abuse,noun,WRONG USE,B2
+abuse,noun,WRONG ACTION,C1
+abuse,noun,LANGUAGE,C2
+abusive,adjective,none,C2
+academic,adjective,none,B2
+accelerate,verb,HAPPEN,C1
+accelerate,verb,VEHICLE,C2
+accent,noun,PRONUNCIATION,B1
+accent,noun,MARK,B2
+accept,verb,AGREE TO TAKE,B1
+accept,verb,ADMIT,B2
+accept,verb,ALLOW TO JOIN,B2
+accept responsibility/blame,lexical_chunk,none,B2
+acceptable,adjective,GOOD ENOUGH,B1
+acceptable,adjective,ALLOWED,C1
+acceptance,noun,none,C1
+accepted,adjective,none,C1
+access,noun,RIGHT/OPPORTUNITY,B1
+access,noun,METHOD,B1
+access,verb,none,B2
+accessible,adjective,none,B2
+accessible,adjective,UNDERSTAND,C2
+accessory,noun,none,C1
+accident,noun,BAD EVENT,A2
+by accident,lexical_chunk,none,B1
+accidental,adjective,none,B2
+accidentally,adverb,none,B1
+acclaimed,adjective,none,C1
+accommodations,noun,none,B2
+accompany,verb,GO WITH,B1
+accompany,verb,HAPPEN TOGETHER,B1
+accompany,verb,MUSIC,C2
+accomplish,verb,none,C1
+of your own accord,lexical_chunk,none,C2
+in accordance with sth,lexical_chunk,none,C1
+according to,preposition,OPINION,B1
+according to,preposition,METHOD,B2
+account,noun,BANK,B1
+account,noun,REPORT,B2
+take account of sth,lexical_chunk,none,B2
+take into account sth,lexical_chunk,none,B2
+on account of sth,lexical_chunk,none,B2
+by all accounts,lexical_chunk,none,C1
+account for sth ,lexical_chunk,REASON,C2
+account for sth ,lexical_chunk,FORM PART OF,C1
+accountable,adjective,none,C2
+accountant,noun,none,B1
+accumulate,verb,none,C1
+accumulation,noun,none,C2
+accuracy,noun,none,B2
+accurate,adjective,none,B2
+accurately,adverb,none,B2
+accusation,noun,none,C1
+accuse,verb,none,B2
+accustomed to sth/doing sth,lexical_chunk,none,C1
+ache,noun,none,B1
+ache,verb,none,B2
+achieve,verb,none,B1
+achievement,noun,none,B1
+acid,noun,none,B2
+acknowledge,verb,ACCEPT,C1
+acknowledge,verb,SAY RECEIVED,C1
+acquaintance,noun,none,C1
+acquire,verb,GET,B2
+acquire,verb,LEARN,B2
+acre,noun,none,C2
+across,adverb,none,A2
+across,preposition,none,A2
+across the board,lexical_chunk,none,C2
+across,preposition,none,A2
+act,verb,PERFORM,B1
+act,verb,BEHAVE,B1
+act,verb,DO SOMETHING,B2
+act as sth ,lexical_chunk,none,B2
+act,noun,THEATER,B1
+act,noun,THING DONE,B2
+act,noun,FALSE BEHAVIOR,C2
+get your act together,lexical_chunk,none,C2
+action,noun,ACTIVITY,B1
+action,noun,DO,B2
+action,noun,LEGAL PROCESS,C1
+course of action,lexical_chunk,none,C1
+action,noun,FIGHTING,C2
+action,noun,PROCESS,C2
+active,adjective,BUSY,B1
+active,adjective,GRAMMAR,B1
+active,adjective,INVOLVED,B2
+active,adjective,VOLCANO,C1
+actively,adverb,none,B2
+activity,noun,EVENT,A2
+activity,noun,WORK,B2
+activity,noun,MOVEMENT,B2
+actor,noun,none,A2
+actual,adjective,REAL,B2
+actually,adverb,TRUTH,A2
+actually,adverb,SURPRISE,B1
+actually,adverb,OPPOSITE,B2
+ad,noun,none,A1
+adapt,verb,CHANGE BEHAVIOR,B2
+adapt,verb,CHANGE SOMETHING,B2
+adaptation,noun,none,C1
+add,verb,PUT WITH,A2
+add,verb,CALCULATE,A2
+add,verb,SAY MORE,B1
+add insult to injury,lexical_chunk,none,C2
+add to sth,lexical_chunk,none,B2
+add up (sth) or add (sth) up,lexical_chunk,none,B1
+addict,noun,none,B2
+addicted,adjective,DRUGS,B2
+addicted,adjective,LIKING,B2
+addiction,noun,none,B2
+addictive,adjective,none,C1
+in addition (to),lexical_chunk,none,B1
+addition,noun,NEW THING,B2
+addition,noun,NUMBERS/AMOUNTS,B2
+additional,adjective,none,B2
+address,noun,BUILDING DETAILS,A1
+address,noun,ELECTRONIC,A1
+address,verb,DEAL WITH,C1
+address,verb,SPEAK,C2
+address,verb,BUILDING DETAILS,C2
+adequate,adjective,ENOUGH,B2
+adequate,adjective,GOOD ENOUGH,B2
+adequately,adverb,none,B2
+adjacent,adjective,none,C2
+adjective,noun,none,A2
+adjust,verb,CHANGE,B2
+adjust,verb,CHANGE BEHAVIOR,B2
+adjustment,noun,none,B2
+administration,noun,ORGANIZING,C1
+administration,noun,MANAGEMENT,C2
+administration,noun,GOVERNMENT,C2
+administrative,adjective,none,C1
+administrator,noun,none,C1
+admiration,noun,none,B2
+admire,verb,LOOK AT,B1
+admire,verb,RESPECT,B2
+admission,noun,MONEY,B1
+admission,noun,PERMISSION,B2
+admit,verb,none,B1
+admittedly,adverb,none,B2
+adolescent,noun,none,C2
+adopt,verb,TAKE CHILD,B2
+adopt,verb,START,B2
+adopted,adjective,none,B2
+adoption,noun,none,B2
+adult,noun,none,A1
+adult,adjective,FOR ADULTS,A2
+adult,adjective,NOT A CHILD,C1
+in advance,lexical_chunk,none,B1
+advance,noun,PROGRESS,B2
+advanced,adjective,HIGHER LEVEL,A2
+advanced,adjective,MODERN,B1
+advantage,noun,USEFUL THING,B1
+take advantage of sth ,lexical_chunk,none,B1
+take advantage of sb/sth ,lexical_chunk,none,B2
+advantage,noun,SUCCESS,B2
+adventure,noun,none,A2
+adventurous,adjective,none,B2
+adverb,noun,none,A2
+adverse effect(s)/reaction(s)/conditions,lexical_chunk,none,C2
+advertise,verb,TRY TO SELL,B1
+advertise,verb,ASK FOR,B1
+advertisement,noun,none,A2
+advertising,noun,none,B2
+advice,noun,none,A2
+advise,verb,none,B1
+adviser,noun,none,C1
+advocate,verb,none,C2
+advocate,noun,none,C2
+affair,noun,SITUATION,B2
+affair,noun,RELATIONSHIP,B2
+affect,verb,CAUSE CHANGE,B2
+affect,verb,CAUSE EMOTION,B2
+affection,noun,none,B2
+affectionate,adjective,none,C2
+affluent,adjective,none,C1
+can afford,lexical_chunk,none,B1
+cannot afford,lexical_chunk,none,C2
+affordable,adjective,none,C1
+I'm afraid...,lexical_chunk,none,A2
+afraid,adjective,FEAR,A2
+afraid,adjective,WORRIED,B1
+after,preposition,TIME/EVENT,A1
+after,preposition,PAST A PLACE,A2
+after,preposition,ORDER,A2
+after,preposition,FOLLOWING,B1
+after all,lexical_chunk,none,B1
+"day after day/year after year, etc.",lexical_chunk,none,B1
+after,preposition,BECAUSE OF,B2
+after,preposition,DESPITE,C1
+after all,lexical_chunk,none,C1
+after,preposition,NAMED FOR,C2
+after,adverb,none,A2
+after,conjunction,none,B1
+afternoon,noun,none,A1
+afterward,adverb,none,A2
+again,adverb,ONE MORE TIME,A1
+again,adverb,AS BEFORE,A2
+again and again,lexical_chunk,none,B1
+once again,lexical_chunk,none,B1
+all over again,lexical_chunk,none,B2
+yet again,lexical_chunk,none,B2
+then again,lexical_chunk,none,C2
+against,preposition,COMPETING,A2
+against,preposition,TOUCHING,A2
+against,preposition,OPPOSITE DIRECTION,B1
+against,preposition,NOT AGREE,B2
+against the law,lexical_chunk,none,B2
+have anything/nothing/something against sb/sth,lexical_chunk,none,C1
+"against sb's advice/wishes, etc.",lexical_chunk,none,C2
+against all odds,lexical_chunk,none,C2
+age,noun,HOW OLD,A1
+age,noun,PERIOD,B2
+age,noun,OLD,C2
+"at the tender age of 8/17/25, etc.",lexical_chunk,none,C2
+aged,adjective,none,A2
+agency,noun,BUSINESS,B1
+agency,noun,ORGANIZATION,C1
+agenda,noun,MEETING,C1
+agenda,noun,IMPORTANT SUBJECTS,C2
+agent,noun,BUSINESS,B2
+agent,noun,SECRET INFORMATION,B2
+ages,noun,none,B1
+aggression,noun,none,C1
+aggressive,adjective,VIOLENT,B2
+aggressive,adjective,DETERMINED,C1
+aggressively,adverb,none,B2
+ago,adverb,none,A2
+long ago,lexical_chunk,none,C1
+agree,verb,SAME OPINION,A2
+agree,verb,DECIDE,B1
+agree,verb,SAY YES,B2
+agree,verb,BE THE SAME,C1
+agree with sth,lexical_chunk,none,B2
+agreement,noun,DECISION,B2
+agreement,noun,SAME OPINION,B2
+agriculture,noun,none,B2
+ahead,adverb,IN FRONT,B1
+ahead,adverb,FUTURE,B1
+ahead,adverb,MORE POINTS,B2
+ahead of time/schedule,lexical_chunk,none,C1
+ahead,adjective,MORE PROGRESS,C2
+aid,noun,HELP,C1
+aid,noun,SUPPLIES,C1
+with the aid of sth,lexical_chunk,none,C1
+aid,noun,EQUIPMENT,C1
+aid,verb,none,C1
+aim,noun,none,B1
+aim to do sth,lexical_chunk,none,B1
+be aimed at sb,lexical_chunk,none,B2
+be aimed at doing sth,lexical_chunk,none,C2
+air,noun,AIRCRAFT,A2
+air,noun,GAS,A2
+the air,lexical_chunk,none,B2
+on the air,lexical_chunk,none,C1
+air,noun,QUALITY,C2
+clear the air,lexical_chunk,none,C2
+vanish/disappear into thin air,lexical_chunk,none,C2
+a breath of fresh air,lexical_chunk,none,C2
+air conditioning,noun,none,B1
+aircraft,noun,none,B2
+air force,noun,none,B1
+airline,noun,none,B1
+airplane,noun,none,A2
+airport,noun,none,A2
+alarm,noun,WARNING,B1
+alarm,noun,WAKING,B1
+alarm,noun,WORRY,C2
+alarm,verb,none,C1
+alarm clock,noun,none,A2
+alarming,adjective,none,C1
+albeit,conjunction,none,C2
+album,noun,BOOK,A2
+album,noun,MUSIC,B1
+alcohol,noun,none,A2
+alcoholic,adjective,none,B1
+alcoholic,adjective,PERSON,C2
+alcoholic,noun,none,C2
+alert,adjective,none,C1
+alert,verb,none,C2
+alert,noun,none,C1
+alike,adjective,none,B1
+alike,adverb,SIMILAR,B2
+alike,adverb,BOTH,B2
+alive,adjective,LIVING,B1
+be alive and well/kicking,lexical_chunk,none,C2
+alive,adjective,PLACE,C2
+alive,adjective,CONTINUING,C2
+all,determiner,EVERY ONE,A1
+all,pronoun,EVERY ONE,A1
+all,determiner,WHOLE TIME,A1
+all,pronoun,WHOLE TIME,A1
+all,determiner,WHOLE AMOUNT,A2
+all,pronoun,WHOLE AMOUNT,A2
+all sorts of sth,lexical_chunk,none,A2
+all the best,lexical_chunk,none,A2
+all the time,lexical_chunk,none,A2
+all,determiner,ONLY THING,B1
+all,pronoun,ONLY THING,B1
+at all,lexical_chunk,none,B1
+all is well,lexical_chunk,none,B1
+and all (that),lexical_chunk,none,B1
+in all,lexical_chunk,none,B2
+ all of a sudden,lexical_chunk,none,B2
+all hours,lexical_chunk,none,C1
+all at once,lexical_chunk,none,C1
+all things considered,lexical_chunk,none,C1
+for all,lexical_chunk,none,C2
+all,adverb,COMPLETELY,A2
+all over,lexical_chunk,none,A2
+ all along,lexical_chunk,none,B2
+ all in all,lexical_chunk,none,B2
+all over the place,lexical_chunk,none,B2
+be all very well,lexical_chunk,none,C1
+be all set,lexical_chunk,none,C1
+"all the better/easier/more exciting, etc.",lexical_chunk,none,C2
+all but,lexical_chunk,none,C2
+allegation,noun,none,C1
+allege,verb,none,C2
+alleged,adjective,none,C1
+allegedly,adverb,none,C2
+alliance,noun,none,C2
+allied,adjective,none,C2
+allocate,verb,none,C1
+allocation,noun,PROCESS,C2
+allocation,noun,PART,C2
+allow,verb,GIVE PERMISSION,B1
+allow,verb,TIME/MONEY,C1
+allow,verb,MAKE POSSIBLE,C1
+allow,verb,NOT PREVENT,C2
+allowance,noun,MONEY,C1
+make allowances for sb/sth,lexical_chunk,none,C2
+all right,adjective,WITHOUT PROBLEMS,A1
+all right,adverb,WITHOUT PROBLEMS,A1
+all right,adjective,WELL,A2
+all right,adverb,WELL,A2
+that's all right,lexical_chunk,none,A2
+all right,adjective,PERMISSION,A2
+all right,adverb,PERMISSION,A2
+all right,adjective,GOOD ENOUGH,B1
+all right,adverb,GOOD ENOUGH,B1
+all right,exclamation,none,A1
+ally,noun,PERSON,C1
+ally,noun,COUNTRY,C2
+almost,adverb,none,A2
+alone,adjective,WITHOUT PEOPLE,A2
+alone,adverb,WITHOUT PEOPLE,A2
+leave sb alone,lexical_chunk,none,B2
+let alone,lexical_chunk,none,C1
+alone,adjective,ONLY ONE,C2
+alone,adverb,ONLY ONE,C2
+along,preposition,DIRECTION,A2
+along,preposition,NEXT TO,B1
+along the lines of sth,lexical_chunk,none,C2
+along,adverb,FORWARD,B1
+along,adverb,WITH YOU,B1
+along,adverb,PARTICULAR PLACE,B2
+along with sb/sth,lexical_chunk,none,B2
+alongside,adverb,NEXT TO,C1
+alongside,preposition,NEXT TO,C1
+alongside,adverb,WITH,C1
+alongside,preposition,WITH,C1
+aloud,adverb,none,B1
+alphabet,noun,none,B1
+alphabetical,adjective,none,B2
+already,adverb,BEFORE NOW,A2
+already,adverb,EARLY,B1
+also,adverb,none,A1
+alter,verb,none,B2
+alteration,noun,none,C1
+"alternate days/weeks/years, etc.",lexical_chunk,none,C1
+alternate,verb,none,C1
+alternative,noun,none,B2
+alternative,adjective,DIFFERENT PLAN,B2
+alternative,adjective,NOT USUAL,B2
+alternatively,adverb,none,B2
+although,conjunction,BUT,B1
+although,conjunction,DESPITE,B1
+altogether,adverb,TOTAL,B1
+altogether,adverb,COMPLETELY,B2
+altogether,adverb,GENERALLY,B2
+aluminum,noun,none,B2
+always,adverb,EVERY TIME,A1
+always,adverb,UNTIL NOW,A2
+always,adverb,FOREVER,A2
+can/could always do sth,lexical_chunk,none,B1
+always,adverb,MANY TIMES,B2
+a.m.,adverb,none,A1
+amateur,adjective,none,C1
+amateur,noun,HOBBY,C1
+amateur,noun,NO SKILL,C1
+amazed,adjective,none,B1
+amazement,noun,none,B2
+amazing,adjective,GOOD,A2
+amazing,adjective,SURPRISING,B1
+amazingly,adverb,none,B1
+ambassador,noun,none,B2
+ambiguity,noun,none,C2
+ambiguous,adjective,none,C2
+ambition,noun,HOPE,B1
+ambition,noun,STRONG FEELING,B2
+ambitious,adjective,PERSON,B2
+ambitious,adjective,PLAN,B2
+ambulance,noun,none,B1
+amend,verb,none,C2
+amendment,noun,none,C1
+amid,preposition,WHILE,C1
+amid,preposition,AMONG,C2
+among,preposition,IN THE MIDDLE,B2
+among,preposition,IN A GROUP,B2
+among other things,lexical_chunk,none,B2
+"among the best/worst/biggest, etc.",lexical_chunk,none,B2
+among,preposition,DIVIDE,C1
+amount,noun,none,B1
+ample,adjective,none,C1
+amuse,verb,MAKE LAUGH,B2
+amuse,verb,KEEP INTERESTED,B2
+amused,adjective,FUNNY,B2
+keep sb amused,lexical_chunk,none,B2
+amusement,noun,FEELING,B2
+amusement,noun,ENTERTAINMENT,B2
+amusing,adjective,none,B1
+an,determiner,none,A1
+analogous,adjective,none,C2
+analogy,noun,none,C2
+analysis,noun,none,B2
+analyst,noun,none,B2
+analytical,adjective,none,C1
+analyze,verb,none,B2
+ancestor,noun,none,B2
+anchor,noun,BOAT,C2
+anchor,noun,SUPPORT,C2
+anchor,noun,JOB,C2
+anchor,verb,BOAT,C2
+anchor,verb,FASTEN,C2
+ancient,adjective,none,B1
+and,conjunction,ALSO,A1
+and,conjunction,AFTER,A1
+and,conjunction,NUMBERS,A1
+and,conjunction,AFTER VERB,A2
+and so on,lexical_chunk,none,B1
+and,conjunction,EMPHASIZE,B1
+angel,noun,none,B1
+anger,noun,none,B2
+angle,noun,SPACE,C1
+at/on an angle,lexical_chunk,none,C1
+angle,noun,DIRECTION,C1
+angle,noun,WAY OF THINKING,C1
+angrily,adverb,none,B1
+angry,adjective,none,A2
+animal,noun,NOT A HUMAN,A1
+animal,noun,NOT A PLANT,B2
+animated,adjective,FILM,B1
+animated,adjective,EXCITEMENT,C2
+animation,noun,none,B1
+ankle,noun,none,B1
+anniversary,noun,none,B1
+announce,verb,none,B1
+announcement,noun,none,B1
+annoy,verb,none,B1
+annoyance,noun,none,C1
+annoyed,adjective,none,B1
+annoying,adjective,none,B1
+annual,adjective,none,B1
+annually,adverb,none,B2
+anonymous,adjective,none,C2
+another,determiner,ADDITIONAL,A2
+another,pronoun,ADDITIONAL,A2
+another,determiner,DIFFERENT,A2
+another,pronoun,DIFFERENT,A2
+one another,lexical_chunk,none,B1
+at one time or another,lexical_chunk,none,C2
+answer,noun,REACTION,A1
+answer,noun,TEST,A2
+answer,noun,DOOR/TELEPHONE,A2
+answer,noun,SOLUTION,B1
+answer,verb,REACT,A1
+answer,verb,DOOR/PHONE,A2
+answer,verb,TEST,B1
+ant,noun,none,B1
+antibiotic,noun,none,C2
+anticipate,verb,none,C1
+anticipation,noun,WAITING,C2
+in anticipation (of),lexical_chunk,none,C2
+antique,noun,none,B1
+antique,adjective,none,B1
+antisocial,adjective,BEHAVIOR,C1
+antisocial,adjective,PERSON,C1
+anxiety,noun,none,B2
+anxious,adjective,WORRIED,B1
+anxious,adjective,EAGER,B2
+anxiously,adverb,none,B2
+any,determiner,SOME,A1
+any,pronoun,SOME,A1
+any,determiner,NOT IMPORTANT WHICH,A1
+any,pronoun,NOT IMPORTANT WHICH,A1
+any,adverb,none,B1
+anybody,pronoun,IN QUESTIONS/NEGATIVES,A2
+anybody,pronoun,ANY PERSON,B1
+anyhow,adverb,DESPITE,B2
+anyhow,adverb,EARLIER SUBJECT,B2
+anyhow,adverb,MORE IMPORTANTLY,B2
+anyhow,adverb,CHANGING STATEMENT,C1
+anymore,adverb,none,A2
+anyone,pronoun,IN QUESTIONS/NEGATIVES,A2
+anyone,pronoun,ANY PERSON,B1
+anything,pronoun,IN QUESTIONS/NEGATIVES,A1
+anything,pronoun,NO MATTER WHICH,A1
+or anything,lexical_chunk,none,B2
+anything like,lexical_chunk,none,B2
+anyway,adverb,DESPITE,A2
+anyway,adverb,CHANGE SUBJECT,A2
+anyway,adverb,MORE IMPORTANTLY,B1
+anywhere,adverb,ANY PLACE,A2
+anywhere,adverb,IN QUESTIONS/NEGATIVES,A2
+not/never get anywhere,lexical_chunk,none,B2
+anywhere near sth,lexical_chunk,none,C1
+apart from,lexical_chunk,none,B1
+apart,adverb,SEPARATE,B1
+apart,adverb,RELATIONSHIP,B2
+apart,adverb,INTO PIECES,B2
+be poles apart,lexical_chunk,none,C2
+apartment,noun,none,A2
+apartment building,noun,none,A2
+apologetic,adjective,none,C2
+apologize,verb,none,B1
+apology,noun,none,B1
+apostrophe,noun,none,B2
+appalling,adjective,none,C2
+apparent,adjective,OBVIOUS,B2
+apparent,adjective,SEEMS TRUE,C1
+apparently,adverb,AS HEARD/READ,B2
+apparently,adverb,SEEMS TRUE,B2
+appeal,noun,QUALITY,B2
+appeal,noun,REQUEST,C2
+appeal,verb,ATTRACT,B2
+appeal,verb,REQUEST,C1
+appear,verb,BE SEEN,B1
+"appear in/at/on, etc.",lexical_chunk,none,B1
+appear,verb,SEEM,B1
+it appears (that),lexical_chunk,none,B2
+appear,verb,BECOME AVAILABLE,B2
+it would appear (that),lexical_chunk,none,C1
+appearance,noun,WAY YOU LOOK,B1
+appearance,noun,IN PUBLIC,B2
+appearance,noun,BECOMING AVAILABLE,B2
+appetite,noun,FOOD,C1
+an appetite for something,lexical_chunk,none,C2
+applaud,verb,CLAP,C1
+applaud,verb,PRAISE,C2
+applause,noun,none,C1
+round of applause,lexical_chunk,none,C2
+apple,noun,none,A1
+appliance,noun,none,C1
+application,noun,REQUEST,B1
+application,noun,COMPUTER SOFTWARE,B2
+application,noun,USE,C2
+apply,verb,REQUEST,B1
+apply,verb,AFFECT,B2
+apply,verb,USE,C1
+apply yourself,lexical_chunk,none,C2
+appoint,verb,none,C1
+appointment,noun,none,A2
+appointment,noun,JOB,C2
+appreciate,verb,VALUE,B2
+would appreciate,lexical_chunk,none,B2
+I/We appreciate...,lexical_chunk,none,B2
+appreciate,verb,UNDERSTAND,C2
+appreciation,noun,none,B2
+approach,verb,COME CLOSE,B2
+approach,verb,DEAL WITH,B2
+approach,noun,METHOD,B2
+approach,noun,COMING CLOSER,B2
+appropriate,adjective,none,B2
+appropriately,adverb,none,B2
+approval,noun,GOOD OPINION,B2
+approval,noun,PERMISSION,B2
+approve,verb,AGREE,B1
+approve,verb,GOOD OPINION,B2
+approximate,adjective,none,B2
+approximately,adverb,none,B1
+April,noun,none,A1
+arbitrary,adjective,none,C2
+arch,noun,none,C2
+arch,verb,none,C2
+archaeologist,noun,none,C1
+archaeology,noun,none,C1
+architect,noun,none,B1
+architecture,noun,STYLE,B1
+architecture,noun,SUBJECT,B1
+area,noun,REGION,A2
+area,noun,PART,B1
+area,noun,SUBJECT,B2
+argue,verb,DISAGREE,B1
+argue,verb,GIVE REASONS,B2
+argument,noun,DISAGREEMENT,B1
+argument,noun,REASON,B2
+arid,adjective,none,C2
+arise,verb,none,C1
+arm,noun,BODY,A1
+arm,noun,CHAIR,C2
+arm in arm,lexical_chunk,none,C2
+(keep sb) at arm's length,lexical_chunk,none,C2
+armchair,noun,none,A2
+armed,adjective,WEAPONS,B2
+armed with sth,lexical_chunk,none,C2
+the army,lexical_chunk,none,B1
+army,noun,ORGANIZED GROUP,C2
+around,preposition,IN A CIRCLE/CIRCULAR MOVEMENT,A2
+around,preposition,TO OR IN A PLACE,A2
+around,preposition,APPROXIMATELY,A2
+around the clock,lexical_chunk,none,C1
+around,adverb,TO/IN A PLACE,A2
+around,adverb,IN A CIRCLE/CIRCULAR MOVEMENT,B1
+around,adverb,OPPOSITE DIRECTION,B1
+be around,lexical_chunk,none,B2
+around,adverb,EXISTING,C2
+arouse,verb,none,C2
+arrange,verb,PLAN,B1
+arrange,verb,PUT IN POSITION,B2
+arrangement,noun,PLANS,B1
+arrangement,noun,AGREEMENT,B2
+arrangement,noun,POSITION,B2
+arrest,verb,none,B1
+arrest,noun,none,B2
+arrival,noun,none,B1
+arrival,noun,NEW PERSON/THING,C1
+arrival,noun,BECOME AVAILABLE,C2
+arrive,verb,REACH A PLACE,A2
+"arrive at an solution/conclusion/answer, etc.",lexical_chunk,none,C2
+arrogant,adjective,none,B2
+arrow,noun,SYMBOL,B2
+arrow,noun,WEAPON,B2
+art,noun,"PAINTINGS/DRAWINGS, ETC.",A2
+arts,lexical_chunk,none,B2
+arts,lexical_chunk,none,C2
+article,noun,NEWSPAPER,B1
+article,noun,GRAMMAR,B1
+artificial,adjective,NOT NATURAL,B2
+artificial,adjective,NOT SINCERE,C2
+artificial intelligence,noun,none,C2
+artificially,adverb,none,B2
+artist,noun,none,A2
+artistic,adjective,CREATIVE ABILITY,B2
+artistic,adjective,RELATING TO ART,B2
+as,adverb; preposition,JOB,A1
+as well,lexical_chunk,none,A1
+as well as,lexical_chunk,none,A2
+as,adverb; preposition,LIKE,A2
+as ... as,lexical_chunk,none,A2
+"as much/quickly/soon, etc. as possible",lexical_chunk,none,A2
+as usual,lexical_chunk,none,A2
+as,adverb; preposition,BEING,B1
+as soon as,lexical_chunk,none,B1
+as long as,lexical_chunk,none,B1
+as for,lexical_chunk,none,B2
+as a result of sth,lexical_chunk,none,B2
+as a whole,lexical_chunk,none,B2
+as a matter of fact,lexical_chunk,none,B2
+as follows,lexical_chunk,none,B2
+as if/as though,lexical_chunk,none,B2
+as far as sb is concerned,lexical_chunk,none,B2
+as far as sth is concerned,lexical_chunk,none,B2
+as far as I know,lexical_chunk,none,B2
+as it happens,lexical_chunk,none,C1
+as many as,lexical_chunk,none,C1
+as yet,lexical_chunk,none,C1
+as a consequence,lexical_chunk,none,C1
+as the/its name implies,lexical_chunk,none,C2
+as opposed to,lexical_chunk,none,C2
+as it stands,lexical_chunk,none,C2
+as,conjunction,BECAUSE,A2
+as,conjunction,WHILE,B1
+as,conjunction,LIKE,B1
+ashamed,adjective,EMBARRASSED,B1
+be ashamed of sb,lexical_chunk,none,B2
+aside,adverb,MOVE TO SIDE,B2
+aside,adverb,SAVE,B2
+aside from sth,lexical_chunk,none,B2
+ask,verb,QUESTION,A1
+ask,verb,INVITE,A2
+ask,verb,REQUEST,B1
+ask,verb,WANT SOMETHING,B1
+ask,verb,WANT PERMISSION,B1
+Don't ask!,lexical_chunk,none,B2
+Don't ask me,lexical_chunk,none,B2
+if you ask me,lexical_chunk,none,C2
+ask yourself sth,lexical_chunk,none,C2
+asleep,adjective,SLEEPING,B1
+asleep,adjective,FEELING,C2
+fast asleep,lexical_chunk,none,C2
+aspect,noun,none,B2
+aspiration,noun,none,C2
+aspire to (do) sth,lexical_chunk,none,C2
+aspirin,noun,none,B1
+"an aspiring writer/actor/artist, etc.",lexical_chunk,none,C2
+assault,noun,none,C2
+assault,verb,none,C2
+assemble,verb,BUILD,C2
+assemble,verb,GROUP,C2
+assembly,noun,GROUP,C2
+assembly,noun,BUILD,C2
+assert,verb,none,C1
+assert yourself,lexical_chunk,none,C2
+"assert your authority/control/independence, etc.",lexical_chunk,none,C2
+assertive,adjective,none,C2
+assess,verb,none,B2
+assessment,noun,none,B2
+asset,noun,USEFUL,C1
+asset,noun,WORTH MONEY,C1
+assign,verb,none,C1
+assign sb to sth,lexical_chunk,none,C2
+assignment,noun,none,B1
+assist,verb,none,B2
+assistance,noun,none,B2
+assistant,noun,none,B1
+be associated with sth,lexical_chunk,none,B2
+associate,verb,TWO THINGS/PEOPLE,C1
+associate with sb,lexical_chunk,none,C2
+association,noun,none,B2
+in association with,lexical_chunk,none,C1
+association,noun,CONNECTION,C2
+assume,verb,none,B2
+"assume control/power/responsibility, etc.",lexical_chunk,none,C2
+assumption,noun,none,C1
+assurance,noun,PROMISE,C1
+assurance,noun,CONFIDENCE,C2
+assure,verb,none,B2
+assure,verb,MAKE CERTAIN,C1
+astonished,adjective,none,B2
+astonishing,adjective,none,B2
+astonishment,noun,none,B2
+astronomy,noun,none,C2
+at,preposition,PLACE,A1
+at,preposition,TIME,A1
+at,preposition,DIRECTION,A1
+at,preposition,E-MAIL ADDRESS,A1
+at,preposition,CAUSE,A2
+at least,lexical_chunk,none,A2
+at,preposition,ABILITY,B1
+"at his/its, etc. best",lexical_chunk,none,B1
+at (long) last,lexical_chunk,none,B1
+at least,lexical_chunk,none,B1
+at first,lexical_chunk,none,B1
+at the same time,lexical_chunk,none,B1
+at once,lexical_chunk,none,B1
+at least,lexical_chunk,none,B2
+at,preposition,AMOUNT,B2
+at all costs,lexical_chunk,none,B2
+at sb's disposal,lexical_chunk,none,B2
+at fault,lexical_chunk,none,B2
+at risk,lexical_chunk,none,B2
+at the expense of sth,lexical_chunk,none,C1
+at face value,lexical_chunk,none,C1
+at a glance,lexical_chunk,none,C1
+at hand,lexical_chunk,none,C1
+at the very least,lexical_chunk,none,C1
+at random,lexical_chunk,none,C1
+at times,lexical_chunk,none,C1
+at first sight,lexical_chunk,none,C1
+at best,lexical_chunk,none,C2
+at the best of times,lexical_chunk,none,C2
+at a disadvantage,lexical_chunk,none,C2
+at sb's expense,lexical_chunk,none,C2
+at your fingertips,lexical_chunk,none,C2
+at heart,lexical_chunk,none,C2
+at issue,lexical_chunk,none,C2
+at the latest,lexical_chunk,none,C2
+at length,lexical_chunk,none,C2
+be at liberty to do sth,lexical_chunk,none,C2
+at a loss,lexical_chunk,none,C2
+at a loss for words,lexical_chunk,none,C2
+be at the mercy of sb/sth ,lexical_chunk,none,C2
+be at odds with sb/sth,lexical_chunk,none,C2
+be at a premium,lexical_chunk,none,C2
+at this rate,lexical_chunk,none,C2
+at any rate,lexical_chunk,none,C2
+at your own risk,lexical_chunk,none,C2
+be at stake,lexical_chunk,none,C2
+athlete,noun,none,B1
+athletic,adjective,none,B2
+atmosphere,noun,FEELING,B1
+the atmosphere,lexical_chunk,none,B2
+atmosphere,noun,AIR INSIDE,B2
+atom,noun,none,B2
+atomic,adjective,none,B2
+attach,verb,CONNECT,B1
+attach,verb,COMPUTING,B1
+"attach importance/value, etc. to sb/sth",lexical_chunk,none,C2
+attach,verb,INCLUDE,C2
+attached,adjective,CONNECTED TO,B2
+attached to sb/sth,lexical_chunk,none,C1
+attachment,noun,EQUIPMENT,B2
+attachment,noun,COMPUTING,B2
+attachment,noun,FEELING,C2
+attack,verb,TRY TO HURT,B1
+attack,verb,CRITICIZE,C1
+attack,verb,DISEASE,C2
+attack,noun,none,B1
+attack,noun,CRITICISM,C2
+attain,verb,none,C1
+attainable,adjective,none,C2
+attempt,verb,none,B1
+attempt,noun,none,B2
+attend,verb,BE PRESENT,B1
+"attend a church/college/school, etc.",lexical_chunk,none,B1
+attendance,noun,NUMBER,C1
+attendance,noun,REGULARLY,C1
+in attendance,lexical_chunk,none,C2
+attention,noun,NOTICE,B1
+pay attention (to sth),lexical_chunk,none,B1
+attract/get (sb's) attention,lexical_chunk,none,B2
+draw (sb's) attention to sth/sb,lexical_chunk,none,B2
+be the center of attention,lexical_chunk,none,C2
+attic,noun,none,B2
+attitude,noun,none,B1
+attorney,noun,none,C1
+attract,verb,ENCOURAGE INTEREST,B1
+"attract attention/interest, etc.",lexical_chunk,none,B1
+be attracted to sb,lexical_chunk,none,B2
+attraction,noun,THING TO SEE OR DO,B1
+attraction,noun,FEELING,C2
+attractive,adjective,BEAUTIFUL,A2
+attractive,adjective,INTERESTING,B2
+attribute sth to sth,lexical_chunk,none,C2
+attribute,noun,none,C2
+auction,noun,none,C1
+audience,noun,GROUP,B1
+audience,noun,TYPE,B2
+audition,noun,none,C1
+August,noun,none,A1
+aunt,noun,none,A2
+authentic,adjective,none,C1
+author,noun,none,B1
+authority,noun,POWER,B2
+authority,noun,OFFICIAL,C1
+an authority on sth,lexical_chunk,none,C2
+authorize,verb,none,C1
+be authorized to do sth,lexical_chunk,none,C1
+automatic,adjective,MACHINE,B2
+automatic,adjective,PERSON,C2
+automatic,adjective,CERTAIN,C2
+automatically,adverb,MACHINE,B2
+automatically,adverb,PERSON,B2
+availability,noun,none,B2
+available,adjective,ABLE TO GET,A2
+available,adjective,NOT BUSY,A2
+avenue,noun,STREET,C1
+avenue,noun,POSSIBILITY,C2
+average,adjective,USUAL,A2
+average,adjective,AMOUNT,B1
+average,adjective,NOT EXCELLENT,C1
+average,noun,AMOUNT,B1
+average,noun,USUAL/TYPICAL,B1
+on average,lexical_chunk,none,B2
+avoid,verb,STAY AWAY FROM,B1
+avoid,verb,PREVENT,B2
+avoid doing sth,lexical_chunk,none,B2
+awake,adjective,none,B1
+be wide awake,lexical_chunk,none,C2
+award,verb,none,B2
+award,noun,PRIZE,B2
+aware,adjective,none,B2
+awareness,noun,none,C1
+away,adverb,SOMEWHERE ELSE,A2
+away,adverb,DISTANCE FROM,A2
+away,adverb,INTO PLACE,B1
+"two weeks/five hours, etc. away",lexical_chunk,none,B1
+away,adverb,GRADUALLY,B2
+away,adverb,SPORTS,C1
+away,adverb,CONTINUOUS ACTION,C2
+awe,noun,none,C2
+be in awe of sb,lexical_chunk,none,C2
+awesome,adjective,GOOD,A2
+awesome,adjective,SPECIAL,C2
+awful,adjective,BAD,A2
+an awful lot (of sth),lexical_chunk,none,B2
+awkward,adjective,DIFFICULT,B2
+awkward,adjective,EMBARRASSING,B2
+awkward,adjective,WITHOUT BEAUTY,C2
+baby,noun,CHILD,A1
+baby,noun,ANIMAL,A2
+babysit,verb,none,B1
+babysitter,noun,none,B1
+back,adverb,RETURNING,A1
+back,adverb,REPLY,A2
+back,adverb,BEHIND,B1
+back,adverb,STATE,B2
+back,adverb,EARLIER,B2
+back,adverb,AWAY FROM,B2
+back and forth,lexical_chunk,none,C2
+the back,lexical_chunk,none,A2
+back,noun,BODY,A2
+in back of sb/sth,lexical_chunk,none,B1
+back,noun,SEAT,C2
+behind sb's back,lexical_chunk,none,C2
+turn your back on sb/sth,lexical_chunk,none,C2
+back,adjective,AT BACK,A2
+back road/street,lexical_chunk,none,C1
+back,verb,SUPPORT,C2
+"back (sth) away/into/out, etc.",lexical_chunk,none,C2
+back off,lexical_chunk,none,C2
+back out,lexical_chunk,none,C1
+back up sb or back sb up,lexical_chunk,none,B2
+back up sth or back sth up,lexical_chunk,none,C2
+back up (sth) or back (sth) up,lexical_chunk,none,B2
+backache,noun,none,B1
+background,noun,EXPERIENCE,B1
+background,noun,SOUND,B2
+background,noun,PICTURE,B2
+background,noun,SITUATION,B2
+backing,noun,none,C2
+backpack,noun,none,A2
+backpacker,noun,none,B1
+backpacking,noun,none,B1
+backup,noun,EXTRA HELP,B2
+backup,noun,COPY,B2
+backward,adverb,BEHIND,B1
+bend over backwards,lexical_chunk,none,C1
+backward,adjective,LESS DEVELOPED,C2
+backyard,noun,none,B1
+bacon,noun,none,B1
+bacteria,noun,none,C1
+bad,adjective,UNPLEASANT,A1
+bad,adjective,LOW QUALITY,A2
+not (too) bad,lexical_chunk,none,A2
+be bad for sb/sth ,lexical_chunk,none,A2
+bad,adjective,SEVERE,B1
+bad,adjective,NOT LUCKY,B1
+feel bad about sth/doing sth ,lexical_chunk,none,B1
+too bad,lexical_chunk,none,B1
+bad,adjective,EVIL,B1
+bad,adjective,NOT FRESH,B2
+bad,adjective,PAINFUL,C1
+too bad,lexical_chunk,none,C1
+badge,noun,none,B2
+badly,adverb,LOW QUALITY,A2
+badly,adverb,VERY MUCH,A2
+badly,adverb,VERY SERIOUSLY,A2
+badly,adverb,UNPLEASANT,B2
+badminton,noun,none,A2
+bad-tempered,adjective,none,B2
+bag,noun,none,A1
+baggage,noun,BAGS,B1
+baggage,noun,FEELINGS,C2
+bake,verb,none,A2
+baker,noun,none,B1
+bakery,noun,none,B2
+balance,noun,WEIGHT,B2
+balance,noun,EQUAL IMPORTANCE,B2
+balance,noun,MONEY,B2
+on balance,lexical_chunk,none,B2
+lose your balance,lexical_chunk,none,C1
+strike a balance,lexical_chunk,none,C1
+hang in the balance,lexical_chunk,none,C2
+balance,verb,NOT FALLING,B2
+balance,verb,EQUAL IMPORTANCE ,B2
+a balanced diet/meal,lexical_chunk,none,B2
+balanced,adjective,FAIR,B2
+balcony,noun,HOUSE ETC.,B1
+balcony,noun,THEATER,C2
+bald,adjective,none,B1
+ball,noun,ROUND OBJECT,A1
+be on the ball,lexical_chunk,none,C1
+get/start the ball rolling,lexical_chunk,none,C2
+ballet,noun,none,B2
+balloon,noun,none,A2
+ban,verb,none,B2
+ban,noun,none,B2
+banana,noun,none,A1
+band,noun,none,A1
+band,noun,THIN PIECE,C2
+bandage,noun,none,A2
+bang,verb,none,B2
+bang,noun,none,B2
+bank,noun,MONEY,A1
+bank,noun,RIVER,B2
+bank account,noun,none,B2
+banker,noun,none,B2
+banking,noun, MONEY MANAGEMENT,A2
+banking,noun,BUSINESS,B2
+bankrupt,adjective,none,C1
+bar,noun,DRINKING PLACE,A2
+bar,noun,BLOCK,B2
+bar,noun,LONG PIECE,B2
+behind bars,lexical_chunk,none,B2
+barbecue,noun,PARTY,A2
+barbecue,noun,EQUIPMENT,A2
+barbecue,verb,none,B1
+barbecued,adjective,none,B1
+barber,noun,none,B1
+barbershop,noun,none,B1
+bare,adjective,NO CLOTHES,C1
+bare,adjective,NOT COVERED,C1
+bare,adjective,BASIC,C2
+bare,adjective,EMPTY,C2
+with your bare hands,lexical_chunk,none,C2
+barely,adverb,none,C1
+bargain,noun,none,B1
+in the bargain,lexical_chunk,none,C2
+bark,verb,DOG,B2
+bark,noun,TREE,C2
+barn,noun,none,C2
+barrier,noun,FENCE,B2
+barrier,noun,PREVENTING,B2
+bartender,noun,none,B2
+base,noun,BOTTOM,B2
+base,noun,MILITARY,B2
+base,noun,MAIN PLACE,C2
+base,noun,MAIN PART,C2
+be based in/at,lexical_chunk,none,B2
+base sth on sth ,lexical_chunk,none,B1
+baseball,noun,none,A1
+basement,noun,none,B2
+basic,adjective,MAIN,B1
+basic,adjective,NECESSARY,B1
+basic,adjective,SIMPLE,B1
+basically,adverb,SIMPLY,B2
+basically,adverb,MOSTLY,B2
+the basics,lexical_chunk,none,B2
+"on a regular/daily/weekly, etc., basis",lexical_chunk,none,B2
+basis,noun,METHOD,B2
+basis,noun,REASON,C1
+on the basis of sth,lexical_chunk,none,C1
+basis,noun,BEGINNING,C1
+basket,noun,none,B1
+basketball,noun,none,A1
+bat,noun,STICK,A1
+bat,noun,ANIMAL,B1
+bath,noun,none,A1
+bathing suit,noun,none,A2
+bathroom,noun,ROOM,A1
+go to the bathroom,lexical_chunk,none,A2
+bathtub,noun,none,B1
+battery,noun,none,A2
+recharge your batteries,lexical_chunk,none,C2
+battle,noun,WAR,B1
+battle,noun,PROBLEMS/ILLNESS,B2
+battle,noun,ARGUMENT,C2
+battle,verb,none,C2
+bay,noun,WATER,B1
+keep/hold sb/sth at bay,lexical_chunk,none,C2
+"I am Spanish/a teacher, etc.",lexical_chunk,none,A1
+"there is/there are/there was, etc.",lexical_chunk,none,A1
+be,verb,POSITION,A1
+have/has been to,lexical_chunk,none,A2
+be,auxiliary verb,CONTINUE,A2
+be,auxiliary verb,PASSIVE,A2
+beach,noun,none,A1
+beak,noun,none,C1
+beam,noun,none,B2
+bean,noun,none,A1
+bear,noun,none,A2
+bear,verb,ACCEPT,C1
+bear,verb,HAVE,C1
+bear left/right,lexical_chunk,none,C1
+"bear a/no/some, etc., resemblance to sb/sth",lexical_chunk,none,C2
+bear,verb,HAVE CHILD,C2
+bear fruit,lexical_chunk,none,C2
+grin and bear it,lexical_chunk,none,C2
+beard,noun,none,A1
+beat,verb,DEFEAT,B1
+beat,verb,HEART,B1
+beat,verb,HIT,B2
+beat,verb,BETTER THAN,B2
+beat around the bush,lexical_chunk,none,C1
+beat,verb,MIX,C1
+beat,verb,SOUND,C2
+you can't beat sth,lexical_chunk,none,C2
+off the beaten track,lexical_chunk,none,C2
+beat up sb or beat sb up,lexical_chunk,none,B2
+beat,noun,REGULAR SOUND,B2
+beat,noun,MUSIC,B2
+beautiful,adjective,ATTRACTIVE,A1
+beautiful,adjective,PLEASANT,A1
+beautifully,adverb,none,B1
+beauty,noun,BEING BEAUTIFUL,B1
+the beauty of sth,lexical_chunk,none,C2
+because,conjunction,none,A1
+because of,preposition,none,B1
+"become available/rich/a writer, etc.",lexical_chunk,none,A2
+become of sb/sth,lexical_chunk,none,C2
+bed,noun,FOR SLEEP,A1
+bed,noun,BOTTOM,C2
+bed,noun,GROUND,C2
+bedroom,noun,none,A1
+bee,noun,none,B1
+beef,noun,none,B1
+beer,noun,none,A1
+before,preposition,EARLIER,A1
+before,preposition,PLACE,A2
+before,preposition,IN FRONT OF,B1
+before,preposition,IN ORDER,B1
+before,preposition,IMPORTANCE,C2
+before,conjunction,EARLIER,A2
+before,conjunction,TO AVOID SOMETHING,B1
+before,conjunction,UNTIL,B1
+before you know it,lexical_chunk,none,C1
+before,adverb,none,A2
+long before,lexical_chunk,none,C2
+beg,verb,STRONG REQUEST,B2
+beg,verb,VERY POOR,B2
+begin,verb,START TO HAPPEN,A1
+begin,verb,START TO DO,A2
+begin with sth ,lexical_chunk,none,B1
+to begin with,lexical_chunk,none,B1
+to begin with,lexical_chunk,none,B2
+beginner,noun,none,A2
+beginning,noun,none,A2
+on behalf of sb or on sb's behalf,lexical_chunk,none,B2
+behave,verb,IN A PARTICULAR WAY,B1
+behave,verb,BE POLITE,B1
+behavior,noun,none,B1
+behind,preposition,BACK,A1
+behind,preposition,SLOWER,B1
+behind,preposition,SUPPORTING,B1
+behind,preposition,CAUSING,C1
+behind the times,lexical_chunk,none,C1
+behind,preposition,NOT AFFECTING,C2
+behind closed doors,lexical_chunk,none,C2
+behind the scenes,lexical_chunk,none,C2
+behind,adverb,BACK,B1
+behind,adverb,SLOWER,C1
+come into being,lexical_chunk,none,C2
+belief,noun,TRUE,B2
+belief,noun,IDEA,B2
+belief,noun,EFFECTIVE,C2
+believe,verb,TRUE,A2
+believe,verb,THINK,A2
+not believe your eyes/ears,lexical_chunk,none,B1
+believe it or not,lexical_chunk,none,B1
+believe in sth ,lexical_chunk,none,B1
+believe in sth/doing sth ,lexical_chunk,none,B2
+bell,noun,ELECTRICAL OBJECT,B1
+bell,noun,METAL OBJECT,B2
+ring a bell,lexical_chunk,none,C2
+belong,verb,RIGHT PLACE,B2
+belong,verb,HAPPY SOMEWHERE,B2
+belong to sb ,lexical_chunk,none,A2
+belong to sth ,lexical_chunk,none,B1
+belongings,noun,none,B2
+below,adverb,POSITION,A1
+below,preposition,POSITION,A1
+below,adverb,LESS,B1
+below,preposition,LESS,B1
+below,adverb,RANK,C2
+below,preposition,RANK,C2
+belt,noun,CLOTHING,A2
+tighten your belt,lexical_chunk,none,C2
+bench,noun,none,B2
+bend,verb,BODY,B2
+bend,verb,CURVE,B2
+bend,noun,none,B2
+beneath,preposition,UNDER,B2
+beneath,preposition,NOT GOOD ENOUGH,C2
+beneficial,adjective,none,B2
+benefit,noun,HELP,B1
+benefit,noun,SERVICE,B1
+give sb the benefit of the doubt,lexical_chunk,none,C2
+for sb's/sth's benefit / for the benefit of sb/sth,lexical_chunk,none,C2
+benefit,verb,none,B2
+berry,noun,none,B2
+beside,preposition,none,B1
+beside yourself,lexical_chunk,none,C2
+besides,preposition,none,B1
+besides,adverb,EXTRA REASON,B1
+besides,adverb,IN ADDITION TO,B1
+best,adjective,BETTER THAN ALL,A1
+best wishes,lexical_chunk,none,A2
+the next best thing,lexical_chunk,none,C1
+your best bet,lexical_chunk,none,C2
+best,adverb,MOST,A1
+best,adverb,MOST SUITABLE,B1
+know best,lexical_chunk,none,C2
+the best,lexical_chunk,none,B1
+do/try your best,lexical_chunk,none,B1
+make the best of sth,lexical_chunk,none,B2
+(have) the best of both worlds,lexical_chunk,none,C1
+for the best,lexical_chunk,none,C2
+bring out the best in sb,lexical_chunk,none,C2
+bestseller,noun,none,B2
+I bet (you),lexical_chunk,none,B1
+bet,verb,none,C1
+bet,noun,GUESS,C2
+a safe bet,lexical_chunk,none,C2
+betray,verb,none,B2
+better,adjective,HIGHER STANDARD,A1
+better,adjective,HEALTHY,A1
+have seen better days,lexical_chunk,none,C2
+better,adverb,WELL,A2
+"I/you/he, etc. had better do sth ",lexical_chunk,none,A2
+know better,lexical_chunk,none,C2
+between,preposition,SPACE,A1
+between,preposition,TIME,A1
+between,preposition,INVOLVE,A1
+between,preposition,AMOUNT,A2
+between,preposition,CONNECT,A2
+between,preposition,SEPARATE,A2
+between,preposition,SHARE,B1
+read between the lines,lexical_chunk,none,C2
+between,adverb,SPACE,C1
+between,adverb,TIME,C1
+few and far between,lexical_chunk,none,C2
+beware,verb,none,C1
+beyond,preposition,TIME,B1
+beyond,preposition,DISTANCE,B2
+"beyond my/our, etc. control",lexical_chunk,none,B2
+beyond,preposition,INVOLVING MORE,C1
+beyond,preposition,AMOUNT,C2
+sth is beyond me,lexical_chunk,none,C2
+beyond (a) doubt,lexical_chunk,none,C2
+beyond a/the shadow of a doubt,lexical_chunk,none,C2
+beyond your wildest dreams,lexical_chunk,none,C2
+beyond,adverb,PLACE,C1
+beyond,adverb,TIME,C2
+bias,noun,none,C2
+biased,adjective,none,C1
+bicycle,noun,none,A2
+bid,noun,ATTEMPT,C1
+bid,noun,OFFER,C1
+bid,noun,BUY,C2
+bid,verb,none,C2
+big,adjective,SIZE,A1
+your big brother/sister,lexical_chunk,none,A2
+big,adjective,IMPORTANT,A2
+big,adjective,SUCCESSFUL,C1
+bike,noun,BICYCLE,A1
+bike,noun,MOTORCYCLE,B1
+bikini,noun,none,B2
+bilingual,adjective,none,C1
+bill,noun,none,A2
+bill,noun,MONEY,B1
+foot the bill,lexical_chunk,none,C2
+billion,noun,none,B2
+bind,verb,TIE,C2
+bind,verb,UNITE,C2
+biography,noun,none,B1
+biological,adjective,none,B2
+biology,noun,none,A2
+bird,noun,none,A1
+birth,noun,BABY,A2
+give birth,lexical_chunk,none,B2
+"Honduran/Canadian/Indian, etc. by birth",lexical_chunk,none,B2
+birth,noun,BEGINNING,C1
+birthday,noun,none,A1
+a bit,lexical_chunk,none,A2
+bit,noun,SMALL AMOUNT,B1
+quite a bit,lexical_chunk,none,B1
+a bit,lexical_chunk,none,B2
+"a bit of a surprise/problem/mess, etc.",lexical_chunk,none,C1
+bit by bit,lexical_chunk,none,C1
+bits and pieces,lexical_chunk,none,C2
+bite,verb,none,B1
+bite,noun,FOOD,B2
+bite,noun,INJURY,B2
+a bite (to eat),lexical_chunk,none,C2
+bitter,adjective,TASTE,B1
+bitter,adjective,ANGRY,B2
+bitter,adjective,HATE,B2
+bitter,adjective,DISAPPOINTED,B2
+bitter,adjective,COLD,B2
+to/till/until the bitter end,lexical_chunk,none,C2
+bizarre,adjective,none,B2
+black,adjective,COLOR,A1
+black,adjective,PEOPLE,A2
+black,noun,none,A2
+blackboard,noun,none,A2
+blackmail,noun,none,C2
+blackmail,verb,none,C2
+blade,noun,none,B2
+blame,verb,RESPONSIBLE,B1
+be to blame,lexical_chunk,none,C1
+"I don't blame him/them/you, etc.",lexical_chunk,none,C2
+blame,noun,none,B2
+bland,adjective,NO TASTE,C2
+bland,adjective,BORING,C2
+blank,adjective,EMPTY,B1
+go blank,lexical_chunk,none,B2
+blank,adjective,NO FEELING,C2
+blank,noun,SPACE,C1
+blanket,noun,FOR BED,A2
+blanket,noun,LAYER,C2
+bleak,adjective,NO HOPE,C2
+bleak,adjective,COLD,C2
+bleed,verb,none,B1
+blend,noun,none,C2
+blind,adjective,NO SIGHT,B1
+be blind to sth,lexical_chunk,none,C2
+the blind,lexical_chunk,none,C1
+blindness,noun,NOT SEEING,C1
+blindness,noun,NOT NOTICING,C2
+blink,verb,EYES,B2
+in the blink of an eye,lexical_chunk,none,C2
+blister,noun,none,C2
+block,noun,DISTANCE,A2
+block,noun,AREA,A2
+block,noun,PIECE,B2
+block,noun,STOP PROGRESS,C2
+block,verb,PREVENT,B2
+block,verb,CANNOT SEE,C1
+block,verb,STOP PROGRESS,C2
+blog,noun,none,B1
+blog,verb,none,B1
+blogger,noun,none,B1
+blond,adjective,none,A2
+blood,noun,RED LIQUID,A2
+new blood,lexical_chunk,none,C1
+in cold blood,lexical_chunk,none,C2
+blood,noun,FAMILY ORIGIN,C2
+make your blood run cold,lexical_chunk,none,C2
+make your blood boil,lexical_chunk,none,C2
+your own flesh and blood,lexical_chunk,none,C2
+bloody,adjective,COVERED IN BLOOD,B2
+bloody,adjective,VIOLENT,C1
+blouse,noun,none,A1
+blow,verb,WIND,B1
+blow,verb,PERSON,B1
+blow your nose,lexical_chunk,none,B1
+blow,verb,SOUND,C2
+blow it/your chance(s),lexical_chunk,none,C2
+blow your mind,lexical_chunk,none,C2
+blow away (sth) or blow (sth) away,lexical_chunk,none,B1
+blow down (sth) or blow (sth) down,lexical_chunk,none,B1
+blow out (sth) or blow (sth) out,lexical_chunk,none,B1
+blow up sth or blow sth up,lexical_chunk,none,B1
+blow up (sth/sb) or blow (sth/sb) up,lexical_chunk,none,B1
+blow,noun,HIT,C2
+blow,noun,BAD EVENT,C2
+blue,adjective,COLOR,A1
+blue,adjective,SAD,C2
+blue,noun,none,A2
+out of the blue,lexical_chunk,none,C1
+blunt,adjective,NOT SHARP,C2
+blunt,adjective,RUDE,C2
+blush,verb,none,B2
+board,noun,CLASSROOM,A1
+board,noun,INFORMATION,A2
+board,noun,GAMES,A2
+board,noun,SURFACE,B1
+on board,lexical_chunk,none,B1
+board,noun,MEALS,B2
+board,noun,ORGANIZATION,C1
+board,verb,none,B1
+board game,noun,none,A2
+boast,verb,PRIDE,B2
+boast,verb,HAVE,C2
+boat,noun,none,A1
+rock the boat,lexical_chunk,none,C2
+be in the same boat,lexical_chunk,none,C2
+miss the boat,lexical_chunk,none,C2
+body,noun,PERSON,A1
+body,noun,DEAD,A2
+body,noun,NOT ARMS/LEGS,B1
+body,noun,GROUP,C2
+boil,verb,HEAT LIQUID,B1
+boil,verb,COOK,B1
+boil,verb,CONTAINER,B1
+boiled,adjective,none,B1
+boiling,adjective,none,B2
+bold,adjective,EASY TO NOTICE,B2
+bold,adjective,BRAVE,B2
+boldly,adverb,none,B2
+bomb,noun,none,B1
+bomb,verb,none,B1
+bomber,noun,PERSON,B2
+bomber,noun,AIRCRAFT,C2
+bombing,noun,none,B2
+bond,noun,none,B2
+bond,verb,none,C2
+bone,noun,none,B1
+a bone of contention,lexical_chunk,none,C2
+bonus,noun,EXTRA THING,B2
+bonus,noun,EXTRA MONEY,B2
+book,noun,FOR READING,A1
+book,noun,FOR WRITING,B1
+"a book of stamps/tickets, etc.",lexical_chunk,none,C2
+not judge a book by its cover,lexical_chunk,none,C2
+do sth by the book,lexical_chunk,none,C2
+book,verb,none,B1
+book sb in or book sb into sth ,lexical_chunk,none,B1
+bookcase,noun,none,A1
+booklet,noun,none,B2
+bookmark,noun,none,B2
+bookmark,verb,none,B2
+bookshelf,noun,none,A2
+bookstore,noun,none,A1
+boost,noun,none,B2
+boost,verb,none,B2
+boot,noun,none,A1
+border,noun,none,B1
+bored,adjective,none,B1
+boring,adjective,none,A1
+be born,lexical_chunk,none,A2
+be born,lexical_chunk,none,C2
+borrow,verb,GET,A2
+borrow,verb,MONEY,C1
+boss,noun,none,A2
+bossy,adjective,none,B2
+both,determiner,none,A1
+both,pronoun,none,A1
+bother,verb,ANNOY,A2
+bother,verb,WORRY,B2
+bother,verb,MAKE AN EFFORT,B2
+can't be bothered,lexical_chunk,none,B2
+bothered,adjective,none,B2
+bottle,noun,none,A2
+bottom,noun,LOWEST PART,A1
+bottom,noun,FLAT SURFACE,A2
+bottom,noun,LOWEST POSITION,B1
+bottom,noun,SEA/RIVER/LAKE,B1
+the bottom line,lexical_chunk,none,C2
+from top to bottom,lexical_chunk,none,C2
+bounce,verb,MOVE UP,B1
+"bounce along/around/into, etc.",lexical_chunk,none,C1
+bounce,verb,E-MAIL,C2
+bounce back,lexical_chunk,SUCCESSFUL AGAIN,C1
+ bound to do sth,lexical_chunk,none,B2
+bound,adjective,DIRECTION,C1
+bound up with sth,lexical_chunk,none,C2
+boundary,noun,LINE,C1
+boundary,noun,LIMIT,C1
+bow,noun,KNOT,B2
+bow,noun,WEAPON,B2
+bow,noun,INSTRUMENT,C2
+bowl,noun,none,A2
+box,noun,CONTAINER,A1
+box,noun,SQUARE SPACE,A2
+boxing,noun,none,B1
+boy,noun,none,A1
+the boys,lexical_chunk,none,B2
+boyfriend,noun,none,A2
+bra,noun,none,B2
+bracelet,noun,none,A2
+bracket,noun,SYMBOL,C1
+bracket,noun,GROUP,C1
+brain,noun,BODY PART,A2
+brain,noun,INTELLIGENCE,C1
+brake,noun,none,B1
+brake,verb,none,B2
+branch,noun,TREE,B1
+branch,noun,BUSINESS,B1
+branch,noun,SUBJECT,B2
+brand,noun,none,B2
+brand new,adjective,none,B1
+brass,noun,METAL,C1
+brass,noun,MUSIC,C2
+brave,adjective,none,B1
+bravely,adverb,none,B1
+bravery,noun,none,B2
+bread,noun,none,A1
+"sb's breadth of experience/knowledge/interest, etc.",lexical_chunk,none,C2
+the length and breadth of sth,lexical_chunk,none,C2
+break,verb,SEPARATE,A2
+"break your arm/leg, etc.",lexical_chunk,none,A2
+break,verb,NOT WORK,A2
+break,verb,INTERRUPT,B1
+break,verb,END,B2
+break a record,lexical_chunk,none,B2
+"break an agreement/promise, etc.",lexical_chunk,none,B2
+break the law,lexical_chunk,none,B2
+break the ice,lexical_chunk,none,B2
+break sb's heart,lexical_chunk,none,B2
+break even,lexical_chunk,none,C1
+break,verb,BECOME KNOWN,C2
+break the news to sb,lexical_chunk,none,C2
+break free,lexical_chunk,none,C2
+break,verb,STORM,C2
+break down,lexical_chunk,none,B1
+break in or break into sth ,lexical_chunk,none,B1
+break off (sth) or break (sth) off,lexical_chunk,none,B2
+break out,lexical_chunk,none,B2
+break through sth,lexical_chunk,none,B2
+break up,lexical_chunk,none,B1
+break,noun,STOP,A2
+break,noun,VACATION,B1
+break,noun,DAMAGE,B1
+break,noun,OPPORTUNITY,C2
+breakable,adjective,none,B2
+breakdown,noun,ILLNESS,B2
+breakdown,noun,NOT WORKING,B2
+breakdown,noun,FAILURE,C1
+breakdown,noun,division,C2
+breakfast,noun,none,A1
+breakthrough,noun,none,B2
+breast,noun,none,B1
+breath,noun,AIR,B1
+be out of breath,lexical_chunk,none,B2
+hold your breath,lexical_chunk,none,B2
+take your breath away,lexical_chunk,none,B2
+take a deep breath,lexical_chunk,none,B2
+catch your breath,lexical_chunk,none,C1
+under your breath,lexical_chunk,none,C2
+with bated breath,lexical_chunk,none,C2
+hold your breath,lexical_chunk,none,C2
+breathe,verb,none,B1
+breathtaking,adjective,none,B2
+breed,verb,none,B2
+"breed resentment/confusion/contempt, etc.",lexical_chunk,none,C2
+breed,noun,none,B2
+breeze,noun,none,B1
+bribe,noun,none,C1
+bribe,verb,none,C1
+bribery,noun,none,C2
+brick,noun,none,B2
+bride,noun,none,B1
+bridge,noun,STRUCTURE,A2
+bridge,noun,CONNECTION,C2
+brief,adjective,SHORT,B1
+in brief,lexical_chunk,none,B2
+briefly,adverb,none,B1
+bright,adjective,COLOR,A2
+bright,adjective,LIGHT,B1
+bright,adjective,INTELLIGENT,B2
+bright,adjective,HAPPY,B2
+look on the bright side,lexical_chunk,none,C1
+brightly,adverb,none,B2
+brilliant,adjective,VERY INTELLIGENT,B1
+brilliant,adjective,VERY BRIGHT,B1
+brilliantly,adverb,none,B2
+bring,verb,TAKE WITH YOU,A2
+"bring (sb) happiness/luck/peace, etc.",lexical_chunk,none,B1
+bring sth to an end,lexical_chunk,none,C1
+bring (sth) to light,lexical_chunk,none,C2
+bring a lump to your throat,lexical_chunk,none,C2
+bring back sth or bring sth back,lexical_chunk,none,A2
+bring out sth or bring sth out,lexical_chunk,none,B2
+bring up sb or bring sb up ,lexical_chunk,none,B1
+bring up sth or bring sth up,lexical_chunk,none,B2
+be on the brink of sth,lexical_chunk,none,C2
+broad,adjective,WIDE,B1
+"a broad range/variety, etc.",lexical_chunk,none,B1
+broadband,noun,none,B2
+broadcast,verb,none,B2
+broaden,verb,none,C1
+broadly,adverb,none,C1
+broad-minded,adjective,none,C2
+broccoli,noun,none,B1
+brochure,noun,none,B1
+broken,adjective,DAMAGED,A2
+"a broken arm/leg, etc.",lexical_chunk,none,A2
+broken,adjective,NOT WORKING,A2
+a broken heart,lexical_chunk,none,B2
+"broken English/Spanish, etc.",lexical_chunk,none,C1
+a broken home,lexical_chunk,none,C2
+bronze,noun,PRIZE,C1
+bronze,noun,METAL,C2
+bronze,adjective,METAL,C2
+bronze,adjective,COLOR,C2
+brother,noun,none,A1
+brother-in-law,noun,none,B2
+brown,adjective,none,A1
+brown,noun,none,A2
+browse,verb,LOOK,B2
+browse,verb,COMPUTING,B2
+browser,noun,none,B2
+bruise,noun,none,B2
+brush,noun,none,A2
+brush,verb,CLEAN/ARRANGE,A2
+brush,verb,TOUCH,B2
+"brush sth away/off, etc.",lexical_chunk,none,C1
+brush up (on) sth,lexical_chunk,none,C1
+brutal,adjective,none,C1
+bubble,noun,none,C1
+"bubble (over) with confidence/enthusiasm, etc.",lexical_chunk,none,C1
+bubble,verb,LIQUID,C2
+bucket,noun,none,B1
+budget,noun,none,B2
+bug,noun,INSECT,B1
+bug,noun,ILLNESS,B2
+bug,noun,COMPUTER,B2
+build,verb,none,A2
+build (sth) up or build up (sth),lexical_chunk,none,C1
+builder,noun,none,B1
+building,noun,none,A2
+bulb,noun,none,B1
+in bulk,lexical_chunk,none,C1
+the bulk of sth,lexical_chunk,none,C1
+bulky,adjective,none,C1
+bull,noun,none,B1
+bullet,noun,none,B2
+bulletin board,noun,none,B1
+bully,verb,none,C1
+bully,noun,none,C1
+bump,verb,HURT,B2
+bump into sth,lexical_chunk,none,B2
+bump into sb,lexical_chunk,none,C1
+bump,noun,BODY,C1
+bump,noun,SURFACE,C1
+bumper,noun,none,B2
+bun,noun,none,B2
+bunch,noun,THINGS,B1
+bunch,noun,PEOPLE,B1
+bundle,noun,TIED GROUP,C2
+a bundle of energy/nerves,lexical_chunk,none,C2
+burden,noun,none,C1
+bureaucracy,noun,RULES,C2
+bureaucracy,noun,GOVERNMENT,C2
+burger,noun,none,A2
+burglar,noun,none,B2
+burglary,noun,none,B2
+burial,noun,none,C2
+burn,verb,DESTROY,B1
+burn,verb,PRODUCE FLAMES,B1
+burn,verb,COOK TOO LONG,B1
+burn,verb,HURT BODY,B1
+burn,verb,COPY,B2
+burn,verb,PRODUCE ENERGY,B2
+burn the midnight oil,lexical_chunk,none,C2
+burn down (sth) or burn (sth) down,lexical_chunk,none,B2
+burn out,lexical_chunk,none,B2
+burning,adjective,ON FIRE,B1
+a burning issue/question,lexical_chunk,none,C1
+"burning ambition/desire, etc.",lexical_chunk,none,C1
+burst,verb,BREAK APART,B2
+"be bursting with confidence/joy, etc.",lexical_chunk,none,C2
+burst into flames,lexical_chunk,none,C2
+burst into sth ,lexical_chunk,ENTER SUDDENLY,B2
+burst into sth ,lexical_chunk,MAKE A NOISE,B2
+burst out ,lexical_chunk,none,B2
+bury,verb,DEAD BODY,B1
+bury,verb,HIDE,B2
+bury yourself in sth,lexical_chunk,none,C2
+bury your face/head in sth,lexical_chunk,none,C2
+bus,noun,none,A1
+bush,noun,none,B2
+the bush,lexical_chunk,none,C2
+business,noun,SELLING,A1
+business,noun,ORGANIZATION,A2
+business,noun,WORK,B1
+be none of sb's  business,lexical_chunk,none,B2
+mind your own business,lexical_chunk,none,C2
+businessman,noun,none,A2
+businesswoman,noun,none,A2
+bus station,noun,none,A2
+bus stop,noun,none,A2
+busy,adjective,PERSON,A1
+busy,adjective,PLACE,A1
+busy,adjective,TIME,A2
+but,conjunction,none,A1
+but,conjunction,EXPLAINING WHY,B1
+but,preposition,none,B1
+butcher,noun,none,B1
+butt,noun,none,C1
+butt in,lexical_chunk,none,C2
+butter,noun,none,A1
+butterfly,noun,none,B1
+button,noun,ON MACHINE,B1
+button,noun,ON CLOTHING,B1
+buy,verb,none,A1
+buyer,noun,none,B1
+buzz,noun,EXCITEMENT,C2
+buzz,noun,SOUND,C2
+buzz,verb,SOUND,C2
+buzz,verb,ENERGY,C2
+by,preposition,DO,A2
+by,preposition,HOW,A2
+by,preposition,NOT LATER THAN,A2
+by the way,lexical_chunk,none,A2
+by,preposition,NEAR,B1
+"by accident/mistake, etc.",lexical_chunk,none,B1
+by hand,lexical_chunk,none,B1
+by,preposition,HOLDING,B2
+by far,lexical_chunk,none,B2
+by heart,lexical_chunk,none,B2
+"day by day/little by little/one by one, etc.",lexical_chunk,none,B2
+by,preposition,AMOUNT,B2
+by and large,lexical_chunk,none,C1
+by law,lexical_chunk,none,C1
+by no means; not by any means,lexical_chunk,none,C1
+by way of sth,lexical_chunk,none,C1
+by all means,lexical_chunk,none,C2
+by word of mouth,lexical_chunk,none,C2
+by the same token,lexical_chunk,none,C2
+by virtue of sth,lexical_chunk,none,C2
+bye,exclamation,none,A1
+cab,noun,none,B1
+cabbage,noun,none,B1
+cabin,noun,AIRCRAFT,B1
+cabin,noun,HOUSE,B1
+cabin,noun,SHIP,C2
+cabinet,noun,none,A2
+cable,noun,TELEVISION/TELEPHONE,B1
+cable,noun,WIRE,B2
+café,noun,none,A1
+cafeteria,noun,none,A2
+cage,noun,none,B1
+cake,noun,FOOD,A1
+be a piece of cake,lexical_chunk,none,B2
+calculate,verb,MATH,B2
+be calculated to do sth,lexical_chunk,none,C2
+calculation,noun,none,B2
+calculator,noun,none,B1
+calendar,noun,DAYS,A2
+calendar,noun,APPOINTMENTS,B2
+calf,noun,ANIMAL,B1
+calf,noun,LEG,C2
+be called sth,lexical_chunk,none,A1
+call,verb,TELEPHONE,A2
+call,verb,NAME,B1
+call,verb,SHOUT,B1
+call,verb,DESCRIBE,B2
+call,verb,ASK TO COME,B2
+call in sick,lexical_chunk,none,B2
+call a meeting,lexical_chunk,none,C1
+call it a day,lexical_chunk,none,C2
+call sb names,lexical_chunk,none,C2
+call back (sb) or call (sb) back,lexical_chunk,none,A2
+call for sb ,lexical_chunk,none,B1
+call for sth,lexical_chunk,none,C2
+call off sth or call sth off,lexical_chunk,NOT HAPPEN,B2
+call off sth or call sth off,lexical_chunk,STOP,C1
+call on sb to do sth,lexical_chunk,none,C1
+call up (sb) or call (sb) up,lexical_chunk,none,B1
+call up sth or call sth up,lexical_chunk,none,C2
+be called up,lexical_chunk,none,C2
+call,noun,TELEPHONE,A2
+call,noun,SHOUT,B1
+sb's call,lexical_chunk,none,B1
+a call for sth,lexical_chunk,none,C1
+call,noun,VISIT,C1
+calm,adjective,PERSON,B1
+calm,adjective,SEA/WEATHER,B1
+calm down (sb) or calm (sb) down ,lexical_chunk,none,B2
+calmly,adverb,none,B2
+camel,noun,none,B1
+camera,noun,none,A1
+camp,noun,TENTS/BUILDINGS,B1
+camp,noun,vacation place,B1
+"an army/prison/refugee, etc. camp",lexical_chunk,none,B2
+camp,verb,none,A2
+campaign,noun,ACTIVITIES,C1
+campaign,noun,WAR,C1
+campaign,verb,none,C1
+camping,noun,none,A2
+campsite,noun,none,B1
+campus,noun,none,B2
+can,noun,none,A2
+can,modal verb,ABILITY,A1
+can,modal verb,REQUEST,A1
+can,modal verb,OFFER,A1
+can,modal verb,POSSIBILITY,A1
+can,modal verb,PERMISSION,A2
+can,modal verb,SURPRISE,B1
+can,modal verb,TYPICAL,B2
+can,modal verb,SOMETIMES HAPPENING,B2
+canal,noun,none,B1
+cancel,verb,none,B1
+cancellation,noun,none,C1
+cancer,noun,none,B1
+candidate,noun,JOB/ELECTION,B2
+candle,noun,none,B1
+candy,noun,none,A2
+canned,adjective,none,B2
+cannot,modal verb,none,A1
+cap,noun,none,A2
+cap,verb,none,C1
+capability,noun,none,C1
+capable,adjective,GOOD AT DOING THINGS,B2
+capable of sth/doing sth ,lexical_chunk,none,B2
+capacity,noun,AMOUNT,B2
+capacity,noun,ABILITY,B2
+capacity,noun,JOB,C1
+capital,noun,none,A2
+capitalism,noun,none,C2
+capitalist,adjective,none,C2
+capital letter,noun,none,A2
+captain,noun,SPORTS,B1
+captain,noun,SHIP/AIRCRAFT,B2
+capture,verb,CATCH,B2
+capture,verb,DESCRIBE,B2
+"capture sb/sth on camera/film, etc.",lexical_chunk,none,B2
+capture sb's attention/ imagination/ interest,lexical_chunk,none,C1
+capture,noun,none,C1
+car,noun,ROAD,A1
+car,noun,TRAIN,C1
+carbon,noun,none,B2
+carbon dioxide,noun,none,B2
+carbon footprint,noun,none,B2
+carbon monoxide,noun,none,B2
+card,noun,GREETINGS,A2
+card,noun,GAME,A2
+card,noun,INFORMATION,B1
+card,noun,COMPUTER,B1
+be in the cards,lexical_chunk,none,C2
+cardboard,noun,none,B2
+cardigan,noun,none,B2
+Take care!,lexical_chunk,none,A2
+take care of sb/sth ,lexical_chunk,none,B1
+care,noun,ATTENTION,B1
+care,noun,PROTECTION,B2
+take care of sth/doing sth,lexical_chunk,none,C1
+care,noun,WORRY,C2
+care,verb,WORRY,B1
+care,verb,LOVE,B1
+Who cares?,lexical_chunk,none,B2
+"I/he/she, etc. couldn't care less",lexical_chunk,none,C1
+care for sb/sth ,lexical_chunk,none,B2
+career,noun,JOB,B1
+career,noun,TIME,C2
+carefree,adjective,none,C2
+careful,adjective,none,A2
+carefully,adverb,none,A2
+careless,adjective,none,B1
+carelessly,adverb,none,B2
+carelessness,noun,none,B2
+cargo,noun,none,C2
+caring,adjective,none,B2
+carnival,noun,CELEBRATION,B2
+carnival,noun,ENTERTAINMENT,B2
+carpet,noun,none,A2
+carriage,noun,none,C2
+carrot,noun,VEGETABLE,A2
+carrot,noun,REWARD,C2
+carry,verb,HOLD,A1
+carry,verb,HAVE WITH YOU,B1
+carry,verb,TRANSPORT,B2
+carry,verb,DISEASE,C1
+carry,verb,HAVE,C2
+carry,verb,SUPPORT,C2
+carry weight,lexical_chunk,none,C2
+be/get carried away,lexical_chunk,none,B2
+carry on (sth) or carry (sth) on,lexical_chunk,none,B1
+carry out sth or carry sth out ,lexical_chunk,none,B1
+cart,noun,none,B2
+cartoon,noun,FILM,A2
+cartoon,noun,DRAWING,A2
+carve,verb,none,C2
+case,noun,CONTAINER,A2
+case,noun,SITUATION,B1
+in case of sth,lexical_chunk,none,B1
+(just) in case,lexical_chunk,none,B1
+be the case,lexical_chunk,none,B2
+in any case,lexical_chunk,none,B2
+in that case,lexical_chunk,none,B2
+case,noun,CRIME,B2
+case,noun,COURT OF LAW,B2
+case,noun,ILLNESS,C2
+case,noun,ARGUMENT,C2
+cash,noun,NOTES/COINS,A2
+cash,noun,MONEY,B1
+cash machine,noun,none,B1
+casserole,noun,FOOD,C2
+casserole,noun,CONTAINER,C2
+cast,noun,none,B2
+cast,verb,ACTORS,B2
+cast a/your vote,lexical_chunk,none,C2
+cast your mind back,lexical_chunk,none,C2
+cast a spell on sb,lexical_chunk,none,C2
+cast a spell (on sb/sth),lexical_chunk,none,C2
+cast doubt on sb/sth,lexical_chunk,none,C2
+cast,verb,LIGHT,C2
+castle,noun,none,A2
+casual,adjective,CLOTHES,B1
+casual,adjective,NOT PLANNED,B2
+casually,adverb,none,B2
+casualty,noun,none,C2
+cat,noun,none,A1
+catalog,noun,none,B2
+catastrophe,noun,none,C2
+catch,verb,TAKE HOLD,A1
+catch,verb,TRAVEL,A1
+catch,verb,ILLNESS,A2
+catch,verb,STOP ESCAPING,B1
+catch fire,lexical_chunk,none,B1
+"catch sb's attention, interest, etc.",lexical_chunk,none,B2
+catch,verb,DISCOVER,B2
+catch,verb,CRIMINAL,B2
+be/get caught,lexical_chunk,none,C2
+catch,verb,STICK,C2
+catch sight of sth,lexical_chunk,none,C2
+catch sb's eye,lexical_chunk,none,C2
+catch sb off guard,lexical_chunk,none,C2
+catch on,lexical_chunk,BECOME POPULAR,C1
+catch on,lexical_chunk,UNDERSTAND,C2
+catch up (sb) or catch (sb) up,lexical_chunk,REACH SOMEONE,B2
+catch up (sb) or catch (sb) up,lexical_chunk,BE AS GOOD AS,C1
+catch up,lexical_chunk,none,B2
+be/get caught up in sth,lexical_chunk,none,C2
+catch up with sb ,lexical_chunk,MEET,B1
+catch up with sb ,lexical_chunk,BAD THING,C2
+catch up on/with sth,lexical_chunk,none,B2
+category,noun,none,B2
+cater,verb,none,C1
+cater to sb/sth,lexical_chunk,none,C1
+catering,noun,none,B2
+cathedral,noun,none,A2
+cattle, noun,none,B1
+cause,noun,REASON WHY,B2
+cause,noun,PRINCIPLE,C1
+cause,noun,REASON FOR,C2
+cause,verb,none,B2
+caution,noun,CARE,C1
+throw caution to the wind,lexical_chunk,none,C2
+caution,verb,none,C2
+cautious,adjective,none,B2
+cave,noun,none,B1
+CD,noun,none,A1
+CD player,noun,none,A1
+CD-ROM,noun,none,B1
+cease,verb,none,B2
+ceiling,noun,ROOM,A2
+ceiling,noun,AMOUNT,C2
+celebrate,verb,none,B1
+celebration,noun,none,B1
+celebrity,noun,none,B1
+cell,noun,ORGANISM,B2
+cell,noun,ROOM,B2
+cellar,noun,none,B2
+cello,noun,none,B2
+cell phone,noun,none,A1
+cemetery,noun,none,B2
+cent,noun,none,A2
+center,noun,MIDDLE,A2
+center,noun,PLACE,A2
+center,noun,POLITICAL,C2
+centigrade,noun,none,B2
+centimeter,noun,none,A2
+central,adjective,NEAR CENTER,B1
+central,adjective,CITY,C1
+central,adjective,ORGANIZATION,C1
+central,adjective,IMPORTANT,C2
+central heating,noun,none,B1
+century,noun,none,A2
+the turn of the century,lexical_chunk,none,C2
+cereal,noun,BREAKFAST FOOD,A2
+cereal,noun,PLANT,C1
+ceremony,noun,none,B1
+certain,adjective,NO DOUBT,B1
+certain,adjective,SURE TO HAPPEN,B1
+certain,adjective,PARTICULAR,B1
+a certain,lexical_chunk,none,B2
+know/say for certain,lexical_chunk,none,C1
+certainly,adverb,NO DOUBT,A2
+certainly,adverb,AGREE,A2
+certainly not,lexical_chunk,none,C1
+certainty,noun,BEING SURE,B2
+certainty,noun,SURE THING,C2
+certificate,noun,none,B1
+chain,noun,METAL RINGS,A2
+chain,noun,BUSINESS,B1
+chain,noun,EVENTS,B2

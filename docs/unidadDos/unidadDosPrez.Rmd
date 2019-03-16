@@ -327,7 +327,7 @@ class: inverse, center, middle
 
 --
 
-```{r}
+```{r warning=FALSE}
 engGrPr <- read_excel("a1-c2.xlsx")
 ```
 
@@ -336,8 +336,13 @@ engGrPr <- read_excel("a1-c2.xlsx")
 ### 3. Inspeccionar los datos. (La definición de las variables se encuentra <a href="http://www.englishprofile.org/english-grammar-profile/glossary"> aquí </a>)
 
 --
-
 ### 4. Vamos a hacer un *Stacked Bar Graph*
+
+---
+
+class: inverse, middle, center
+
+# ¿Cuál es la distribución de los puntos gramaticales según el nivel del *pasado?*?
 
 ---
 
@@ -415,7 +420,7 @@ engGrPr %>%
 
 class: inverse, center, middle
 
-# Word Cloud con Word Cloud 2
+# Word Cloud con Word Cloud hello world 2 d
 
 ---
 

@@ -109,18 +109,23 @@ library(kableExtra)
 ```
 
 # *Overview*
-En esta unidad, vamos a aplicar lo que vimos en el curso *Introduction to the Tidyverse* a dos bases de datos lexicográficos: *A Frequency Dictionar of Spanish* y *English Grammar Profile*; y unos datos sociofonéticos.
+El propósito de esta unidad es aplicar los conocimientos del curso [*Introduction to the Tidyverse*](https://www.datacamp.com/courses/introduction-to-the-tidyverse) a dos bases de datos lexicográficos: [*A Frequency Dictionary of Spanish: Core Vocabulary for Learners (Routledge Frequency Dictionaries)*](https://www.amazon.com/Frequency-Dictionary-Spanish-Vocabulary-Dictionaries/dp/0415334292) (una sub muestra), [*English Grammar Profile*](https://www.englishprofile.org/english-grammar-profile?); y unos datos sociofonéticos de mi tesis de maestría. Puedes utilizar `git clone` para descargar todas las materiales.
+
+```{r, engine = 'bash', eval = FALSE}
+# Por hacer: crear un repositorio por separado con todas las materiales de esta unidad o configurar la descarga de un subdirectorio
+git clone https://github.com/axme100/rclass
+```
 
 
 # ¿Cómo cargar datos en R?
-Los primeros datos linguüísticos que vamos a cargar vienen de un diccionario de frecuencia llamado [*A Frequency Dictionary of Spanish: Core Vocabulary for Learners (Routledge Frequency Dictionaries)*](https://www.amazon.com/Frequency-Dictionary-Spanish-Vocabulary-Dictionaries/dp/0415334292). El diccionario está pensado en los aprendices del español.
-
-
+El primero que hay que hacer es cargar los datos de [*A Frequency Dictionary of Spanish: Core Vocabulary for Learners (Routledge Frequency Dictionaries)*](https://www.amazon.com/Frequency-Dictionary-Spanish-Vocabulary-Dictionaries/dp/0415334292). El diccionario está pensado en los aprendices del español, esta submuestra del diccionario está en formato `.csv` (*comma separated values*), y lo podemos cargar con `read_csv()`
 
 ## Con *Absolute Path*
 ```{r}
-spanLexData <- read.csv("spanLexData.csv")
+spanLexData <- read.csv("/Users/maxcarey/Documents/proj/rclass/docs/unidadDos/spanLexData.csv")
 ```
+
+Acuérdate que siempre es mejor utilizar `*relative paths*` porque hace que tu *script* sea más transferible a otras personas. Es decir, el *path* de arriba, no funcionaría en tu maquina, pues tendrías que poner tu proio nombre.
 
 ## Con *Relative Path*
 ```{r}

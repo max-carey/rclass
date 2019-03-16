@@ -109,7 +109,7 @@ library(kableExtra)
 ```
 
 # *Overview*
-El propósito de esta unidad es aplicar los conocimientos del curso [*Introduction to the Tidyverse*](https://www.datacamp.com/courses/introduction-to-the-tidyverse) a dos bases de datos lexicográficos: [*A Frequency Dictionary of Spanish: Core Vocabulary for Learners (Routledge Frequency Dictionaries)*](https://www.amazon.com/Frequency-Dictionary-Spanish-Vocabulary-Dictionaries/dp/0415334292) (una sub muestra), [*English Grammar Profile*](https://www.englishprofile.org/english-grammar-profile?); y unos datos sociofonéticos de mi tesis de maestría. Puedes utilizar `git clone` para descargar todas las materiales.
+El propósito de esta unidad es aplicar los conocimientos del curso [*Introduction to the Tidyverse*](https://www.datacamp.com/courses/introduction-to-the-tidyverse) a dos bases de datos lexicográficos: [*A Frequency Dictionary of Spanish: Core Vocabulary for Learners (Routledge Frequency Dictionaries)*](https://www.amazon.com/Frequency-Dictionary-Spanish-Vocabulary-Dictionaries/dp/0415334292) (una sub muestra), [*English Grammar Profile*](https://www.englishprofile.org/english-grammar-profile?); y unos datos sociofonéticos de mi tesis de maestría. Puedes utilizar `git clone` para descargar todas las materiales:
 
 ```{r, engine = 'bash', eval = FALSE}
 # Por hacer: crear un repositorio por separado con todas las materiales de esta unidad o configurar la descarga de un subdirectorio
@@ -125,7 +125,9 @@ El primero que hay que hacer es cargar los datos de [*A Frequency Dictionary of 
 spanLexData <- read.csv("/Users/maxcarey/Documents/proj/rclass/docs/unidadDos/spanLexData.csv")
 ```
 
-Acuérdate que siempre es mejor utilizar `*relative paths*` porque hace que tu *script* sea más transferible a otras personas. Es decir, el *path* de arriba, no funcionaría en tu maquina, pues tendrías que poner tu proio nombre.
+Acuérdate que siempre es mejor utilizar *relative paths* porque hace que tu *script* sea más transferible a otras personas. Es decir, el *path* de arriba, no funcionaría en tu maquina, pues tendrías que poner tu proio nombre. Si nuestro *script* y nuestros datos están en la misma carpeta solo tenemos que decirle a R que identifica esta carpeta como el directorio activo. En R Studio, con el *script* meta que estémos utilizando se hace: `Session` -> `Set Working Directory` -> `To Source File Location` (Ve abajo):
+
+[working_directory](set_wd.png)
 
 ## Con *Relative Path*
 ```{r}

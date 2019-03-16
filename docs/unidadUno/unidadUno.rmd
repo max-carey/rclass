@@ -134,7 +134,6 @@ https://git-scm.com/
   <span class="checkmark"></span>
 </label>
 
-
 Si tienes Windows, vas a necesitar descargar un programa que se llama Git bash. Las instrucciones se pueden encontrar en: [este video](https://www.youtube.com/watch?v=UQZvV6VTlGQ). (50 segundos). Si tienes un Mac, no necesitas hacer nada porque ya cuentas con un programa que se llama *Terminal*.
 
 

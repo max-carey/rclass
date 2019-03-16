@@ -183,13 +183,21 @@ Dentro de este programa puedes usar R. R Studio es un programa que utiliza R per
 
 Sigue [estas instrucciones](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu). Para usuarios de Windows, es muy fácil descargar R y R Studio, para usuarios de Mac es un poco más complicado si no tienes experiencia con la línea de comandos.
 
-## Si ya tienes R Studio instalado, corre el siguiente comando para confirmar que tienes una versión actualizada.
+## Confirma que tienes la versión actualizada de R y R Studio. (Sobre todo si ya tiene un buen desde que los descargaste) 
+
+Corre el siguiente comando dentro de la consola para confirmar que tienes una versión actualizada en R.
 
 ```{r}
 sessionInfo()
 ```
 
 Como pueden ver en la primera linea del *output* de arriba: `R version 3.5.1 (2018-07-02)` estamos utilizando una versión de R descargado el segundo de julio de 2018, tendría que actualizarme!
+
+Para checar si tienes la versión más actualizada de R Studio, haz: `help` -> `Check for Updates` (Ve la foto de abajo)
+
+![help_pane.png](help_pane.png)
+
+
 
 ---
 

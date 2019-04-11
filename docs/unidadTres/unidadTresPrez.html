@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Unidad 3</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Max Carey" />
+    <link href="libs/remark-css/chocolate.css" rel="stylesheet" />
+    <link href="libs/remark-css/chocolate-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Unidad 3
+## Estadística con R
+### Max Carey
+### UNAM </br> 2019-03-29
+
+---
+
+
+
+
+class: center, middle
+
+# xaringan
+
+### /ʃæ.'riŋ.ɡæn/
+
+---
+
+# Cargar los datos
+
+
+```r
+# Leer datos
+datosPiloto &lt;- read_csv("datosPiloto.csv")
+glimpse(datosPiloto)
+```
+
+```
+## Observations: 1,177
+## Variables: 30
+## $ uniqueID              &lt;chr&gt; "001-cdmx-f-30-lic-605.352786879051", "001…
+## $ intensityDif          &lt;dbl&gt; 5.681258, 1.000000, 14.449244, 15.361933, …
+## $ preceding_phone       &lt;chr&gt; "baja", "media", "alta", "baja", "baja", "…
+## $ Consonant             &lt;chr&gt; "d", "d", "d", "d", "d", "d", "d", "d", "d…
+## $ following_phone       &lt;chr&gt; "media", "media", "baja", "media", "media"…
+## $ grupo                 &lt;chr&gt; "CDMX-IN-SITU", "CDMX-IN-SITU", "CDMX-IN-S…
+## $ sexo                  &lt;chr&gt; "FEMENINO", "FEMENINO", "FEMENINO", "FEMEN…
+## $ Word                  &lt;chr&gt; "DADO", "TODO", "REALIDAD", "PANADERO", "P…
+## $ wordFrequency         &lt;dbl&gt; 1.778151, 3.392697, 2.230449, 1.301030, 1.…
+## $ stressStatus          &lt;chr&gt; "unstressed", "unstressed", "stressed", "s…
+## $ wordPosition          &lt;chr&gt; "medial", "medial", "medial", "medial", "m…
+## $ pastParticiple        &lt;chr&gt; "yes", "no", "no", "no", "no", "no", "mayb…
+## $ observableDip         &lt;chr&gt; "yes", "elidida", "yes", "yes", "yes", "ye…
+## $ stopBurst             &lt;chr&gt; "no_hay", "no_hay", "no_hay", "no_hay", "n…
+## $ formante              &lt;chr&gt; "formantes_fuertes", "formantes_fuertes", …
+## $ speaker               &lt;chr&gt; "001-cdmx-f-30-lic", "001-cdmx-f-30-lic", …
+## $ Status                &lt;chr&gt; "valid", "valid", "valid", "valid", "valid…
+## $ stopMinInten          &lt;dbl&gt; 66.57054, 66.53607, 65.55487, 66.67569, 63…
+## $ vowelMaxInten         &lt;dbl&gt; 71.25179, 69.20429, 79.00411, 81.03762, 71…
+## $ startTime             &lt;dbl&gt; 605.3392, 639.2028, 664.3357, 674.8008, 67…
+## $ endTime               &lt;dbl&gt; 605.3664, 639.2311, 664.3650, 674.8369, 67…
+## $ midPoint              &lt;dbl&gt; 605.3528, 639.2169, 664.3503, 674.8188, 67…
+## $ following_two_phone   &lt;chr&gt; "k", "u", "d", "r", "r", "r", "e", "d", "s…
+## $ Notes                 &lt;chr&gt; NA, NA, "Discourse reasons for a high inte…
+## $ Analyst               &lt;chr&gt; "mc", "mc", "mc", "mc", "mc", "mc", "mc", …
+## $ Date                  &lt;chr&gt; "Tue Aug 21 15:45:06 2018", "Tue Dec 11 13…
+## $ minimumPitchSetting   &lt;chr&gt; "75HZ", "75HZ", "75HZ", "75HZ", "75HZ", "7…
+## $ Praat.Version         &lt;chr&gt; "6.0.40", "6.0.40", "6.0.40", "6.0.40", "6…
+## $ OS                    &lt;chr&gt; "OSX", "OSX", "OSX", "OSX", "OSX", "OSX", …
+## $ wordFrequencyAbsolute &lt;dbl&gt; 6, 247, 17, 2, 5, 1, 3, 1, 1, 29, 17, 2, 5…
+```
+---
+#¿Cuál es la media de la variable dependiente?
+
+--
+
+
+```r
+mean(datosPiloto$intensityDif)
+```
+
+```
+## [1] 4.352866
+```
+
+--
+
+# ¿Cuál es la media de la variable dependiente por hombres y mujeres?
+
+--
+
+
+```r
+datosPiloto %&gt;%
+  group_by(sexo) %&gt;%
+  summarize(mean = mean(intensityDif))
+```
+
+```
+## # A tibble: 2 x 2
+##   sexo       mean
+##   &lt;chr&gt;     &lt;dbl&gt;
+## 1 FEMENINO   4.96
+## 2 MASCULINO  3.83
+```
+
+---
+
+# ¿Cuál es la media de la variable dependiente por grupo dialectal?
+
+
+```r
+datosPiloto %&gt;%
+  group_by(grupo) %&gt;%
+  summarize(mean = mean(intensityDif))
+```
+
+```
+## # A tibble: 3 x 2
+##   grupo         mean
+##   &lt;chr&gt;        &lt;dbl&gt;
+## 1 CDMX-IN-SITU  6.14
+## 2 CHI-EN-CDMX   3.70
+## 3 CHI-IN-SITU   3.19
+```
+
+---
+
+# ¿Cuál es la media de la variable dependiente por grupo dialectal?
+
+
+```r
+datosPiloto %&gt;%
+  group_by(grupo, sexo) %&gt;%
+  summarize(mean = mean(intensityDif))
+```
+
+```
+## # A tibble: 6 x 3
+## # Groups:   grupo [?]
+##   grupo        sexo       mean
+##   &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;
+## 1 CDMX-IN-SITU FEMENINO   7.33
+## 2 CDMX-IN-SITU MASCULINO  5.30
+## 3 CHI-EN-CDMX  FEMENINO   4.14
+## 4 CHI-EN-CDMX  MASCULINO  3.22
+## 5 CHI-IN-SITU  FEMENINO   3.69
+## 6 CHI-IN-SITU  MASCULINO  2.80
+```
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+
+```r
+ggplot(datosPiloto, aes(x=wordFrequency,y=intensityDif))
+```
+
+![](unidadTresPrez_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+
+```r
+ggplot(datosPiloto, aes(x=wordFrequency,y=intensityDif)) +
+  geom_point()
+```
+
+![](unidadTresPrez_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+
+```r
+ggplot(datosPiloto, aes(x=wordFrequency,y=intensityDif)) +
+  geom_point() +
+  geom_jitter(width=1)
+```
+
+![](unidadTresPrez_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+
+```r
+ggplot(datosPiloto, aes(x=wordFrequency,y=intensityDif)) +
+  geom_point() +
+  geom_jitter(width=1) +
+  geom_smooth(method = "lm")
+```
+
+![](unidadTresPrez_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+
+```r
+modelo &lt;- lm(intensityDif~wordFrequency,data=datosPiloto)
+summary(modelo)
+```
+
+```
+## 
+## Call:
+## lm(formula = intensityDif ~ wordFrequency, data = datosPiloto)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -4.971 -2.529 -1.338  1.516 20.912 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     7.4309     0.3261   22.79   &lt;2e-16 ***
+## wordFrequency  -1.4601     0.1450  -10.07   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.897 on 1175 degrees of freedom
+## Multiple R-squared:  0.07946,	Adjusted R-squared:  0.07867 
+## F-statistic: 101.4 on 1 and 1175 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+
+
+```r
+modeloDos &lt;- lm(intensityDif~wordFrequency+sexo+grupo,data=datosPiloto)
+summary(modeloDos)
+```
+
+```
+## 
+## Call:
+## lm(formula = intensityDif ~ wordFrequency + sexo + grupo, data = datosPiloto)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -7.2632 -2.4033 -0.7872  1.4562 21.3339 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)        9.6097     0.3561  26.987  &lt; 2e-16 ***
+## wordFrequency     -1.3465     0.1370  -9.832  &lt; 2e-16 ***
+## sexoMASCULINO     -1.3273     0.2150  -6.172 9.28e-10 ***
+## grupoCHI-EN-CDMX  -2.3237     0.2587  -8.984  &lt; 2e-16 ***
+## grupoCHI-IN-SITU  -2.8095     0.2681 -10.480  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.66 on 1172 degrees of freedom
+## Multiple R-squared:  0.1901,	Adjusted R-squared:  0.1874 
+## F-statistic: 68.79 on 4 and 1172 DF,  p-value: &lt; 2.2e-16
+```
+
+
+
+---
+# Regular expression
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

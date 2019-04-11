@@ -1,0 +1,291 @@
+---
+title: "Expresiones regulares"
+#subtitle: "⚔<br/>with xaringan"
+#author: "Yihui Xie"
+#institute: "RStudio, Inc."
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(dplyr)
+library(ggplot2)
+library(forcats)
+library(stringr)
+```
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+class: center, middle
+
+# xaringan
+
+### /ʃaː.'riŋ.ɡan/
+
+---
+class: inverse, center, middle
+
+# Get Started
+
+---
+
+# RegEx
+
+Las expresiones regulares son representaciones esquemáticas o semi esquemáticas de patrones.
+
+--
+
+- CV.CV.CV
+
+--
+
+- FN(FV-FN)
+
+--
+
+- Ca.Cá
+
+--
+
+- FN(DAR-FN-FP)
+
+---
+background-image: url(`r xaringan:::karl`)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+# You only live once!
+
+---
+
+# RegEx
+
+Las expresiones regulares se utilizan principalmente para la identificación de patrones en cadenas de carácteres.
+
+```{r}
+
+string <- c("Handel", "Händel", "Haendel", "banana", "anana", "piña", "piñata")
+
+str_subset(string, "H(a|ä|(ae))ndel")
+
+str_subset(string, "\\w+nana")
+
+```
+
+---
+
+# RegEx en un corpus
+
+En un corpus, el uso de RegEx es útil para identificar contextos relevantes para el investigador.
+
+```{r}
+
+archivo <- "Entrevista 73 (ME-258-11H-05).txt"
+entrevista <- readLines(archivo, encoding = "UTF-8")
+tail(entrevista)
+
+```
+
+---
+
+# Identificación de palabras terminadas en "it[oa]s?"
+
+```{r}
+
+dims <- str_subset(entrevista, "\\w+ \\w+it[oa]s? \\w+") %>%
+  str_extract_all("\\w+it[oa]s?\\b")
+
+head(dims, n = 4)
+
+```
+
+---
+background-image: url(`r xaringan:::karl`)
+background-size: cover
+class: center, bottom, inverse
+
+# I was so happy to have discovered RegEx!
+
+---
+# Identificación de palabras esdrújulas
+
+Palabras esdrújulas de la forma X.'V.CV.CV(C)
+
+```{r}
+
+esdru <- str_subset(entrevista, "\\w*[áéíóú][bcdfghjklmnprstvxyz]+[aeiou][bcdfghjklmnprstvxyz][aeiou][bcdfghjklmnprstvxyz]?\\b") %>%
+  str_extract_all("\\w*[áéíóú][bcdfghjklmnprstvxyz]+[aeiou][bcdfghjklmnprstvxyz][aeiou][bcdfghjklmnprstvxyz]?\\b")
+
+head(esdru, n = 4)
+
+```
+
+---
+
+# De lista a vector
+
+Una vez identificados los elementos relevantes mediante RegEx, se pueden almacenar como vectores y luego como data frames.
+
+```{r}
+
+vec <- vector('character')
+
+for (v in dims) {
+  for (s in v) {
+    #print(string)
+    vec <- c(vec, s)
+  }
+}
+
+head(vec, n = 5)
+
+```
+
+---
+
+#De vector a data frame
+
+```{r}
+
+word_frame <- as.data.frame(table(vec)) %>%
+  arrange(desc(Freq)) %>%
+  mutate(vec = fct_reorder(vec, desc(Freq)))
+
+head(word_frame)
+
+```
+
+---
+
+# Descripción cuantitativa
+
+```{r echo=FALSE}
+
+ggplot(word_frame, aes(x = vec, y = Freq)) +
+  geom_bar(stat = "identity")
+
+```
+
+---
+
+background-image: url(`r xaringan:::karl`)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+# So amazing!
+
+---
+#Palabras esdrújulas más frecuentes
+
+```{r echo=FALSE}
+
+esdrujulas <- vector("character")
+
+for (v in esdru) {
+  for (s in v) {
+    esdrujulas <- c(esdrujulas, s)
+  }
+}
+
+#head(esdrujulas, n = 5)
+
+word_frame2 <- as.data.frame(table(esdrujulas)) %>%
+  arrange(desc(Freq)) %>%
+  mutate(esdrujulas = fct_reorder(esdrujulas, desc(Freq)))
+
+head(word_frame2)
+```
+
+---
+#Descripción cuantitativa
+
+```{r echo=FALSE}
+
+ggplot(word_frame2, aes(x = esdrujulas, y = Freq)) +
+  geom_bar(stat = "identity")
+
+```
+
+
+---
+class: inverse, middle, center
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
+background-size: contain
+
+# Naruto
+
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-size: 100px
+background-position: 90% 8%
+
+# Sharingan
+
+The R package name **xaringan** was derived<sup>1</sup> from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
+
+- the "Eye of Insight"
+
+- the "Eye of Hypnotism"
+
+I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.<sup>2,3</sup>
+
+.footnote[
+[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
+
+[2] By comparison, bad presentations only put the audience to sleep.
+
+[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
+]
+
+---
+
+# Naruto terminology
+
+The **xaringan** package borrowed a few terms from Naruto, such as
+
+- [Sharingan](http://naruto.wikia.com/wiki/Sharingan) (写輪眼; the package name)
+
+- The [moon reader](http://naruto.wikia.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
+
+- [Chakra](http://naruto.wikia.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
+
+- [Nature transformation](http://naruto.wikia.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
+
+- The [infinite moon reader](http://naruto.wikia.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
+
+- The [summoning technique](http://naruto.wikia.com/wiki/Summoning_Technique) (download remark.js from the web)
+
+You can click the links to know more about them if you want. The jutsu "Moon Reader" may seem a little evil, but that does not mean your slides are evil.
+
+---
+
+class: center
+
+# Hand seals (印)
+
+Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).

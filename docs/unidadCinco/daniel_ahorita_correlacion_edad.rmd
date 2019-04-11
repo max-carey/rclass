@@ -1,0 +1,262 @@
+---
+title: "Correlación entre el uso de _ahorita_ y la edad de los hablantes"
+#subtitle: "⚔<br/>with xaringan"
+#author: "Yihui Xie"
+#institute: "RStudio, Inc."
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(dplyr)
+library(ggplot2)
+library(forcats)
+
+```
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+class: center, middle
+
+# xaringan
+
+### /ʃaː.'riŋ.ɡan/
+
+---
+class: inverse, center, middle
+
+# Get Started
+
+---
+
+# Corpus
+
+Para la investigación se utilizaron las 108 entrevistas del _Corpus Sociolingüístico de la Ciudad de México_.
+
+--
+- Se contó cuántas instancias de _ahorita_ y de _ahora_ realizaba cada hablante.
+
+--
+- Se registraron los datos sociolingüísticos de los informantes.
+
+```{r}
+FrecHablantes <- read.csv("FreqHablantesR.csv")
+
+glimpse(FrecHablantes)
+
+```
+
+---
+#Distribución de ahorita por grupos etarios
+
+```{r echo=FALSE}
+
+FrecHablantes$GpoEtario <- factor(FrecHablantes$GpoEtario, levels = c("V", "A", "J"))
+
+ggplot(FrecHablantes, aes(x = GpoEtario, y = Ahorita)) +
+  geom_boxplot()
+
+```
+
+---
+
+#Uso de ahorita por grupos etarios + género
+
+```{r echo=FALSE}
+
+FrecHablantes$Genero <- factor(FrecHablantes$Genero, levels = c("M", "H"))
+
+ggplot(FrecHablantes, aes(x = GpoEtario, y = Ahorita, fill = Genero)) +
+  geom_boxplot()
+
+```
+
+---
+
+#Uso de ahorita por año de nacimiento
+
+```{r echo=FALSE}
+
+ggplot(FrecHablantes, aes(x = ANacimiento, y = Ahorita)) +
+  geom_point()
+
+```
+
+---
+
+#Superposición del modelo lineal
+
+```{r echo=FALSE}
+
+ggplot(FrecHablantes, aes(x = ANacimiento, y = Ahorita)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+
+```
+
+
+---
+
+
+#Correlación entre las variables
+
+```{r}
+
+FrecHablantes %>%
+  summarize(N = n(), r = cor(ANacimiento, Ahorita))
+
+```
+
+
+---
+
+
+
+#Modelo: Frecuencia de uso de ahorita ~ Año de nacimiento de los hablantes
+
+```{r echo=FALSE}
+
+modelo <- lm(Ahorita ~ ANacimiento, data = FrecHablantes)
+
+summary(modelo)
+
+```
+
+
+
+---
+
+#Media de uso de ahorita por año de nacimiento
+
+```{r}
+
+fAhorita_year <- FrecHablantes %>%
+  group_by(ANacimiento) %>%
+  summarise(Media = round(mean(Ahorita), digits = 1))
+  
+head(fAhorita_year)
+
+```
+
+
+---
+
+#Uso medio de ahorita por año de nacimiento
+
+```{r echo=FALSE}
+
+ggplot(fAhorita_year, aes(x = ANacimiento, y = Media)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+
+```
+
+
+---
+#Correlación entre las variables
+
+```{r}
+
+fAhorita_year %>%
+  summarize(N = n(), r = cor(ANacimiento, Media))
+
+```
+
+
+---
+
+
+#Modelo: Media de uso de ahorita ~ Año de nacimiento
+
+```{r echo=FALSE}
+
+modelo2 <- lm(Media ~ ANacimiento, data = fAhorita_year)
+
+summary(modelo2)
+
+```
+
+
+
+---
+class: inverse, middle, center
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
+background-size: contain
+
+# Naruto
+
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-size: 100px
+background-position: 90% 8%
+
+# Sharingan
+
+The R package name **xaringan** was derived<sup>1</sup> from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
+
+- the "Eye of Insight"
+
+- the "Eye of Hypnotism"
+
+I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.<sup>2,3</sup>
+
+.footnote[
+[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
+
+[2] By comparison, bad presentations only put the audience to sleep.
+
+[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
+]
+
+---
+
+# Naruto terminology
+
+The **xaringan** package borrowed a few terms from Naruto, such as
+
+- [Sharingan](http://naruto.wikia.com/wiki/Sharingan) (写輪眼; the package name)
+
+- The [moon reader](http://naruto.wikia.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
+
+- [Chakra](http://naruto.wikia.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
+
+- [Nature transformation](http://naruto.wikia.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
+
+- The [infinite moon reader](http://naruto.wikia.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
+
+- The [summoning technique](http://naruto.wikia.com/wiki/Summoning_Technique) (download remark.js from the web)
+
+You can click the links to know more about them if you want. The jutsu "Moon Reader" may seem a little evil, but that does not mean your slides are evil.
+
+---
+
+class: center
+
+# Hand seals (印)
+
+Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).

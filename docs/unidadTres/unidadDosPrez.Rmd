@@ -1,0 +1,132 @@
+---
+title: "Unidad 3"
+subtitle: "Estadística con R"
+author: "Max Carey"
+date: "UNAM </br> `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["chocolate", "chocolate-fonts"]
+    nature:
+      beforeInit: "http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(tidyverse)
+library(wordcloud2)
+library(kableExtra)
+library(readxl)
+```
+
+class: center, middle
+
+# xaringan
+
+### /ʃæ.'riŋ.ɡæn/
+
+---
+
+# Cargar los datos
+
+```{r message=FALSE, warning=FALSE}
+# Leer datos
+datosPiloto <- read_csv("datosPiloto.csv")
+glimpse(datosPiloto)
+```
+---
+#¿Cuál es la media de la variable dependiente?
+
+--
+
+```{r}
+mean(datosPiloto$intensityDif)
+```
+
+--
+
+# ¿Cuál es la media de la variable dependiente por hombres y mujeres?
+
+--
+
+```{r}
+datosPiloto %>%
+  group_by(sexo) %>%
+  summarize(mean = mean(intensityDif))
+```
+
+---
+
+# ¿Cuál es la media de la variable dependiente por grupo dialectal?
+
+```{r}
+datosPiloto %>%
+  group_by(grupo) %>%
+  summarize(mean = mean(intensityDif))
+```
+
+---
+
+# ¿Cuál es la media de la variable dependiente por grupo dialectal?
+
+```{r}
+datosPiloto %>%
+  group_by(grupo, sexo) %>%
+  summarize(mean = mean(intensityDif))
+```
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+```{r fig.height=5}
+ggplot(datosPiloto, aes(x=wordFrequency,y=intensityDif))
+
+```
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+```{r fig.height=5}
+ggplot(datosPiloto, aes(x=wordFrequency,y=intensityDif)) +
+  geom_point()
+```
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+```{r fig.height=5}
+ggplot(datosPiloto, aes(x=wordFrequency,y=intensityDif)) +
+  geom_point() +
+  geom_jitter(width=1)
+```
+
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+```{r fig.height=5}
+ggplot(datosPiloto, aes(x=wordFrequency,y=intensityDif)) +
+  geom_point() +
+  geom_jitter(width=1) +
+  geom_smooth(method = "lm")
+```
+
+---
+
+# ¿Cómo es la relación entre frecuencia de palabra y la variable dependiente?
+
+```{r}
+modelo <- lm(intensityDif~wordFrequency,data=datosPiloto)
+summary(modelo)
+```
+
+---
+# Regular expression

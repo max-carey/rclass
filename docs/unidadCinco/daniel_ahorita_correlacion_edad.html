@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Correlación entre el uso de ahorita y la edad de los hablantes</title>
+    <meta charset="utf-8" />
+    <meta name="date" content="2019-04-11" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Correlación entre el uso de <em>ahorita</em> y la edad de los hablantes
+### 2019-04-11
+
+---
+
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+class: center, middle
+
+# xaringan
+
+### /ʃaː.'riŋ.ɡan/
+
+---
+class: inverse, center, middle
+
+# Get Started
+
+---
+
+# Corpus
+
+Para la investigación se utilizaron las 108 entrevistas del _Corpus Sociolingüístico de la Ciudad de México_.
+
+--
+- Se contó cuántas instancias de _ahorita_ y de _ahora_ realizaba cada hablante.
+
+--
+- Se registraron los datos sociolingüísticos de los informantes.
+
+
+```r
+FrecHablantes &lt;- read.csv("FreqHablantesR.csv")
+
+glimpse(FrecHablantes)
+```
+
+```
+## Observations: 108
+## Variables: 9
+## $ Informante     &lt;fct&gt; E100.61H.Bajo, E101.68H.Bajo, E102.75H.Bajo, E103…
+## $ Genero         &lt;fct&gt; H, H, H, M, M, M, M, M, M, M, M, M, H, H, H, H, H…
+## $ GpoEtario      &lt;fct&gt; V, V, V, V, V, V, V, V, V, J, J, J, A, A, A, A, A…
+## $ Edad           &lt;int&gt; 61, 68, 75, 60, 91, 70, 57, 76, 78, 30, 21, 21, 3…
+## $ ANacimiento    &lt;int&gt; 1945, 1940, 1932, 1939, 1910, 1930, 1949, 1930, 1…
+## $ NivelEducativo &lt;fct&gt; Bajo, Bajo, Bajo, Bajo, Bajo, Bajo, Bajo, Bajo, B…
+## $ Ahora          &lt;int&gt; 34, 1, 27, 20, 39, 33, 11, 15, 14, 5, 8, 3, 12, 6…
+## $ Ahorita        &lt;int&gt; 20, 11, 8, 32, 15, 16, 4, 4, 5, 23, 8, 18, 1, 2, …
+## $ Total.general  &lt;int&gt; 54, 12, 35, 52, 54, 49, 15, 19, 19, 28, 16, 21, 1…
+```
+
+---
+#Distribución de ahorita por grupos etarios
+
+![](daniel_ahorita_correlacion_edad_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+
+---
+
+#Uso de ahorita por grupos etarios + género
+
+![](daniel_ahorita_correlacion_edad_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+
+---
+
+#Uso de ahorita por año de nacimiento
+
+![](daniel_ahorita_correlacion_edad_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+---
+
+#Superposición del modelo lineal
+
+![](daniel_ahorita_correlacion_edad_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+
+---
+
+
+#Correlación entre las variables
+
+
+```r
+FrecHablantes %&gt;%
+  summarize(N = n(), r = cor(ANacimiento, Ahorita))
+```
+
+```
+##     N         r
+## 1 108 0.2662024
+```
+
+
+---
+
+
+
+#Modelo: Frecuencia de uso de ahorita ~ Año de nacimiento de los hablantes
+
+
+```
+## 
+## Call:
+## lm(formula = Ahorita ~ ANacimiento, data = FrecHablantes)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -12.255  -5.907  -2.261   3.272  36.742 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept) -266.71679   98.14591  -2.718  0.00768 **
+## ANacimiento    0.14248    0.05011   2.843  0.00536 **
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 8.548 on 106 degrees of freedom
+## Multiple R-squared:  0.07086,	Adjusted R-squared:  0.0621 
+## F-statistic: 8.084 on 1 and 106 DF,  p-value: 0.005358
+```
+
+
+
+---
+
+#Media de uso de ahorita por año de nacimiento
+
+
+```r
+fAhorita_year &lt;- FrecHablantes %&gt;%
+  group_by(ANacimiento) %&gt;%
+  summarise(Media = round(mean(Ahorita), digits = 1))
+  
+head(fAhorita_year)
+```
+
+```
+## # A tibble: 6 x 2
+##   ANacimiento Media
+##         &lt;int&gt; &lt;dbl&gt;
+## 1        1910  15  
+## 2        1920   9  
+## 3        1927   5  
+## 4        1929   5  
+## 5        1930  10  
+## 6        1932   4.5
+```
+
+
+---
+
+#Uso medio de ahorita por año de nacimiento
+
+![](daniel_ahorita_correlacion_edad_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+
+---
+#Correlación entre las variables
+
+
+```r
+fAhorita_year %&gt;%
+  summarize(N = n(), r = cor(ANacimiento, Media))
+```
+
+```
+## # A tibble: 1 x 2
+##       N     r
+##   &lt;int&gt; &lt;dbl&gt;
+## 1    53 0.358
+```
+
+
+---
+
+
+#Modelo: Media de uso de ahorita ~ Año de nacimiento
+
+
+```
+## 
+## Call:
+## lm(formula = Media ~ ANacimiento, data = fAhorita_year)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -8.937 -4.178 -1.663  2.596 22.296 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept) -255.9847    98.0214  -2.612  0.01181 * 
+## ANacimiento    0.1370     0.0501   2.735  0.00856 **
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 6.602 on 51 degrees of freedom
+## Multiple R-squared:  0.1279,	Adjusted R-squared:  0.1108 
+## F-statistic: 7.481 on 1 and 51 DF,  p-value: 0.008555
+```
+
+
+
+---
+class: inverse, middle, center
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
+background-size: contain
+
+# Naruto
+
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-size: 100px
+background-position: 90% 8%
+
+# Sharingan
+
+The R package name **xaringan** was derived&lt;sup&gt;1&lt;/sup&gt; from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
+
+- the "Eye of Insight"
+
+- the "Eye of Hypnotism"
+
+I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.&lt;sup&gt;2,3&lt;/sup&gt;
+
+.footnote[
+[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
+
+[2] By comparison, bad presentations only put the audience to sleep.
+
+[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
+]
+
+---
+
+# Naruto terminology
+
+The **xaringan** package borrowed a few terms from Naruto, such as
+
+- [Sharingan](http://naruto.wikia.com/wiki/Sharingan) (写輪眼; the package name)
+
+- The [moon reader](http://naruto.wikia.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
+
+- [Chakra](http://naruto.wikia.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
+
+- [Nature transformation](http://naruto.wikia.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
+
+- The [infinite moon reader](http://naruto.wikia.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
+
+- The [summoning technique](http://naruto.wikia.com/wiki/Summoning_Technique) (download remark.js from the web)
+
+You can click the links to know more about them if you want. The jutsu "Moon Reader" may seem a little evil, but that does not mean your slides are evil.
+
+---
+
+class: center
+
+# Hand seals (印)
+
+Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

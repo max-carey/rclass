@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Expresiones regulares</title>
+    <meta charset="utf-8" />
+    <meta name="date" content="2019-04-11" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Expresiones regulares
+### 2019-04-11
+
+---
+
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+class: center, middle
+
+# xaringan
+
+### /ʃaː.'riŋ.ɡan/
+
+---
+class: inverse, center, middle
+
+# Get Started
+
+---
+
+# RegEx
+
+Las expresiones regulares son representaciones esquemáticas o semi esquemáticas de patrones.
+
+--
+
+- CV.CV.CV
+
+--
+
+- FN(FV-FN)
+
+--
+
+- Ca.Cá
+
+--
+
+- FN(DAR-FN-FP)
+
+---
+background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+# You only live once!
+
+---
+
+# RegEx
+
+Las expresiones regulares se utilizan principalmente para la identificación de patrones en cadenas de carácteres.
+
+
+```r
+string &lt;- c("Handel", "Händel", "Haendel", "banana", "anana", "piña", "piñata")
+
+str_subset(string, "H(a|ä|(ae))ndel")
+```
+
+```
+## [1] "Handel"  "Händel"  "Haendel"
+```
+
+```r
+str_subset(string, "\\w+nana")
+```
+
+```
+## [1] "banana" "anana"
+```
+
+---
+
+# RegEx en un corpus
+
+En un corpus, el uso de RegEx es útil para identificar contextos relevantes para el investigador.
+
+
+```r
+archivo &lt;- "Entrevista 73 (ME-258-11H-05).txt"
+entrevista &lt;- readLines(archivo, encoding = "UTF-8")
+tail(entrevista)
+```
+
+```
+## [1] "I:\tmh/ sí hay muchas cosas que ver/ a ver "                                                     
+## [2] "E:\tsí pues &lt;~pus&gt; porque la realidad es que tiene &lt;~tiene:&gt; o sea gastos ¿no?"                  
+## [3] "I:\tsí sí sí/ sí también la cosa de que como es &lt;~es:&gt;/ pues &lt;~pus&gt; ya es fijo/ ya es de planta "
+## [4] "E:\tmh mh"                                                                                       
+## [5] "I:\tpues &lt;~pus&gt; yo de ese modo/ como que la presiono un poco// esa sería la cuestión"            
+## [6] "E:\tsí/ pues mire ahorita/ esta era la parte be le digo era así como plática nada más"
+```
+
+---
+
+# Identificación de palabras terminadas en "it[oa]s?"
+
+
+```r
+dims &lt;- str_subset(entrevista, "\\w+ \\w+it[oa]s? \\w+") %&gt;%
+  str_extract_all("\\w+it[oa]s?\\b")
+
+head(dims, n = 4)
+```
+
+```
+## [[1]]
+## [1] "chambita"
+## 
+## [[2]]
+## [1] "Ermita" "Ermita"
+## 
+## [[3]]
+## [1] "poquito"
+## 
+## [[4]]
+## [1] "puerquito"
+```
+
+---
+background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
+background-size: cover
+class: center, bottom, inverse
+
+# I was so happy to have discovered RegEx!
+
+---
+# Identificación de palabras esdrújulas
+
+Palabras esdrújulas de la forma X.'V.CV.CV(C)
+
+
+```r
+esdru &lt;- str_subset(entrevista, "\\w*[áéíóú][bcdfghjklmnprstvxyz]+[aeiou][bcdfghjklmnprstvxyz][aeiou][bcdfghjklmnprstvxyz]?\\b") %&gt;%
+  str_extract_all("\\w*[áéíóú][bcdfghjklmnprstvxyz]+[aeiou][bcdfghjklmnprstvxyz][aeiou][bcdfghjklmnprstvxyz]?\\b")
+
+head(esdru, n = 4)
+```
+
+```
+## [[1]]
+## [1] "teléfono"
+## 
+## [[2]]
+## [1] "órale" "órale"
+## 
+## [[3]]
+## [1] "época"
+## 
+## [[4]]
+## [1] "México"
+```
+
+---
+
+# De lista a vector
+
+Una vez identificados los elementos relevantes mediante RegEx, se pueden almacenar como vectores y luego como data frames.
+
+
+```r
+vec &lt;- vector('character')
+
+for (v in dims) {
+  for (s in v) {
+    #print(string)
+    vec &lt;- c(vec, s)
+  }
+}
+
+head(vec, n = 5)
+```
+
+```
+## [1] "chambita"  "Ermita"    "Ermita"    "poquito"   "puerquito"
+```
+
+---
+
+#De vector a data frame
+
+
+```r
+word_frame &lt;- as.data.frame(table(vec)) %&gt;%
+  arrange(desc(Freq)) %&gt;%
+  mutate(vec = fct_reorder(vec, desc(Freq)))
+
+head(word_frame)
+```
+
+```
+##         vec Freq
+## 1   ahorita    7
+## 2     orita    3
+## 3 chambitas    2
+## 4  depósito    2
+## 5    Ermita    2
+## 6    gatito    2
+```
+
+---
+
+# Descripción cuantitativa
+
+![](daniel_xaringan_regex_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+
+background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+# So amazing!
+
+---
+#Palabras esdrújulas más frecuentes
+
+
+```
+##   esdrujulas Freq
+## 1      órale    5
+## 2     híjole    4
+## 3     rápido    3
+## 4   depósito    2
+## 5  depósitos    2
+## 6  echábamos    2
+```
+
+---
+#Descripción cuantitativa
+
+![](daniel_xaringan_regex_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+
+---
+class: inverse, middle, center
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/39/Naruto_Shiki_Fujin.svg)
+background-size: contain
+
+# Naruto
+
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-size: 100px
+background-position: 90% 8%
+
+# Sharingan
+
+The R package name **xaringan** was derived&lt;sup&gt;1&lt;/sup&gt; from **Sharingan**, a dōjutsu in the Japanese anime _Naruto_ with two abilities:
+
+- the "Eye of Insight"
+
+- the "Eye of Hypnotism"
+
+I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even "hypnotize" the audience.&lt;sup&gt;2,3&lt;/sup&gt;
+
+.footnote[
+[1] In Chinese, the pronounciation of _X_ is _Sh_ /ʃ/ (as in _shrimp_). Now you should have a better idea of how to pronounce my last name _Xie_.
+
+[2] By comparison, bad presentations only put the audience to sleep.
+
+[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
+]
+
+---
+
+# Naruto terminology
+
+The **xaringan** package borrowed a few terms from Naruto, such as
+
+- [Sharingan](http://naruto.wikia.com/wiki/Sharingan) (写輪眼; the package name)
+
+- The [moon reader](http://naruto.wikia.com/wiki/Moon_Reader) (月読; an attractive R Markdown output format)
+
+- [Chakra](http://naruto.wikia.com/wiki/Chakra) (查克拉; the path to the remark.js library, which is the power to drive the presentation)
+
+- [Nature transformation](http://naruto.wikia.com/wiki/Nature_Transformation) (性質変化; transform the chakra by setting different options)
+
+- The [infinite moon reader](http://naruto.wikia.com/wiki/Infinite_Tsukuyomi) (無限月読; start a local web server to continuously serve your slides)
+
+- The [summoning technique](http://naruto.wikia.com/wiki/Summoning_Technique) (download remark.js from the web)
+
+You can click the links to know more about them if you want. The jutsu "Moon Reader" may seem a little evil, but that does not mean your slides are evil.
+
+---
+
+class: center
+
+# Hand seals (印)
+
+Press `h` or `?` to see the possible ninjutsu you can use in remark.js.
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg)
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

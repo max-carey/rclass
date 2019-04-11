@@ -21,11 +21,11 @@ knit: (function(input_file, encoding) {
 # Diapositvas de Daniel:
 
 <a href="unidadCinco/daniel_xaringan_regex.html" target="_blank">
-<button type="button" class="btn btn-primary">Diapositivas 2</button>
+<button type="button" class="btn btn-primary">Diapositivas 1</button>
 </a>
 
 
-<a href="daniel_ahorita_correlacion_edad.html" target="_blank">
+<a href="unidadCinco/daniel_ahorita_correlacion_edad.html" target="_blank">
 <button type="button" class="btn btn-primary">Diapositvas 2</button>
 </a>
 

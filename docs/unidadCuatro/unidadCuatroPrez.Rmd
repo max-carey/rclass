@@ -1,0 +1,157 @@
+---
+title: "Unidad 4"
+subtitle: "Programación básica con R"
+author: "Max Carey"
+date: "UNAM </br> `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["robot", "robot-fonts"]
+    nature:
+      beforeInit: "http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+# Mostrar output en R
+```{r}
+cat("Hello world")
+```
+
+--
+
+# Asignar una variable y mostrar output
+```{r}
+x <- "México"
+cat("Hello", x)
+```
+
+---
+
+# Condicionales en R
+```{r}
+lengua <- "español"
+if (lengua == "español") {
+  cat("hola")
+}
+```
+
+--
+
+# Agregar más condiciones
+```{r}
+lengua <- "japonés"
+  if (lengua == "inglés") {
+  cat("hola")
+  } else if (lengua == "english") {
+  cat("hello")
+  } else if (lengua == "japonés") {
+    cat("こにちわ")
+  }
+```
+
+---
+
+# Funciones
+```{r}
+getLanguage <- function(x) {
+  if (x == "español") {
+    cat("hola")
+  } else if (x == "inglés") {
+    cat("hello")
+  }
+}
+```
+
+--
+
+# "Llamar" las funciones
+```{r}
+getLanguage("español")
+cat("\n")
+getLanguage("inglés")
+```
+
+---
+
+# Reclasificar varialbes
+
+## Paso 1: Leer los datos lexicográficos
+```{r}
+eprofile_lex <- read_csv("eprofile_lex.csv")
+```
+
+## Paso 2:
+Queremos recodificar la columna `freq` para tener tres valores: "avanzado", "intermedio", "principiante"
+
+---
+
+## Paso 3: Crear una función vacía
+```{r}
+myFunction <- function() {
+}
+```
+
+--
+
+## Paso 4: Agregar los argumentos y las condicionales
+```{r}
+getLevel <- function(nivel) {
+  if (nivel == "A1" | nivel == "A2") {
+    return("principiante")
+  } else if (nivel == "B1" | nivel == "B2") {
+    return("intermedio")
+  } else {
+    return("avanzado")
+  }
+}
+```
+
+---
+
+## Paso 5: Probar la función localmente
+```{r}
+getLevel("A1")
+getLevel("A2")
+getLevel("B1")
+getLevel("B2")
+getLevel("C1")
+getLevel("C2")
+```
+
+---
+
+## Guardar la función en un archivo por separado y utilizar source()
+
+```{r}
+source("getLevel.R")
+```
+
+## Paso 6: Aplicar la función con mapply()
+
+```{r}
+mapply(getLevel, eprofile_lex$freq)
+```
+
+---
+
+# Paso 7: Guardar el resultado como una columna nueva
+
+```{r}
+eprofile_lex$ nivelNew <- mapply(getLevel, eprofile_lex$freq)
+```
+
+---
+
+# Una forma más rápido con dplyr()
+
+
+---
+

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Unidad 4</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Max Carey" />
+    <link href="libs/remark-css-0.0.1/robot.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/robot-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Unidad 4
+## Programación básica con R
+### Max Carey
+### UNAM </br> 2019-04-26
+
+---
+
+
+
+```r
+library(tidyverse)
+```
+
+
+# Mostrar output en R
+
+```r
+cat("Hello world")
+```
+
+```
+## Hello world
+```
+
+--
+
+# Asignar una variable y mostrar output
+
+```r
+x &lt;- "México"
+cat("Hello", x)
+```
+
+```
+## Hello México
+```
+
+---
+
+# Condicionales en R
+
+```r
+lengua &lt;- "español"
+if (lengua == "español") {
+  cat("hola")
+}
+```
+
+```
+## hola
+```
+
+--
+
+# Agregar más condiciones
+
+```r
+lengua &lt;- "japonés"
+  if (lengua == "inglés") {
+  cat("hola")
+  } else if (lengua == "english") {
+  cat("hello")
+  } else if (lengua == "japonés") {
+    cat("こにちわ")
+  }
+```
+
+```
+## こにちわ
+```
+
+---
+
+# Funciones
+
+```r
+getLanguage &lt;- function(x) {
+  if (x == "español") {
+    cat("hola")
+  } else if (x == "inglés") {
+    cat("hello")
+  }
+}
+```
+
+--
+
+# "Llamar" las funciones
+
+```r
+getLanguage("español")
+```
+
+```
+## hola
+```
+
+```r
+cat("\n")
+```
+
+```r
+getLanguage("inglés")
+```
+
+```
+## hello
+```
+
+---
+
+# Reclasificar varialbes
+
+## Paso 1: Leer los datos lexicográficos
+
+```r
+eprofile_lex &lt;- read_csv("eprofile_lex.csv")
+```
+
+```
+## Parsed with column specification:
+## cols(
+##   base = col_character(),
+##   pos = col_character(),
+##   gw = col_character(),
+##   freq = col_character()
+## )
+```
+
+## Paso 2:
+Queremos recodificar la columna `freq` para tener tres valores: "avanzado", "intermedio", "principiante"
+
+---
+
+## Paso 3: Crear una función vacía
+
+```r
+myFunction &lt;- function() {
+}
+```
+
+--
+
+## Paso 4: Agregar los argumentos y las condicionales
+
+```r
+getLevel &lt;- function(nivel) {
+  if (nivel == "A1" | nivel == "A2") {
+    return("principiante")
+  } else if (nivel == "B1" | nivel == "B2") {
+    return("intermedio")
+  } else {
+    return("avanzado")
+  }
+}
+```
+
+---
+
+## Paso 5: Probar la función localmente
+
+```r
+getLevel("A1")
+```
+
+```
+## [1] "principiante"
+```
+
+```r
+getLevel("A2")
+```
+
+```
+## [1] "principiante"
+```
+
+```r
+getLevel("B1")
+```
+
+```
+## [1] "intermedio"
+```
+
+```r
+getLevel("B2")
+```
+
+```
+## [1] "intermedio"
+```
+
+```r
+getLevel("C1")
+```
+
+```
+## [1] "avanzado"
+```
+
+```r
+getLevel("C2")
+```
+
+```
+## [1] "avanzado"
+```
+
+---
+
+## Guardar la función en un archivo por separado y utilizar source()
+
+
+```r
+source("getLevel.R")
+```
+
+## Paso 6: Aplicar la función con mapply()
+
+
+```r
+mapply(getLevel, eprofile_lex$freq)
+```
+
+```
+##             A1             A1             A1             A1             A2 
+## "principiante" "principiante" "principiante" "principiante" "principiante" 
+##             A2             A2             A2             A2             A2 
+## "principiante" "principiante" "principiante" "principiante" "principiante" 
+##             B2             C1             B2             B2             B1 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             A2             C2             C1             C1             C1 
+## "principiante"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             B2             C1             A1             A2             B1 
+##   "intermedio"     "avanzado" "principiante" "principiante"   "intermedio" 
+##             A1             B2             A1             A1             A2 
+## "principiante"   "intermedio" "principiante" "principiante" "principiante" 
+##             A2             B1             C2             C2             B1 
+## "principiante"   "intermedio"     "avanzado"     "avanzado"   "intermedio" 
+##             B1             B1             C2             C2             C2 
+##   "intermedio"   "intermedio"     "avanzado"     "avanzado"     "avanzado" 
+##             B2             B2             B1             B2             B1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             C2             B2             B2             C1 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"     "avanzado" 
+##             B2             B2             B2             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C1             C2             C2             B2             C1 
+##     "avanzado"     "avanzado"     "avanzado"   "intermedio"     "avanzado" 
+##             C2             B1             B2             B1             B2 
+##     "avanzado"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B2             B1             C1             C1 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             C1             B1             B1             B2             B2 
+##     "avanzado"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C2             C1             A2             B1             B2 
+##     "avanzado"     "avanzado" "principiante"   "intermedio"   "intermedio" 
+##             B1             C1             B2             B1             B1 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             C2             C1             C2             C1             B1 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"   "intermedio" 
+##             B2             B1             B2             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             C1             C2             C1             C2 
+##   "intermedio"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             B1             C1             C2             B2             B2 
+##   "intermedio"     "avanzado"     "avanzado"   "intermedio"   "intermedio" 
+##             B2             C1             B2             C1             B1 
+##   "intermedio"     "avanzado"   "intermedio"     "avanzado"   "intermedio" 
+##             B2             B1             B1             B2             C1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C1             C1             B2             B2             C2 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"     "avanzado" 
+##             A2             A2             C2             A2             B1 
+## "principiante" "principiante"     "avanzado" "principiante"   "intermedio" 
+##             B1             B2             B2             B1             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C2             C2             B1             B2             C1 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"     "avanzado" 
+##             C1             C2             C2             B1             B1 
+##     "avanzado"     "avanzado"     "avanzado"   "intermedio"   "intermedio" 
+##             B2             C1             B2             A2             B2 
+##   "intermedio"     "avanzado"   "intermedio" "principiante"   "intermedio" 
+##             B2             A2             B2             A2             B1 
+##   "intermedio" "principiante"   "intermedio" "principiante"   "intermedio" 
+##             B2             A1             B2             B2             C1 
+##   "intermedio" "principiante"   "intermedio"   "intermedio"     "avanzado" 
+##             A2             A2             B1             C2             B2 
+## "principiante" "principiante"   "intermedio"     "avanzado"   "intermedio" 
+##             B1             B2             B2             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C1             B1             B2             B2             B2 
+##     "avanzado"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             A1             A1             C1             C2             C2 
+## "principiante" "principiante"     "avanzado"     "avanzado"     "avanzado" 
+##             B2             B2             B2             C2             A2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado" "principiante" 
+##             B2             B2             B2             C1             C2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             C2             C1             C1             B2             B1 
+##     "avanzado"     "avanzado"     "avanzado"   "intermedio"   "intermedio" 
+##             B2             B1             B2             B1             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C2             B2             B2             B2             B2 
+##     "avanzado"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             A1             A2             C1             B1             B2 
+## "principiante" "principiante"     "avanzado"   "intermedio"   "intermedio" 
+##             A2             B1             B1             B1             B2 
+## "principiante"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             A2             B2             A2             C2 
+##   "intermedio" "principiante"   "intermedio" "principiante"     "avanzado" 
+##             B1             B1             A2             B2             A2 
+##   "intermedio"   "intermedio" "principiante"   "intermedio" "principiante" 
+##             B1             C1             C2             C2             B2 
+##   "intermedio"     "avanzado"     "avanzado"     "avanzado"   "intermedio" 
+##             B2             B2             B2             B2             C2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C1             B1             C2             C1             A2 
+##     "avanzado"   "intermedio"     "avanzado"     "avanzado" "principiante" 
+##             A2             B1             A1             A2             A2 
+## "principiante"   "intermedio" "principiante" "principiante" "principiante" 
+##             B1             B1             B1             B2             C1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C1             C2             A2             B1             A1 
+##     "avanzado"     "avanzado" "principiante"   "intermedio" "principiante" 
+##             A2             A1             A2             B1             B1 
+## "principiante" "principiante" "principiante"   "intermedio"   "intermedio" 
+##             B2             B2             C2             A2             A2 
+##   "intermedio"   "intermedio"     "avanzado" "principiante" "principiante" 
+##             B1             B2             B2             C1             C2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             C2             A1             B2             C2             C2 
+##     "avanzado" "principiante"   "intermedio"     "avanzado"     "avanzado" 
+##             A2             B1             C1             C1             C2 
+## "principiante"   "intermedio"     "avanzado"     "avanzado"     "avanzado" 
+##             B2             B2             B1             C1             B2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"   "intermedio" 
+##             C1             B2             A2             C1             A2 
+##     "avanzado"   "intermedio" "principiante"     "avanzado" "principiante" 
+##             B1             B2             C1             B2             B2 
+##   "intermedio"   "intermedio"     "avanzado"   "intermedio"   "intermedio" 
+##             B2             B2             B1             B1             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C1             C2             C1             C1             C1 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C1             C1             B1             B1             B2 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             C2             A2             A2             B2             C1 
+##     "avanzado" "principiante" "principiante"   "intermedio"     "avanzado" 
+##             C2             C2             C2             C2             B1 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"   "intermedio" 
+##             B2             B1             B1             A2             A2 
+##   "intermedio"   "intermedio"   "intermedio" "principiante" "principiante" 
+##             B1             B1             C2             C1             A2 
+##   "intermedio"   "intermedio"     "avanzado"     "avanzado" "principiante" 
+##             C1             C2             A2             B1             A2 
+##     "avanzado"     "avanzado" "principiante"   "intermedio" "principiante" 
+##             B1             C2             C2             C1             C2 
+##   "intermedio"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C1             B1             B2             B2             B1 
+##     "avanzado"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C2             C2             C2             A1             A1 
+##     "avanzado"     "avanzado"     "avanzado" "principiante" "principiante" 
+##             A1             A1             A2             A2             A2 
+## "principiante" "principiante" "principiante" "principiante" "principiante" 
+##             A2             A2             B1             B1             B1 
+## "principiante" "principiante"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             B1             B2             B2             C1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C1             C1             C2             A2             A2 
+##     "avanzado"     "avanzado"     "avanzado" "principiante" "principiante" 
+##             B2             B2             B2             C1             C1 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             C2             C2             C1             C2             C1 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             C2             C2             C1             C2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             B1             C1             C1             C2 
+##     "avanzado"   "intermedio"     "avanzado"     "avanzado"     "avanzado" 
+##             C1             C2             A1             A1             A2 
+##     "avanzado"     "avanzado" "principiante" "principiante" "principiante" 
+##             A2             A2             A2             A2             B1 
+## "principiante" "principiante" "principiante" "principiante"   "intermedio" 
+##             B1             A1             C1             C2             A2 
+##   "intermedio" "principiante"     "avanzado"     "avanzado" "principiante" 
+##             A2             A2             B2             C1             C2 
+## "principiante" "principiante"   "intermedio"     "avanzado"     "avanzado" 
+##             C2             A2             B1             C2             B1 
+##     "avanzado" "principiante"   "intermedio"     "avanzado"   "intermedio" 
+##             B1             B2             B2             C1             C1 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             C1             C1             B1             B1             B2 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             A2             B1             A1             B2             C1 
+## "principiante"   "intermedio" "principiante"   "intermedio"     "avanzado" 
+##             C1             C1             B2             B2             B2 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B1             B1             B1             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B2             A1             A2             A2 
+##   "intermedio"   "intermedio" "principiante" "principiante" "principiante" 
+##             B1             B2             A1             C1             C1 
+##   "intermedio"   "intermedio" "principiante"     "avanzado"     "avanzado" 
+##             C1             B1             B2             A2             B1 
+##     "avanzado"   "intermedio"   "intermedio" "principiante"   "intermedio" 
+##             B1             B2             C2             C2             B1 
+##   "intermedio"   "intermedio"     "avanzado"     "avanzado"   "intermedio" 
+##             B2             B2             B2             B1             C2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C1             C1             C2             B2             B2 
+##     "avanzado"     "avanzado"     "avanzado"   "intermedio"   "intermedio" 
+##             B2             B2             C1             B1             C1 
+##   "intermedio"   "intermedio"     "avanzado"   "intermedio"     "avanzado" 
+##             B2             B2             B2             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B1             A1             C2             C2 
+##   "intermedio"   "intermedio" "principiante"     "avanzado"     "avanzado" 
+##             B2             B2             C1             B2             B2 
+##   "intermedio"   "intermedio"     "avanzado"   "intermedio"   "intermedio" 
+##             C2             C2             C2             C2             C2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             B1             A1             A1             A1             A2 
+##   "intermedio" "principiante" "principiante" "principiante" "principiante" 
+##             B1             B1             B1             B2             C1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C1             C1             C1             B1             A2 
+##     "avanzado"     "avanzado"     "avanzado"   "intermedio" "principiante" 
+##             A1             B2             B1             C2             B1 
+## "principiante"   "intermedio"   "intermedio"     "avanzado"   "intermedio" 
+##             B1             B1             B1             B1             B1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C1             B1             B1             B1             B2 
+##     "avanzado"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C2             A2             A2             A2             A2 
+##     "avanzado" "principiante" "principiante" "principiante" "principiante" 
+##             B1             C2             A1             A2             A2 
+##   "intermedio"     "avanzado" "principiante" "principiante" "principiante" 
+##             B1             A1             A2             B1             B1 
+##   "intermedio" "principiante" "principiante"   "intermedio"   "intermedio" 
+##             C2             C1             C2             C2             B1 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"   "intermedio" 
+##             B1             C1             C1             B2             B1 
+##   "intermedio"     "avanzado"     "avanzado"   "intermedio"   "intermedio" 
+##             B2             B2             A1             A1             A1 
+##   "intermedio"   "intermedio" "principiante" "principiante" "principiante" 
+##             A1             B1             A2             B1             B2 
+## "principiante"   "intermedio" "principiante"   "intermedio"   "intermedio" 
+##             B2             B2             C1             A2             A2 
+##   "intermedio"   "intermedio"     "avanzado" "principiante" "principiante" 
+##             B1             A1             A1             B2             B2 
+##   "intermedio" "principiante" "principiante"   "intermedio"   "intermedio" 
+##             A2             A2             B1             A2             A2 
+## "principiante" "principiante"   "intermedio" "principiante" "principiante" 
+##             B2             C1             B1             B1             B2 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             C2             A2             A2             C2 
+##   "intermedio"     "avanzado" "principiante" "principiante"     "avanzado" 
+##             B1             B1             B2             C2             B2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"   "intermedio" 
+##             C1             B2             B2             B2             C2 
+##     "avanzado"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             B2             C1             B1             B1             B1 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B2             C1             B1             B2 
+##   "intermedio"   "intermedio"     "avanzado"   "intermedio"   "intermedio" 
+##             B2             C1             C2             C1             C2 
+##   "intermedio"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C1             C2             A1             C1             B1 
+##     "avanzado"     "avanzado" "principiante"     "avanzado"   "intermedio" 
+##             B2             C2             B1             B2             C1 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"     "avanzado" 
+##             C2             C1             A2             C2             B2 
+##     "avanzado"     "avanzado" "principiante"     "avanzado"   "intermedio" 
+##             B2             B2             C2             B2             B2 
+##   "intermedio"   "intermedio"     "avanzado"   "intermedio"   "intermedio" 
+##             B2             B2             B2             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B2             B1             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             A1             C2             C2             C2 
+##   "intermedio" "principiante"     "avanzado"     "avanzado"     "avanzado" 
+##             C1             C1             B1             B1             B1 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             A2             B1             B2             B1             B2 
+## "principiante"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             B2             C2             C1             A1 
+##   "intermedio"   "intermedio"     "avanzado"     "avanzado" "principiante" 
+##             C2             C2             C2             A2             B2 
+##     "avanzado"     "avanzado"     "avanzado" "principiante"   "intermedio" 
+##             C2             B1             C2             A2             A2 
+##     "avanzado"   "intermedio"     "avanzado" "principiante" "principiante" 
+##             A2             C1             A2             B1             B1 
+## "principiante"     "avanzado" "principiante"   "intermedio"   "intermedio" 
+##             B2             C2             C2             B1             B2 
+##   "intermedio"     "avanzado"     "avanzado"   "intermedio"   "intermedio" 
+##             B1             B2             B2             B1             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             C1             C2             A2             C2 
+##   "intermedio"     "avanzado"     "avanzado" "principiante"     "avanzado" 
+##             B2             B2             B2             A2             B2 
+##   "intermedio"   "intermedio"   "intermedio" "principiante"   "intermedio" 
+##             C2             B1             B1             B2             C2 
+##     "avanzado"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C2             B2             A2             B2             B2 
+##     "avanzado"   "intermedio" "principiante"   "intermedio"   "intermedio" 
+##             A1             A1             A2             A2             A2 
+## "principiante" "principiante" "principiante" "principiante" "principiante" 
+##             A2             A2             B1             B1             B1 
+## "principiante" "principiante"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B2             B2             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B2             B2             B2             C1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C1             C1             C1             C2             C2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             A2             B1             B1             B1 
+##     "avanzado" "principiante"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B2             B2             B2             A1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio" "principiante" 
+##             A2             B1             B1             B1             B2 
+## "principiante"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             C2             C2             B1             C2 
+##   "intermedio"     "avanzado"     "avanzado"   "intermedio"     "avanzado" 
+##             C2             B2             C2             C2             B1 
+##     "avanzado"   "intermedio"     "avanzado"     "avanzado"   "intermedio" 
+##             C2             C2             C2             C2             C2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             C2             C1             C2             C2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             B2             B2             C1             C1 
+##     "avanzado"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             C1             C2             B1             B2             B2 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             B2             C1             C2             B2 
+##   "intermedio"   "intermedio"     "avanzado"     "avanzado"   "intermedio" 
+##             C1             C2             B2             C2             C1 
+##     "avanzado"     "avanzado"   "intermedio"     "avanzado"     "avanzado" 
+##             C1             C2             B2             C1             B2 
+##     "avanzado"     "avanzado"   "intermedio"     "avanzado"   "intermedio" 
+##             B2             B2             C2             A1             A1 
+##   "intermedio"   "intermedio"     "avanzado" "principiante" "principiante" 
+##             A1             A1             A2             A2             B1 
+## "principiante" "principiante" "principiante" "principiante"   "intermedio" 
+##             B1             B1             B1             B1             B1 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             B2             B2             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B2             C1             C1             C1 
+##   "intermedio"   "intermedio"     "avanzado"     "avanzado"     "avanzado" 
+##             C1             C1             C1             C1             C1 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             C2             C2             C2             C2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             C2             C2             C2             C2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             C2             C2             C2             C2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"     "avanzado" 
+##             C2             C2             C2             C2             B1 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"   "intermedio" 
+##             B2             B1             B2             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             B1             B1             C2             C2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             B2             C1             B2             B2             C2 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"     "avanzado" 
+##             B1             C1             C2             B1             C2 
+##   "intermedio"     "avanzado"     "avanzado"   "intermedio"     "avanzado" 
+##             C1             C2             B1             B2             B1 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             C1             C1             C2             B1 
+##   "intermedio"     "avanzado"     "avanzado"     "avanzado"   "intermedio" 
+##             B1             B2             B2             C2             B2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"   "intermedio" 
+##             B1             C1             B1             B1             B2 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             C2             A2             B2             C2 
+##   "intermedio"     "avanzado" "principiante"   "intermedio"     "avanzado" 
+##             C2             C1             B1             B2             C1 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"     "avanzado" 
+##             A1             A2             C1             B1             B2 
+## "principiante" "principiante"     "avanzado"   "intermedio"   "intermedio" 
+##             C1             C2             C1             C1             B2 
+##     "avanzado"     "avanzado"     "avanzado"     "avanzado"   "intermedio" 
+##             C2             C2             B2             B2             B2 
+##     "avanzado"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             A2             A2             C1             C2             A2 
+## "principiante" "principiante"     "avanzado"     "avanzado" "principiante" 
+##             B1             C1             B1             B1             B2 
+##   "intermedio"     "avanzado"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             B2             B2             B1             C2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             B2             B2             B2             C1             A2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado" "principiante" 
+##             A2             B1             B1             B2             C1 
+## "principiante"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             C2             C2             C2             A2             C2 
+##     "avanzado"     "avanzado"     "avanzado" "principiante"     "avanzado" 
+##             A2             B2             B2             B2             C2 
+## "principiante"   "intermedio"   "intermedio"   "intermedio"     "avanzado" 
+##             A1             A2             B1             B1             A1 
+## "principiante" "principiante"   "intermedio"   "intermedio" "principiante" 
+##             A2             B1             B2             B2             B2 
+## "principiante"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             C2             A2             A2             B1             C2 
+##     "avanzado" "principiante" "principiante"   "intermedio"     "avanzado" 
+##             C2             C2             A2             C1             C2 
+##     "avanzado"     "avanzado" "principiante"     "avanzado"     "avanzado" 
+##             C2             C2             C1             B2             C2 
+##     "avanzado"     "avanzado"     "avanzado"   "intermedio"     "avanzado" 
+##             B2             B1             B1             B2             B2 
+##   "intermedio"   "intermedio"   "intermedio"   "intermedio"   "intermedio" 
+##             B2             C2             A2             B1             B1 
+##   "intermedio"     "avanzado" "principiante"   "intermedio"   "intermedio" 
+##             B2             B2             B1             C1             C2 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             B1             B1             C1             A1             A2 
+##   "intermedio"   "intermedio"     "avanzado" "principiante" "principiante" 
+##             A2             A2             B1             B1             B1 
+## "principiante" "principiante"   "intermedio"   "intermedio"   "intermedio" 
+##             B1             B1             B2             C1             C1 
+##   "intermedio"   "intermedio"   "intermedio"     "avanzado"     "avanzado" 
+##             B2             A2             A2             A2             B2 
+##   "intermedio" "principiante" "principiante" "principiante"   "intermedio" 
+##             A2             B2             A1             B1             C2 
+## "principiante"   "intermedio" "principiante"   "intermedio"     "avanzado" 
+##  [ reached getOption("max.print") -- omitted 996 entries ]
+```
+
+---
+
+# Paso 7: Guardar el resultado como una columna nueva
+
+
+```r
+eprofile_lex$ nivelNew &lt;- mapply(getLevel, eprofile_lex$freq)
+```
+
+---
+
+# Una forma más rápido con dplyr()
+
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -152,14 +152,6 @@ Los materiales del curso serán en inglés y las sesiones se darán en español.
 ### Objetivo general
 Familiarizar al alumno, de manera muy práctica, con la programación en R, Estadística con R, y otras herramientas y conceptos básicos de la informática para que puedan aplicarlos a sus futuros y actuales proyectos de investigación.
 
-<br>
-
-```{r, out.width = "20%", echo=FALSE}
-knitr::include_graphics("https://cdn.datacamp.com/main-app/assets/brand/logos/DataCamp_Horizontal_CMYK-6182801ee29c9b9e380044bb930f3c18029987c1992648b7600051dd779b0868.png")
-```
-</a>
-
-> “This class is supported by [DataCamp](https://www.datacamp.com), the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.”
 
 # Temas
 ```{r echo=FALSE}
@@ -226,33 +218,11 @@ kable(temas) %>%
 - Trabajar con los propios datos de los hablantes (5 en casa y 10 horas de taller)
 
 # Bibliografía básica
-Este curso utilizará datacamp.com, una plataforma en línea para aprender sobre la ciencia de los datos. Los alumnos completarán los cursillos de datacamp.com en sus casas y vendrán a las sesiones semanales para solucionar problemas y trabajar con datos lingüísticos que incluyan los propios datos de los alumnos.
 
-1. [Introduction to Shell for Data Science](https://www.datacamp.com/courses/introduction-to-shell-for-data-science) (datacamp.com), Chapter 1 
-
-2. [Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r) (datacamp.com)
-
-3. [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) (datacamp.com)
-
-4. [Introduction to Data](https://www.datacamp.com/courses/introduction-to-data) (datacamp.com)
-
-
-5. [Exploratory Data Analysis](https://www.datacamp.com/courses/exploratory-data-analysis) (datacamp.com)
-
-6. [Correlation and Regression](https://www.datacamp.com/courses/correlation-and-regression) (datacamp.com)
-
-7. [Multiple and Logistic Regression](https://www.google.com/search?client=firefox-b&q=datacamp+multiple+and+logistic+regression)(datacamp.com)
-
-8. [Foundations of Inference](https://www.datacamp.com/courses/foundations-of-inference) (datacamp.com)
-
-9. Sierra Martínez, G. E. (2017). Introducción a los corpus lingüísticos. Instituto de Ingeniería. UNAM
-
-
-# Bibliografía complementaria
-
-1. Gries, S. T. (2017). Quantitative corpus linguistics with R: a practical introduction (Segunda Edición). New York: Routledge, Taylor & Francis Group
-2. Adolphs, S. (2011). Corpus Linguistics. En J. Simpson (Ed.), The Routledge handbook of applied linguistics (1st ed). Milton Park, Abingdon, [UK]; New York: Routledge.
-3. Weisser, M. (2016). Practical corpus linguistics: an introduction to corpus-based language analysis. Chichester, West Sussex [England]; Malden, MA: Wiley Blackwell.
+1. Sierra Martínez, G. E. (2017). Introducción a los corpus lingüísticos. Instituto de Ingeniería. UNAM
+2. Gries, S. T. (2017). Quantitative corpus linguistics with R: a practical introduction (Segunda Edición). New York: Routledge, Taylor & Francis Group
+3. Adolphs, S. (2011). Corpus Linguistics. En J. Simpson (Ed.), The Routledge handbook of applied linguistics (1st ed). Milton Park, Abingdon, [UK]; New York: Routledge.
+4. Weisser, M. (2016). Practical corpus linguistics: an introduction to corpus-based language analysis. Chichester, West Sussex [England]; Malden, MA: Wiley Blackwell.
 
 # Estrategias didácticas
 
